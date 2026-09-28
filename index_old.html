@@ -217,82 +217,28 @@ footer{
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  /* Nav */
   .nav-links{display:none}
-  .nav-hamburger{display:flex}
-  .nav-mobile-cta{display:inline-block}
-
-  /* Hero */
   .hero{grid-template-columns:1fr}
   .hero-freedom{border-right:none;border-bottom:1px solid #e2e8f0}
-  .hero-inner{flex-direction:column;text-align:center;gap:32px}
-  .hero-inner > div:last-child{display:none}
-  .hero-btns{justify-content:center;flex-wrap:wrap}
-  .hero-new{padding:80px 5% 48px}
-
-  /* Sections */
-  .three-products{grid-template-columns:1fr}
-  .freedom-intro-grid{grid-template-columns:1fr}
   .models-grid{grid-template-columns:1fr 1fr}
   .why-grid{grid-template-columns:1fr 1fr}
   .c1a-grid,.disp-grid,.contact-grid,.sitebox-grid{grid-template-columns:1fr}
   .proc-grid{grid-template-columns:1fr 1fr}
   .foot-top{grid-template-columns:1fr 1fr}
-
-  /* SiteBox inner grid */
-  div[style*="grid-template-columns:1fr 1fr;gap:48px"]{grid-template-columns:1fr !important}
-}
-
-@media(max-width:540px){
-  /* Nav */
-  nav{padding:0 4%}
-
-  /* Hero */
-  .hero-new{padding:72px 4% 40px}
-  .hero-btns{flex-direction:column;align-items:stretch;gap:10px}
-  .btn-primary-hero,.btn-ghost-hero{text-align:center;width:100%;box-sizing:border-box}
-
-  /* Sections */
-  .sec{padding:40px 4% !important}
-  .sec-hdr{margin-bottom:24px}
-  .sec-hdr h2{font-size:1.5rem}
   .three-products{grid-template-columns:1fr}
+  .nav-hamburger{display:flex}
+  .nav-mobile-cta{display:inline-block}
+}
+@media(max-width:540px){
   .models-grid,.why-grid,.proc-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
+  .foot-bottom{flex-direction:column;gap:8px}
+  .three-products{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column;gap:10px}
+  .btn-primary-hero,.btn-ghost-hero{text-align:center;width:100%;box-sizing:border-box}
+  .sec{padding:48px 5% !important}
   .foot-top{grid-template-columns:1fr}
-  .foot-bottom{flex-direction:column;gap:8px;text-align:center}
-
-  /* Freedom intro */
-  .freedom-intro-grid{grid-template-columns:1fr}
-
-  /* Certified + SiteBox inner grids */
-  .c1a-grid{grid-template-columns:1fr;gap:24px}
-  div[style*="grid-template-columns:1fr 1fr;gap:48px"]{grid-template-columns:1fr !important;gap:24px !important}
-  div[style*="grid-template-columns:1fr 1fr;gap:12px"]{grid-template-columns:1fr 1fr !important}
-
-  /* Contact grid */
-  .contact-grid{grid-template-columns:1fr;gap:32px}
-
-  /* Footer */
-  .foot-simple{flex-direction:column;gap:8px;text-align:center}
-  .foot-contact{flex-direction:column;gap:4px;align-items:center}
-
-  /* Process steps */
-  .proc-grid{grid-template-columns:1fr 1fr}
-
-  /* Model cards */
-  .model-card{margin-bottom:4px}
-  .layout-tabs{gap:4px}
-  .layout-tab{font-size:0.65rem;padding:3px 8px}
-
-  /* Inline 3-col grids */
-  div[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr !important}
-  div[style*="grid-template-columns: 1fr 1fr 1fr"]{grid-template-columns:1fr !important}
-}
-
-@media(max-width:380px){
-  .models-grid,.proc-grid{grid-template-columns:1fr}
-  .sec-hdr h2{font-size:1.3rem}
+  .foot-bottom{text-align:center}
 }
 
 /* Fix Issue 3 — prevent horizontal overflow */
@@ -455,10 +401,17 @@ html,body{overflow-x:hidden}
 .hero-stat-l{font-size:0.7rem;color:#4a7c59;margin-top:4px}
 .hero-img-wrap{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(30,58,95,0.15)}
 .hero-img-wrap img{width:100%;height:520px;object-fit:cover;object-position:center}
-@media(max-width:900px){.hero-img-wrap{display:none}}
 .hero-img-badge{position:absolute;bottom:16px;left:16px;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;font-size:0.75rem;font-weight:600;color:#1e293b;display:flex;align-items:center;gap:6px}
 .hero-img-badge span{color:#2563eb}
-@media(max-width:900px){.hero-inner{flex-direction:column;text-align:center}}
+@media(max-width:900px){.hero-inner{
+    max-width:1160px;
+    margin:0 auto;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}}
 
 
 .hero-inner > div{
