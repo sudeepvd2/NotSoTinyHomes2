@@ -130,18 +130,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
 /* CONTACT */
 .contact-sec{background:#fff}
-.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:72px;align-items:start}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start}
 .contact-dets{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
 .cd{display:flex;gap:10px;align-items:center}
 .cd-ico{width:34px;height:34px;background:#f1f5f9;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.85rem;flex-shrink:0}
 .cd strong{display:block;font-size:0.72rem;color:#94a3b8;margin-bottom:1px}
 .cd span{font-size:0.85rem;color:#1e293b}
-.cform{background:#f8fafc;border-radius:12px;padding:32px;border:1px solid #e2e8f0}
+.cform{background:#f8fafc;border-radius:12px;padding:24px;border:1px solid #e2e8f0;width:100%;box-sizing:border-box;max-width:100%}
 .cform-title{font-size:1rem;font-weight:700;margin-bottom:22px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
 .fg{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
 .fg label{font-size:0.72rem;font-weight:600;color:#64748b}
-.fg input,.fg select,.fg textarea{padding:10px 12px;border:1.5px solid #e2e8f0;border-radius:6px;font-size:0.85rem;font-family:inherit;color:#1e293b;outline:none;transition:border-color .15s;background:#fff}
+.fg input,.fg select,.fg textarea{padding:10px 12px;border:1.5px solid #e2e8f0;border-radius:6px;font-size:0.85rem;font-family:inherit;color:#1e293b;outline:none;transition:border-color .15s;background:#fff;width:100%;box-sizing:border-box}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#2563eb}
 .fg textarea{resize:vertical;min-height:88px}
 .form-btn{width:100%;padding:12px;background:#1e293b;color:#fff;border:none;border-radius:6px;font-weight:700;font-size:0.88rem;cursor:pointer;transition:background .15s;font-family:inherit}
@@ -1067,7 +1067,7 @@ justify-content:center;
       <div class="modal-btn-title">★ Certified Series</div>
       <div class="modal-btn-sub" style="color:#64748b">NCC Class 1a — full council approval, permanently placeable</div>
     </button>
-    <button class="modal-cancel" onclick="document.getElementById('quote-modal').style.display='none'">Cancel</button>
+    <button class="modal-cancel" onclick="document.getElementById('quote-modal').style.display='none';document.getElementById('interest-select').value='';">Cancel</button>
   </div>
 </div>
 
@@ -1137,16 +1137,26 @@ let _selectedSize = '';
 
 function openModal(size) {
   _selectedSize = size;
-  document.getElementById('modal-size-label').textContent = size;
+  document.getElementById('modal-size-label').textContent = size + ' Model';
   document.getElementById('quote-modal').style.display = 'flex';
+  // Reset select when opening modal
+  const sel = document.getElementById('interest-select');
+  if(sel) sel.value = '';
 }
 
 function chooseSeries(series) {
   document.getElementById('quote-modal').style.display = 'none';
   const sel = document.getElementById('interest-select');
   const val = _selectedSize.replace('ft','') + 'ft-' + series;
-  sel.value = val;
-  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  if(sel) {
+    sel.value = val;
+    // Trigger change event so any listeners fire
+    sel.dispatchEvent(new Event('change'));
+  }
+  // Scroll to contact form
+  setTimeout(function(){
+    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  }, 100);
 }
 
 // Formspree contact form handler
