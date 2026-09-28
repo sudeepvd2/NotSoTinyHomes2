@@ -216,6 +216,14 @@ footer{
 .modal-cancel{padding:8px;border:none;background:none;color:#94a3b8;cursor:pointer;font-family:inherit;font-size:0.82rem;margin-top:4px}
 
 /* RESPONSIVE */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.nav-hamburger span{display:block;width:22px;height:2px;background:#1e3a5f;border-radius:2px;transition:transform 0.2s}
+.nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 5% 20px;flex-direction:column;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.nav-mobile.open{display:flex}
+.nav-mobile a{font-size:0.95rem;font-weight:500;color:#1e3a5f;padding:13px 0;border-bottom:1px solid #f1f5f9;text-decoration:none;display:block}
+.nav-mobile a:last-child{border-bottom:none}
+.nav-mobile-cta{display:none;margin-top:12px;background:#2563eb;color:#fff !important;padding:12px 20px;border-radius:8px;text-align:center;font-weight:700 !important}
+
 @media(max-width:900px){
   /* Nav */
   .nav-links{display:none}
@@ -279,14 +287,7 @@ footer{
 /* Fix Issue 3 — prevent horizontal overflow */
 html,body{overflow-x:hidden}
 
-/* Fix Issue 1 — hamburger menu */
-.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-.nav-hamburger span{display:block;width:22px;height:2px;background:#1e3a5f;border-radius:2px;transition:transform 0.2s}
-.nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 5% 20px;flex-direction:column;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
-.nav-mobile.open{display:flex}
-.nav-mobile a{font-size:0.95rem;font-weight:500;color:#1e3a5f;padding:13px 0;border-bottom:1px solid #f1f5f9;text-decoration:none;display:block}
-.nav-mobile a:last-child{border-bottom:none}
-.nav-mobile-cta{display:none;margin-top:12px;background:#2563eb;color:#fff !important;padding:12px 20px;border-radius:8px;text-align:center;font-weight:700 !important}
+/* hamburger defined above media queries */
 
 /* Fix Issue 2 — three products CSS class */
 .three-products{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
@@ -327,7 +328,6 @@ html,body{overflow-x:hidden}
 
 .hero-new{
     position:relative;
-    min-height:65vh;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -337,8 +337,8 @@ html,body{overflow-x:hidden}
 
 .hero-new{
     justify-content:center;
-    align-items:flex-end;
-    padding-bottom:140px;
+    align-items:center;
+    padding-bottom:60px;
 }
 
 .hero-content{
@@ -470,7 +470,6 @@ justify-content:center;
 }
  
 .hero-new{
-    min-height:100vh;
     background:linear-gradient(170deg,#e8f4fd 0%,#dbeafe 40%,#e0f2fe 70%,#f0f9ff 100%);
     display:flex;
     justify-content:center;
