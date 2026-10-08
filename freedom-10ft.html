@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Freedom 10ft — Not So Tiny Homes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden}
+body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:60px;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}
+.nav-logo{font-weight:800;font-size:1.1rem;color:#1e293b}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-size:0.83rem;font-weight:600;color:#64748b}
+.nav-links a:hover{color:#1e293b}
+.nav-cta{background:#2563eb;color:#fff!important;padding:8px 18px;border-radius:6px}
+.nav-back{color:#2563eb!important;display:flex;align-items:center;gap:4px}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
+.hamburger span{display:block;width:22px;height:2px;background:#1e3a5f;border-radius:2px}
+.mob-nav{display:none;position:fixed;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 5% 20px;flex-direction:column;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.mob-nav.open{display:flex}
+.mob-nav a{font-size:0.95rem;font-weight:500;color:#1e3a5f;padding:13px 0;border-bottom:1px solid #f1f5f9;display:block}
+@media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}}
+
+/* SECTIONS */
+.sec{padding:60px 5%}
+.sec-i{max-width:1160px;margin:0 auto}
+
+/* HERO */
+.hero-band{background:linear-gradient(135deg,#1e3a5f 0%,#2563eb 100%);padding:100px 5% 48px;color:#fff}
+.hero-band-i{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-badge{display:inline-block;background:rgba(255,255,255,0.15);color:#fff;font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:4px;margin-bottom:14px}
+.hero-band h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.1;margin-bottom:12px}
+.hero-band p{font-size:0.93rem;color:rgba(255,255,255,0.75);line-height:1.75;margin-bottom:24px}
+.hero-stats{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.hero-stat{text-align:left}
+.hero-stat-n{font-size:1.4rem;font-weight:800;color:#fff}
+.hero-stat-l{font-size:0.7rem;color:rgba(255,255,255,0.6);margin-top:2px}
+.hero-price{font-size:0.78rem;color:rgba(255,255,255,0.6);margin-bottom:6px}
+.hero-price strong{font-size:2rem;font-weight:800;color:#fff;display:block}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-white{background:#fff;color:#1e3a5f;padding:12px 24px;border-radius:8px;font-weight:700;font-size:0.88rem;display:inline-block}
+.btn-outline{border:2px solid rgba(255,255,255,0.4);color:#fff;padding:12px 24px;border-radius:8px;font-weight:600;font-size:0.88rem;display:inline-block}
+.hero-img{position:relative;height:380px;display:flex;align-items:center;justify-content:center}
+.hero-img img{width:100%;height:100%;object-fit:contain;object-position:center;mix-blend-mode:luminosity;filter:brightness(1.1) contrast(1.05)}
+
+/* GALLERY */
+.gallery-wrap{position:relative;border-radius:12px;overflow:hidden;background:#f1f5f9}
+.gallery-wrap img{width:100%;height:420px;object-fit:cover;display:none}
+.gallery-wrap img.active{display:block}
+.gal-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;z-index:2}
+.gal-prev{left:12px}
+.gal-next{right:12px}
+.gal-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.gdot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.5);border:none;cursor:pointer;padding:0}
+.gdot.on{background:#fff}
+.thumb-row{display:flex;gap:8px;margin-top:10px;overflow-x:auto}
+.thumb{width:72px;height:52px;border-radius:6px;object-fit:cover;cursor:pointer;opacity:0.6;flex-shrink:0;border:2px solid transparent}
+.thumb.on{opacity:1;border-color:#2563eb}
+
+/* SPECS TABLE */
+.specs-table{width:100%;border-collapse:collapse;font-size:0.85rem}
+.specs-table tr:nth-child(odd) td{background:#f8fafc}
+.specs-table td{padding:11px 14px;border-bottom:1px solid #e2e8f0;color:#475569}
+.specs-table td:first-child{font-weight:600;color:#0f172a;width:45%}
+
+/* OPTIONS */
+.options-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.opt-card{border:2px solid #e2e8f0;border-radius:8px;overflow:hidden;cursor:pointer;transition:border-color .15s}
+.opt-card:hover,.opt-card.on{border-color:#2563eb}
+.opt-swatch{height:80px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+.opt-label{padding:8px 10px;font-size:0.72rem;font-weight:600;color:#0f172a;border-top:1px solid #e2e8f0}
+.opt-code{font-size:0.65rem;color:#94a3b8;margin-top:2px}
+
+/* INTERIOR SLIDER */
+.int-gallery{position:relative;border-radius:12px;overflow:hidden;background:#1e293b;height:340px}
+.int-gallery .slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .4s}
+.int-gallery .slide.active{opacity:1}
+.int-slide-img{width:100%;height:100%;object-fit:cover}
+.int-slide-placeholder{text-align:center;color:rgba(255,255,255,0.5);padding:40px}
+.int-slide-placeholder div{font-size:3rem;margin-bottom:12px}
+.int-slide-placeholder p{font-size:0.85rem;line-height:1.6}
+.int-auto-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.int-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.2);color:#fff;border:none;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:0.9rem;display:flex;align-items:center;justify-content:center;z-index:2}
+.int-prev{left:12px}
+.int-next{right:12px}
+
+/* CONFIG TABS */
+.config-tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.config-tab{padding:8px 18px;border-radius:6px;border:1.5px solid #e2e8f0;background:#fff;font-weight:600;font-size:0.83rem;cursor:pointer;font-family:inherit;color:#64748b}
+.config-tab.on{border-color:#2563eb;background:#eff6ff;color:#2563eb}
+.config-panel{display:none}
+.config-panel.on{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+
+/* CTA BAND */
+.cta-band{background:#1e3a5f;padding:48px 5%;text-align:center}
+.cta-band h2{font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:8px}
+.cta-band p{font-size:0.88rem;color:rgba(255,255,255,0.65);margin-bottom:24px}
+.cta-band a{display:inline-block;background:#f59e0b;color:#0f172a;padding:13px 28px;border-radius:8px;font-weight:700;font-size:0.9rem;margin:0 8px 8px}
+.cta-band a.sec{background:rgba(255,255,255,0.12);color:#fff;border:1.5px solid rgba(255,255,255,0.25)}
+
+/* FOOTER */
+footer{background:#0f172a;padding:28px 5%;text-align:center}
+.foot-logo{font-weight:800;color:#fff;margin-bottom:6px}
+.foot-contact{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;font-size:0.78rem;color:rgba(255,255,255,0.5)}
+.foot-abn{font-size:0.7rem;color:rgba(255,255,255,0.3);margin-top:6px}
+
+/* SECTION HEADINGS */
+.sec-title{font-size:1.4rem;font-weight:800;color:#0f172a;margin-bottom:6px}
+.sec-sub{font-size:0.88rem;color:#64748b;margin-bottom:28px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-band-i{grid-template-columns:1fr}
+  .hero-img{display:none}
+  .options-grid{grid-template-columns:repeat(3,1fr)}
+  .config-panel.on{grid-template-columns:1fr}
+}
+@media(max-width:540px){
+  .sec{padding:40px 4%}
+  .hero-band{padding:80px 4% 40px}
+  .options-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-stats{gap:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Not So Tiny Homes</div>
+  <div class="nav-links">
+    <a href="index.html" class="nav-back">← Back</a>
+    <a href="index.html#class1a">Certified Series</a>
+    <a href="index.html#sitebox">Site Office</a>
+    <a href="index.html#contact" class="nav-cta">Get a Quote</a>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="document.getElementById('mobnav').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mob-nav" id="mobnav">
+  <a href="index.html">← Back to Home</a>
+  <a href="index.html#class1a">Certified Series</a>
+  <a href="index.html#sitebox">Site Office</a>
+  <a href="index.html#contact">Get a Quote</a>
+</div>
+
+<!-- HERO -->
+<div class="hero-band">
+  <div class="hero-band-i">
+    <div>
+      <div class="hero-badge">Freedom Series</div>
+      <h1>10ft Expandable Home</h1>
+      <p>A compact studio or one-bedroom home — perfect for a guest retreat, home office or a first step onto acreage living.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-n">6.35 × 3m</div><div class="hero-stat-l">Expanded size</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">~19m²</div><div class="hero-stat-l">Floor area</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">2.2–2.4m</div><div class="hero-stat-l">Ceiling height</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">~1.8T</div><div class="hero-stat-l">Weight</div></div>
+      </div>
+      <div class="hero-price"><span>From</span><strong>$17,000</strong><span>incl. GST</span></div>
+      <div class="hero-btns">
+        <a href="index.html#contact" class="btn-white">Get a quote</a>
+        <a href="#options" class="btn-outline">View all options ↓</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="freedom_20ft_01.jpg" alt="Freedom 20ft expandable home" >
+    </div>
+  </div>
+</div>
+
+<!-- EXTERIOR PHOTOS -->
+<section class="sec" style="background:#f8fafc;padding-bottom:32px">
+  <div class="sec-i">
+    <div class="sec-title">Exterior</div>
+    <div class="sec-sub">Outside views — folded for delivery, expanded on site</div>
+        <div class="gallery-wrap" id="extgal">
+      <img src="freedom_10ft_01.jpg" class="active" alt="10ft exterior front">
+      <img src="freedom_10ft_02.jpg" alt="10ft exterior angle">
+      <button class="gal-arr gal-prev" onclick="galNav('extgal',-1)">‹</button>
+      <button class="gal-arr gal-next" onclick="galNav('extgal',1)">›</button>
+      <div class="gal-dots" id="extgaldots"></div>
+    </div>
+    <div class="thumb-row" id="extthumbrow"></div>
+  </div>
+</section>
+
+<!-- INTERIOR PHOTOS -->
+<section class="sec" style="background:#fff;padding-bottom:32px">
+  <div class="sec-i">
+    <div class="sec-title">Interior</div>
+    <div class="sec-sub">Kitchen, bathroom, bedroom and living spaces</div>
+    <div class="int-gallery" id="intgal2">
+      <div class="slide active">
+        <img class="int-slide-img" src="20ft_interior_01.jpg" alt="Living area"
+             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🛋️</div><p>Kitchen &amp; Living Area<br>Open plan L-shaped kitchen with stainless sink, dining and living space with windows on three sides</p></div>'">
+      </div>
+      <div class="slide">
+        <img class="int-slide-img" src="20ft_interior_02.jpg" alt="Kitchen"
+             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🍳</div><p>Kitchen<br>L-shaped bench with stainless steel sink. Choose from 4 cupboard styles and stone-look benchtops</p></div>'">
+      </div>
+      <div class="slide">
+        <img class="int-slide-img" src="20ft_interior_03.jpg" alt="Bedroom 1"
+             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🛏️</div><p>Bedroom 1<br>~2.09 × 3.16m — fits a double or queen bed. Choose from 11 door styles</p></div>'">
+      </div>
+      <div class="slide">
+        <img class="int-slide-img" src="20ft_interior_04.jpg" alt="Bathroom"
+             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🚿</div><p>Bathroom<br>Shower, toilet and vanity. Choose vanity style, shower screen and bathroom door</p></div>'">
+      </div>
+      <div class="slide">
+        <img class="int-slide-img" src="20ft_interior_05.jpg" alt="Bedroom 2"
+             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🛏️</div><p>Bedroom 2<br>~2.09 × 2.30m — guest room, kids room or study</p></div>'">
+      </div>
+      <button class="int-arr int-prev" onclick="intNav2(-1)">‹</button>
+      <button class="int-arr int-next" onclick="intNav2(1)">›</button>
+      <div class="int-auto-dots" id="intdots2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIFICATIONS -->
+<section class="sec">
+  <div class="sec-i">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+      <div>
+        <div class="sec-title">Specifications</div>
+        <div class="sec-sub">Full technical details</div>
+        <table class="specs-table">
+          <tr><td>Expanded size</td><td>6.35 × 3m</td></tr>
+          <tr><td>Floor area</td><td>~19m²</td></tr>
+          <tr><td>Folded size</td><td>3m × 2.4m × 2.9m</td></tr>
+          <tr><td>Ceiling height</td><td>2.2m – 2.4m</td></tr>
+          <tr><td>Weight</td><td>~1.8T</td></tr>
+          <tr><td>Bedrooms</td><td>Studio or 1 bedroom</td></tr>
+          <tr><td>Bathrooms</td><td>1 (shower, toilet, vanity)</td></tr>
+          <tr><td>Kitchen</td><td>Compact kitchen with sink</td></tr>
+          <tr><td>Water heater</td><td>Electric</td></tr>
+          <tr><td>Flooring</td><td>PVC vinyl (30 colour options)</td></tr>
+          <tr><td>Frame</td><td>Welded steel (powder coated)</td></tr>
+          <tr><td>Windows</td><td>Double glazed aluminium (8 style options)</td></tr>
+          <tr><td>Insulation</td><td>Insulated wall, floor & ceiling panels</td></tr>
+          <tr><td>Electrical</td><td>Australian standard fittings, pre-wired</td></tr>
+          <tr><td>Plumbing</td><td>Pre-plumbed, WaterMark fittings</td></tr>
+          <tr><td>Warranty</td><td>12 months manufacturer</td></tr>
+          <tr><td>Delivery</td><td>~6–8 weeks from deposit</td></tr>
+        </table>
+      </div>
+      <div>
+        <div class="sec-title">Floor Plan</div>
+        <div class="sec-sub">Layout configurations</div>
+        <div class="config-tabs">
+          <button class="config-tab on" onclick="showConfig(0)">Studio</button>
+          <button class="config-tab" onclick="showConfig(1)">1 Bed</button>
+        </div>
+        <div class="config-panel on" id="cfg0">
+          <div>
+            <img src="10ft_floor_plan_01.png" style="width:100%;border-radius:8px" alt="Studio floor plan">
+          </div>
+          <div style="font-size:0.83rem;color:#475569;line-height:1.8">
+            <strong style="color:#0f172a;display:block;margin-bottom:8px">Studio · Open plan</strong>
+            <div>• Open plan living and sleeping area</div>
+            <div>• Bathroom: compact shower, toilet and basin</div>
+            <div>• Kitchen bench along one wall</div>
+            <div>• Single multi-purpose living space</div>
+          </div>
+        </div>
+        <div class="config-panel" id="cfg1">
+          <div>
+            <img src="10ft_layout_01.jpg" style="width:100%;border-radius:8px" alt="1 Bed floor plan">
+          </div>
+          <div style="font-size:0.83rem;color:#475569;line-height:1.8">
+            <strong style="color:#0f172a;display:block;margin-bottom:8px">1 Bedroom</strong>
+            <div>• Separate bedroom</div>
+            <div>• Bathroom: compact shower, toilet and basin</div>
+            <div>• Open plan kitchen and living</div>
+            <div>• Good use of space</div>
+          </div>
+        </div>
+          <div style="font-size:0.83rem;color:#475569;line-height:1.8">
+            <strong style="color:#0f172a;display:block;margin-bottom:8px">Studio Open Plan</strong>
+            <div>• Open plan living & sleeping</div>
+            <div>• Full bathroom</div>
+            <div>• Kitchen area</div>
+            <div>• Maximum living space</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMISATION OPTIONS -->
+<section class="sec" id="options">
+  <div class="sec-i">
+    <div class="sec-title">Customise Your Home</div>
+    <div class="sec-sub">Choose your finishes — every category below can be personalised before ordering</div>
+
+    <!-- Frame Colour -->
+    <div style="margin-bottom:36px">
+      <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:6px">Frame Colour</h3>
+      <p style="font-size:0.82rem;color:#64748b;margin-bottom:14px">Choose your steel frame colour. Custom colours available to order.</p>
+      <div class="options-grid" style="grid-template-columns:repeat(3,1fr);max-width:360px">
+        <div class="opt-card"><div class="opt-swatch" style="background:#1a1a1a"></div><div class="opt-label">Black<div class="opt-code">FR-01</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#fff;border:1px solid #e2e8f0"></div><div class="opt-label">White<div class="opt-code">FR-02</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#9ca3af"></div><div class="opt-label">Grey<div class="opt-code">FR-03</div></div></div>
+      </div>
+    </div>
+
+    <!-- Wall Panel Colours -->
+    <div style="margin-bottom:36px">
+      <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:6px">Wall Panel Colours</h3>
+      <p style="font-size:0.82rem;color:#64748b;margin-bottom:14px">15 options — timber grains, stone textures and solid colours. Confirm final choice against a physical sample.</p>
+      <div class="options-grid">
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#c8a87a 0%,#8B6914 50%,#a07040 100%);background-size:4px 4px"></div><div class="opt-label">3D Wood Grain<div class="opt-code">WP-01</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#d4b896,#b89060,#d4b896)"></div><div class="opt-label">Phoenix Eye Wood<div class="opt-code">WP-02</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#c8a060,#a07840,#c8a060)"></div><div class="opt-label">Oomatsu Cedar<div class="opt-code">WP-03</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#4a3020,#2a1810,#4a3020)"></div><div class="opt-label">Wenge<div class="opt-code">WP-04</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#e8d080,#c0a840,#e8d080)"></div><div class="opt-label">Yellow Wood Grain<div class="opt-code">WP-05</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#8a3020,#5a1810,#8a3020)"></div><div class="opt-label">Red Sandalwood<div class="opt-code">WP-06</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#b06040,#803020,#b06040)"></div><div class="opt-label">Redwood Grain<div class="opt-code">WP-07</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#d8c8a0,#b0a070,#d8c8a0);background-image:radial-gradient(circle at 30% 40%,#604820 2px,transparent 2px),radial-gradient(circle at 70% 60%,#604820 2px,transparent 2px)"></div><div class="opt-label">Knotty Pine<div class="opt-code">WP-08</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#a09888,#787060,#a09888);background-image:repeating-linear-gradient(45deg,transparent,transparent 3px,rgba(0,0,0,0.1) 3px,rgba(0,0,0,0.1) 4px)"></div><div class="opt-label">Stacked Stone<div class="opt-code">WP-09</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#f8f8f5;border:1px solid #e2e8f0"></div><div class="opt-label">Pure White<div class="opt-code">WP-10</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#c0c0c0"></div><div class="opt-label">Silver Grey<div class="opt-code">WP-11</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#8d9089"></div><div class="opt-label">Traffic Grey<div class="opt-code">WP-12 · RAL 7042</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#474b4f"></div><div class="opt-label">Graphite Grey<div class="opt-code">WP-13 · RAL 7024</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#61666a"></div><div class="opt-label">Slate Grey<div class="opt-code">WP-14 · RAL 7015</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#0e0e10"></div><div class="opt-label">Jet Black<div class="opt-code">WP-15 · RAL 9005</div></div></div>
+      </div>
+      <p style="font-size:0.75rem;color:#94a3b8;margin-top:10px">Colours shown are indicative only — confirm final choice against a physical sample.</p>
+    </div>
+
+    <!-- Windows -->
+    <div style="margin-bottom:36px">
+      <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:6px">Windows</h3>
+      <p style="font-size:0.82rem;color:#64748b;margin-bottom:14px">All windows 930×930mm, double glazed. Thermal-break range (WN-03 to WN-08) available in black, white or grey frames with optional tinted glass.</p>
+      <div class="options-grid">
+        <div class="opt-card"><div class="opt-swatch" style="background:#e8f4fc;border:3px solid #c0d8e8">◻</div><div class="opt-label">PVC Sliding<div class="opt-code">WN-01 · 4+10+4mm</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#ddeef8;border:3px solid #90b8d0">◻</div><div class="opt-label">Aluminium Sliding<div class="opt-code">WN-02 · 5+14+5mm</div></div></div>
+        <div class="opt-card on"><div class="opt-swatch" style="background:#eff6ff;border:3px solid #2563eb">✓</div><div class="opt-label">Thermal-Break Awning<div class="opt-code">WN-03 · Popular</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#ddeef8;border:3px solid #90b8d0">◻</div><div class="opt-label">Thermal-Break Sliding<div class="opt-code">WN-04</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#ddeef8;border:3px solid #90b8d0">◻</div><div class="opt-label">Inward Casement<div class="opt-code">WN-05</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#ddeef8;border:3px solid #90b8d0">◻</div><div class="opt-label">Outward Casement<div class="opt-code">WN-06</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#ddeef8;border:3px solid #90b8d0">◻◻</div><div class="opt-label">Double Casement<div class="opt-code">WN-07</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#ddeef8;border:3px solid #90b8d0">↕</div><div class="opt-label">Tilt & Turn<div class="opt-code">WN-08</div></div></div>
+      </div>
+    </div>
+
+    <!-- Entrance Doors -->
+    <div style="margin-bottom:36px">
+      <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:6px">Entrance & Security Doors</h3>
+      <p style="font-size:0.82rem;color:#64748b;margin-bottom:14px">6 main entrance door styles plus 2 optional security door upgrades. Thermal-break doors (ED-03 to ED-06) in black, white or grey with clear, blue, grey, black or tinted glass.</p>
+      <div class="options-grid">
+        <div class="opt-card"><div class="opt-swatch" style="background:#e8e8e8;border-left:8px solid #888">🚪</div><div class="opt-label">Aluminium Swing Double<div class="opt-code">ED-01 · 1890×2230mm</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#e8e8e8;border-left:8px solid #888">⇔</div><div class="opt-label">Aluminium Sliding Double<div class="opt-code">ED-02 · 1890×2230mm</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#ddeef8;border-left:8px solid #2563eb">🚪</div><div class="opt-label">Thermal-Break Casement<div class="opt-code">ED-03 · 1895×2235mm</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#ddeef8;border-left:8px solid #2563eb">⇔</div><div class="opt-label">Thermal-Break Sliding Double<div class="opt-code">ED-04 · 1895×2235mm</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#ddeef8;border-left:8px solid #2563eb">⊢⊣</div><div class="opt-label">Asymmetric Double<div class="opt-code">ED-05 · 1200×2250mm</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#ddeef8;border-left:8px solid #2563eb">▣</div><div class="opt-label">Shopfront Double<div class="opt-code">ED-06 · Full-height glass</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#1a1a1a">🔒</div><div class="opt-label" style="color:#fff;background:#1a1a1a">Single Security Door<div class="opt-code" style="color:#888">ED-07 · 900×2050mm</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#1a1a1a">🔐</div><div class="opt-label" style="color:#fff;background:#1a1a1a">Premium Security Double<div class="opt-code" style="color:#888">ED-08 · Smart lock optional</div></div></div>
+      </div>
+    </div>
+
+    <!-- Bedroom Doors -->
+    <div style="margin-bottom:36px">
+      <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:6px">Bedroom Doors</h3>
+      <p style="font-size:0.82rem;color:#64748b;margin-bottom:14px">11 styles across three ranges — solid steel, steel with timber detailing, and aluminium & timber panels.</p>
+      <div style="margin-bottom:10px;font-size:0.75rem;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.05em">Steel</div>
+      <div class="options-grid" style="margin-bottom:16px">
+        <div class="opt-card"><div class="opt-swatch" style="background:#f8f8f5;border:1px solid #e2e8f0"></div><div class="opt-label">Standard White<div class="opt-code">BD-01</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:repeating-linear-gradient(90deg,#f0f0f0 0px,#f0f0f0 18px,#e0e0e0 18px,#e0e0e0 20px)"></div><div class="opt-label">White with Grooves<div class="opt-code">BD-02</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#9ca3af"></div><div class="opt-label">Grey Custom<div class="opt-code">BD-03</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#f8f8f5;border:1px solid #e2e8f0;background-image:linear-gradient(135deg,#2a1810 0%,#2a1810 45%,#f8f8f5 45%,#f8f8f5 55%,#2a1810 55%,#2a1810 100%);background-size:20px 20px"></div><div class="opt-label">White, Dark Inlay<div class="opt-code">BD-04</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:repeating-linear-gradient(45deg,#9ca3af 0px,#9ca3af 4px,#d1d5db 4px,#d1d5db 8px)"></div><div class="opt-label">Grey Herringbone<div class="opt-code">BD-05</div></div></div>
+      </div>
+      <div style="margin-bottom:10px;font-size:0.75rem;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.05em">Aluminium & Timber</div>
+      <div class="options-grid">
+        <div class="opt-card"><div class="opt-swatch" style="background:#f8f8f5;border:1px solid #e2e8f0;border-top:4px solid #888;border-bottom:4px solid #888"></div><div class="opt-label">Flat Panel<div class="opt-code">BD-06</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:repeating-linear-gradient(90deg,#f8f8f5 0px,#f8f8f5 6px,#d0d0d0 6px,#d0d0d0 8px)"></div><div class="opt-label">Vertical Lines<div class="opt-code">BD-07</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#f8f8f5;border:1px solid #e2e8f0;border-radius:0 0 40% 40% / 0 0 20% 20%"></div><div class="opt-label">Arched Panel<div class="opt-code">BD-08</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(90deg,#f8f8f5 60%,rgba(200,230,255,0.8) 60%)"></div><div class="opt-label">Glass Strip<div class="opt-code">BD-09</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:repeating-linear-gradient(90deg,#f8f8f5 0px,#f8f8f5 2px,#d0d0d0 2px,#d0d0d0 3px)"></div><div class="opt-label">Pinstripe<div class="opt-code">BD-10</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(180deg,#f8f8f5 48%,#d0d0d0 48%,#d0d0d0 52%,#f8f8f5 52%)"></div><div class="opt-label">Split Panel<div class="opt-code">BD-11</div></div></div>
+      </div>
+    </div>
+
+    <!-- Bathroom -->
+    <div style="margin-bottom:36px">
+      <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:6px">Bathroom</h3>
+      <p style="font-size:0.82rem;color:#64748b;margin-bottom:20px">Choose your vanity, shower screen and bathroom door independently — each has its own range.</p>
+
+      <div style="font-size:0.85rem;font-weight:700;color:#0f172a;margin-bottom:10px">Vanities (VA-01 to VA-07)</div>
+      <p style="font-size:0.78rem;color:#64748b;margin-bottom:12px">Floor-standing vanity with basin and mixer tap, shown with matching mirror cabinet and open shelving.</p>
+      <div class="options-grid">
+        <div class="opt-card"><div class="opt-swatch" style="background:#f8f8f5;border:1px solid #e2e8f0;border-bottom:6px solid #e2e8f0"></div><div class="opt-label">Classic White<div class="opt-code">VA-01 · Flat-front</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:repeating-linear-gradient(180deg,#f8f8f5 0px,#f8f8f5 8px,#e8e8e8 8px,#e8e8e8 10px);border:1px solid #e2e8f0"></div><div class="opt-label">White Shaker<div class="opt-code">VA-02 · With towel rail</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#d4c8b0;border:1px solid #c8bc9e"></div><div class="opt-label">Warm Beige<div class="opt-code">VA-03 · Soft stone</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#8a8878;border:1px solid #787665"></div><div class="opt-label">Taupe Grey<div class="opt-code">VA-04 · Flat-front</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:repeating-linear-gradient(180deg,#f8f8f5 0px,#f8f8f5 8px,#e8e8e8 8px,#e8e8e8 10px);border:1px solid #e2e8f0"></div><div class="opt-label">White Shaker<div class="opt-code">VA-05 · No towel rail</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#1a1a1a"></div><div class="opt-label" style="background:#fff">Matte Black<div class="opt-code">VA-06 · Black mirror</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#d4c8b0;border-top:6px solid #b0a488"></div><div class="opt-label">Beige Vessel Basin<div class="opt-code">VA-07 · Countertop</div></div></div>
+      </div>
+
+      <div style="font-size:0.85rem;font-weight:700;color:#0f172a;margin-top:20px;margin-bottom:10px">Shower Screens (SH-01 to SH-08)</div>
+      <p style="font-size:0.78rem;color:#64748b;margin-bottom:12px">Full-height glass screen — frosted for privacy, clear for an open feel, or fluted for texture.</p>
+      <div class="options-grid">
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,220,240,0.6);border:3px solid #1a1a1a;filter:blur(0.5px)"></div><div class="opt-label">Frosted Sliding<div class="opt-code">SH-01 · Black frame</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,220,240,0.6);border:3px solid #d0d0d0;filter:blur(0.5px)"></div><div class="opt-label">Frosted Sliding<div class="opt-code">SH-02 · Light frame</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,230,255,0.7);border:3px solid #1a1a1a"></div><div class="opt-label">Clear Sliding<div class="opt-code">SH-03 · Black frame</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,220,240,0.6);border:3px solid #d0d0d0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.3) 0px,rgba(255,255,255,0.3) 6px,transparent 6px,transparent 10px)"></div><div class="opt-label">Grid Sliding<div class="opt-code">SH-04 · White, frosted</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,220,240,0.6);border:3px solid #1a1a1a;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.3) 0px,rgba(255,255,255,0.3) 6px,transparent 6px,transparent 10px)"></div><div class="opt-label">Grid Sliding<div class="opt-code">SH-05 · Black, frosted</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,230,255,0.7);border:3px solid #1a1a1a;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.3) 0px,rgba(255,255,255,0.3) 6px,transparent 6px,transparent 10px)"></div><div class="opt-label">Grid Sliding<div class="opt-code">SH-06 · Black, clear</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,220,240,0.6);border:2px solid #888;background-image:repeating-linear-gradient(180deg,rgba(255,255,255,0.4) 0px,rgba(255,255,255,0.4) 4px,transparent 4px,transparent 8px)"></div><div class="opt-label">Slim Fluted Sliding<div class="opt-code">SH-07 · Ultra-narrow</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,220,240,0.6);border-left:2px solid #888;background-image:repeating-linear-gradient(180deg,rgba(255,255,255,0.4) 0px,rgba(255,255,255,0.4) 4px,transparent 4px,transparent 8px)"></div><div class="opt-label">Slim Fluted Hinged<div class="opt-code">SH-08 · Swing door</div></div></div>
+      </div>
+
+      <div style="font-size:0.85rem;font-weight:700;color:#0f172a;margin-top:20px;margin-bottom:10px">Bathroom Doors (BT-01 to BT-06)</div>
+      <p style="font-size:0.78rem;color:#64748b;margin-bottom:12px">Single hinged doors — frosted or fluted glass lets light through while keeping privacy.</p>
+      <div class="options-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,220,240,0.5);border:3px solid #d0d0d0;border-top:8px solid #d0d0d0;border-bottom:8px solid #d0d0d0"></div><div class="opt-label">Frosted Banded<div class="opt-code">BT-01 · White frame</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,220,240,0.5);border:3px solid #d0d0d0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.4) 0px,rgba(255,255,255,0.4) 5px,transparent 5px,transparent 10px)"></div><div class="opt-label">Frosted Grid<div class="opt-code">BT-02 · White frame</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,220,240,0.5);border:3px solid #1a1a1a;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.4) 0px,rgba(255,255,255,0.4) 5px,transparent 5px,transparent 10px)"></div><div class="opt-label">Frosted Grid<div class="opt-code">BT-03 · Black frame</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(180deg,rgba(200,220,240,0.5) 50%,rgba(200,220,240,0.3) 50%);border:3px solid #1a1a1a"></div><div class="opt-label">Frosted Split Panel<div class="opt-code">BT-04 · Black frame</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,220,240,0.5);border:1px solid #1a1a1a;background-image:repeating-linear-gradient(180deg,rgba(255,255,255,0.5) 0px,rgba(255,255,255,0.5) 3px,transparent 3px,transparent 6px)"></div><div class="opt-label">Slim Fluted<div class="opt-code">BT-05 · Black slim frame</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:rgba(200,220,240,0.5);border:1px solid #d0d0d0;background-image:repeating-linear-gradient(180deg,rgba(255,255,255,0.5) 0px,rgba(255,255,255,0.5) 3px,transparent 3px,transparent 6px)"></div><div class="opt-label">Slim Fluted<div class="opt-code">BT-06 · Light slim frame</div></div></div>
+      </div>
+    </div>
+
+    <!-- Kitchen -->
+    <div style="margin-bottom:36px">
+      <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:6px">Kitchen</h3>
+      <p style="font-size:0.82rem;color:#64748b;margin-bottom:14px">L-shaped kitchen with base cupboards, drawers and inset sink. Choose your cabinet style and benchtop colour (benchtop samples available on request — code KB).</p>
+      <div class="options-grid" style="grid-template-columns:repeat(4,1fr)">
+        <div class="opt-card"><div class="opt-swatch" style="background:repeating-linear-gradient(180deg,#f8f8f5 0px,#f8f8f5 12px,#e0e0e0 12px,#e0e0e0 14px);border:1px solid #e2e8f0"></div><div class="opt-label">White Shaker<div class="opt-code">KC-01 · Panelled doors</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#d4b896,#a07850)"></div><div class="opt-label">Natural Timber-Look<div class="opt-code">KC-02 · SS sink & mixer</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#f8f8f5;border:1px solid #e2e8f0;border-left:5px solid #1a1a1a"></div><div class="opt-label">White Handleless<div class="opt-code">KC-03 · Black accents</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#f8f8f5;border:1px solid #e2e8f0;border-bottom:5px solid #1a1a1a"></div><div class="opt-label">White Handleless L-Shape<div class="opt-code">KC-04 · Under-window</div></div></div>
+      </div>
+      <div style="margin-top:12px;padding:12px 14px;background:#f8fafc;border-radius:8px;border:1px solid #e2e8f0">
+        <span style="font-size:0.8rem;font-weight:600;color:#0f172a">Benchtop colours</span>
+        <span style="font-size:0.78rem;color:#64748b;margin-left:8px">Soft stone tones · Speckled greys · Terrazzo styles — ask us for the physical sample set (code KB)</span>
+      </div>
+    </div>
+
+    <!-- Flooring -->
+    <div style="margin-bottom:36px">
+      <h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:6px">Floor Coverings</h3>
+      <p style="font-size:0.82rem;color:#64748b;margin-bottom:14px">30 hard-wearing PVC vinyl options — timber looks (FL-01–08), speckled (FL-09–14), textured tones (FL-15–27) and bold solid colours (FL-28–30).</p>
+      <div style="margin-bottom:10px;font-size:0.75rem;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.05em">Timber Looks · FL-01 to FL-08</div>
+      <div class="options-grid" style="margin-bottom:16px">
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#c8a87a,#a07850,#c8a87a)"></div><div class="opt-label">Palm Wood<div class="opt-code">FL-01</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#e8dcc8,#d0c4a8,#e8dcc8)"></div><div class="opt-label">White Pine<div class="opt-code">FL-02</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#d4b890,#b89868,#d4b890)"></div><div class="opt-label">Paulownia Wood<div class="opt-code">FL-03</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#c8a870,#a07848,#c8a870)"></div><div class="opt-label">Light Chestnut<div class="opt-code">FL-04</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#e0d8c0,#c8c0a0,#e0d8c0)"></div><div class="opt-label">Maple Grain<div class="opt-code">FL-05</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#888078,#686058,#888078)"></div><div class="opt-label">Grey Firewood<div class="opt-code">FL-06</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#a89080,#807060,#a89080)"></div><div class="opt-label">Nanmu Wood<div class="opt-code">FL-07</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:linear-gradient(135deg,#b09878,#887858,#b09878)"></div><div class="opt-label">Cedar Wood<div class="opt-code">FL-08</div></div></div>
+      </div>
+      <div style="margin-bottom:10px;font-size:0.75rem;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.05em">Speckled Finishes · FL-09 to FL-14</div>
+      <div class="options-grid" style="margin-bottom:16px">
+        <div class="opt-card"><div class="opt-swatch" style="background:#b0a8a0;background-image:radial-gradient(circle,#887870 1px,transparent 1px);background-size:6px 6px"></div><div class="opt-label">Copper Grey<div class="opt-code">FL-09</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#6a8878;background-image:radial-gradient(circle,#485e50 1px,transparent 1px);background-size:6px 6px"></div><div class="opt-label">Jade Blue<div class="opt-code">FL-10</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#6880a0;background-image:radial-gradient(circle,#485870 1px,transparent 1px);background-size:6px 6px"></div><div class="opt-label">Mountain Blue<div class="opt-code">FL-11</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#808888;background-image:radial-gradient(circle,#606870 1px,transparent 1px);background-size:6px 6px"></div><div class="opt-label">Dusk Grey<div class="opt-code">FL-12</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#c8c090;background-image:radial-gradient(circle,#a0a060 1px,transparent 1px);background-size:6px 6px"></div><div class="opt-label">Straw Yellow<div class="opt-code">FL-13</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#989088;background-image:radial-gradient(circle,#787068 1px,transparent 1px);background-size:6px 6px"></div><div class="opt-label">Brick Grey<div class="opt-code">FL-14</div></div></div>
+      </div>
+      <div style="margin-bottom:10px;font-size:0.75rem;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.05em">Textured Tones · FL-15 to FL-27</div>
+      <div class="options-grid" style="margin-bottom:16px">
+        <div class="opt-card"><div class="opt-swatch" style="background:#e0dcd8"></div><div class="opt-label">Cloud & Mist<div class="opt-code">FL-15</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#1e3a5f"></div><div class="opt-label">Navy Blue<div class="opt-code">FL-16</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#4a7090"></div><div class="opt-label">Mediterranean Blue<div class="opt-code">FL-17</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#e8b878"></div><div class="opt-label">Apricot Yellow<div class="opt-code">FL-18</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#d4c8b0"></div><div class="opt-label">Beige<div class="opt-code">FL-19</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#808080"></div><div class="opt-label">Premium Grey<div class="opt-code">FL-20</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#a8c8d0"></div><div class="opt-label">Shallow Sea<div class="opt-code">FL-21</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#606878"></div><div class="opt-label">Space Grey<div class="opt-code">FL-22</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#d8c8a0"></div><div class="opt-label">Beach Sand<div class="opt-code">FL-23</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#2860a0"></div><div class="opt-label">Ocean Blue<div class="opt-code">FL-24</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#708098"></div><div class="opt-label">Light Ink<div class="opt-code">FL-25</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#d8ccb0"></div><div class="opt-label">Oat<div class="opt-code">FL-26</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#c8b888"></div><div class="opt-label">Soybean<div class="opt-code">FL-27</div></div></div>
+      </div>
+      <div style="margin-bottom:10px;font-size:0.75rem;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.05em">Bold Solid Colours · FL-28 to FL-30</div>
+      <div class="options-grid" style="grid-template-columns:repeat(3,1fr);max-width:360px">
+        <div class="opt-card"><div class="opt-swatch" style="background:#4a9050"></div><div class="opt-label">Apple Green<div class="opt-code">FL-28</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#2a6838"></div><div class="opt-label">Forest Green<div class="opt-code">FL-29</div></div></div>
+        <div class="opt-card"><div class="opt-swatch" style="background:#1848a0"></div><div class="opt-label">Sapphire Blue<div class="opt-code">FL-30</div></div></div>
+      </div>
+      <p style="font-size:0.75rem;color:#94a3b8;margin-top:10px">Colours shown are indicative only — confirm final choice against a physical sample.</p>
+    </div>
+
+        <!-- Download booklet CTA -->
+    <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:24px;display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+      <div style="flex:1">
+        <div style="font-weight:700;color:#0f172a;margin-bottom:4px">📋 Full Model & Finish Guide</div>
+        <div style="font-size:0.83rem;color:#64748b">Download our complete 16-page guide with all option codes, floor plans and how to submit your selections.</div>
+      </div>
+      <a href="index.html#contact" style="background:#2563eb;color:#fff;padding:10px 20px;border-radius:7px;font-weight:700;font-size:0.85rem;white-space:nowrap">Request the Guide →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <h2>Ready to order your 10ft home?</h2>
+  <p>View the display unit in Waterford, Brisbane or send an enquiry and we'll get back to you within one business day.</p>
+  <a href="index.html#contact">Get a quote</a>
+  <a href="index.html#display" class="sec">Book a viewing</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">Not So Tiny Homes</div>
+  <div class="foot-contact">
+    <span>📞 0405 274 801</span>
+    <span>✉️ info@notsotinyhomes.com.au</span>
+    <span>📍 Waterford, Brisbane QLD</span>
+  </div>
+  <div class="foot-abn">© 2026 Kiteworks Pty Ltd · ABN 99 692 292 274 t/a Not So Tiny Homes</div>
+</footer>
+
+<script>
+// Exterior gallery
+function initGal(id, dotsId, thumbRowId) {
+  const wrap = document.getElementById(id);
+  const dots = document.getElementById(dotsId);
+  if(!wrap || !dots) return;
+  const imgs = Array.from(wrap.querySelectorAll('img')).filter(i => !i.style.display || i.style.display !== 'none');
+  imgs.forEach((img, i) => {
+    const d = document.createElement('button');
+    d.className = 'gdot' + (i===0?' on':'');
+    d.onclick = () => showGal(id, i);
+    dots.appendChild(d);
+  });
+  const thumbRow = document.getElementById(thumbRowId);
+  if(thumbRow) {
+    imgs.forEach((img, i) => {
+      const t = document.createElement('img');
+      t.src = img.src; t.className = 'thumb' + (i===0?' on':'');
+      t.alt = img.alt;
+      t.onclick = () => showGal(id, i);
+      thumbRow.appendChild(t);
+    });
+  }
+}
+function showGal(id, i) {
+  const wrap = document.getElementById(id);
+  const imgs = Array.from(wrap.querySelectorAll('img')).filter(el => !el.style.display || el.style.display !== 'none');
+  const dots = wrap.querySelectorAll('.gdot');
+  imgs.forEach(el => el.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('on'));
+  if(imgs[i]) imgs[i].classList.add('active');
+  if(dots[i]) dots[i].classList.add('on');
+  // sync thumbs
+  const row = wrap.nextElementSibling;
+  if(row && row.classList.contains('thumb-row')) {
+    Array.from(row.querySelectorAll('.thumb')).forEach((t,j) => t.classList.toggle('on', j===i));
+  }
+}
+function galNav(id, dir) {
+  const wrap = document.getElementById(id);
+  const imgs = Array.from(wrap.querySelectorAll('img')).filter(el => !el.style.display || el.style.display !== 'none');
+  const cur = imgs.findIndex(i => i.classList.contains('active'));
+  showGal(id, (cur + dir + imgs.length) % imgs.length);
+}
+
+// Interior auto-gallery
+let intCur2 = 0, intTimer2;
+function initInt2() {
+  const slides = document.querySelectorAll('#intgal2 .slide');
+  const dots = document.getElementById('intdots2');
+  if(!dots) return;
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'gdot' + (i===0?' on':'');
+    d.onclick = () => { clearInterval(intTimer2); showInt2(i); };
+    dots.appendChild(d);
+  });
+  intTimer2 = setInterval(() => showInt2((intCur2 + 1) % slides.length), 4000);
+}
+function showInt2(i) {
+  const slides = document.querySelectorAll('#intgal2 .slide');
+  const dots = document.querySelectorAll('#intdots2 .gdot');
+  slides.forEach(s => s.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('on'));
+  if(slides[i]) slides[i].classList.add('active');
+  if(dots[i]) dots[i].classList.add('on');
+  intCur2 = i;
+}
+function intNav2(dir) {
+  clearInterval(intTimer2);
+  const slides = document.querySelectorAll('#intgal2 .slide');
+  showInt2((intCur2 + dir + slides.length) % slides.length);
+  intTimer2 = setInterval(() => showInt2((intCur2 + 1) % slides.length), 4000);
+}
+
+// Config tabs
+function showConfig(i) {
+  document.querySelectorAll('.config-tab').forEach((t,j) => t.classList.toggle('on', i===j));
+  document.querySelectorAll('.config-panel').forEach((p,j) => p.classList.toggle('on', i===j));
+}
+
+// Mobile nav
+document.addEventListener('click', e => {
+  const nav = document.getElementById('mobnav');
+  const btn = document.getElementById('hamburger');
+  if(nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target))
+    nav.classList.remove('open');
+});
+
+initGal('extgal','extgaldots','extthumbrow');
+initInt2();
+</script>
+</body>
+</html>
