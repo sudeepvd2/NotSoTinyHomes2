@@ -175,25 +175,53 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
   </div>
 </div>
 
-<!-- PHOTO GALLERY -->
+<!-- EXTERIOR PHOTOS -->
 <section class="sec" style="background:#f8fafc;padding-bottom:32px">
   <div class="sec-i">
-    <div class="sec-title">Photos</div>
-    <div class="sec-sub">Exterior and interior views</div>
-    <div class="gallery-wrap" id="maingal">
-      <img src="freedom_20ft_01.jpg" class="active" alt="20ft exterior">
-      <img src="freedom_20ft_02.png" alt="20ft angle">
-      <img src="freedom_20ft_03.jpg" alt="20ft exterior 3">
-      <img src="20ft_interior_01.jpg" alt="20ft interior" onerror="this.style.display='none'">
-      <img src="20ft_interior_02.jpg" alt="20ft kitchen" onerror="this.style.display='none'">
-      <img src="20ft_interior_03.jpg" alt="20ft bedroom" onerror="this.style.display='none'">
-      <img src="20ft_interior_04.jpg" alt="20ft bathroom" onerror="this.style.display='none'">
-      <img src="20ft_interior_05.jpg" alt="20ft living" onerror="this.style.display='none'">
-      <button class="gal-arr gal-prev" onclick="galNav('maingal',-1)">‹</button>
-      <button class="gal-arr gal-next" onclick="galNav('maingal',1)">›</button>
-      <div class="gal-dots" id="maingaldots"></div>
+    <div class="sec-title">Exterior</div>
+    <div class="sec-sub">Outside views — folded for delivery, expanded on site</div>
+    <div class="gallery-wrap" id="extgal">
+      <img src="freedom_20ft_01.jpg" class="active" alt="20ft exterior front">
+      <img src="freedom_20ft_02.png" alt="20ft exterior angle">
+      <img src="freedom_20ft_03.jpg" alt="20ft exterior side">
+      <button class="gal-arr gal-prev" onclick="galNav('extgal',-1)">‹</button>
+      <button class="gal-arr gal-next" onclick="galNav('extgal',1)">›</button>
+      <div class="gal-dots" id="extgaldots"></div>
     </div>
-    <div class="thumb-row" id="thumbrow"></div>
+    <div class="thumb-row" id="extthumbrow"></div>
+  </div>
+</section>
+
+<!-- INTERIOR PHOTOS -->
+<section class="sec" style="background:#fff;padding-bottom:32px">
+  <div class="sec-i">
+    <div class="sec-title">Interior</div>
+    <div class="sec-sub">Kitchen, bathroom, bedroom and living spaces</div>
+    <div class="int-gallery" id="intgal2">
+      <div class="slide active">
+        <img class="int-slide-img" src="20ft_interior_01.jpg" alt="Living area"
+             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🛋️</div><p>Kitchen &amp; Living Area<br>Open plan L-shaped kitchen with stainless sink, dining and living space with windows on three sides</p></div>'">
+      </div>
+      <div class="slide">
+        <img class="int-slide-img" src="20ft_interior_02.jpg" alt="Kitchen"
+             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🍳</div><p>Kitchen<br>L-shaped bench with stainless steel sink. Choose from 4 cupboard styles and stone-look benchtops</p></div>'">
+      </div>
+      <div class="slide">
+        <img class="int-slide-img" src="20ft_interior_03.jpg" alt="Bedroom 1"
+             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🛏️</div><p>Bedroom 1<br>~2.09 × 3.16m — fits a double or queen bed. Choose from 11 door styles</p></div>'">
+      </div>
+      <div class="slide">
+        <img class="int-slide-img" src="20ft_interior_04.jpg" alt="Bathroom"
+             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🚿</div><p>Bathroom<br>Shower, toilet and vanity. Choose vanity style, shower screen and bathroom door</p></div>'">
+      </div>
+      <div class="slide">
+        <img class="int-slide-img" src="20ft_interior_05.jpg" alt="Bedroom 2"
+             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🛏️</div><p>Bedroom 2<br>~2.09 × 2.30m — guest room, kids room or study</p></div>'">
+      </div>
+      <button class="int-arr int-prev" onclick="intNav2(-1)">‹</button>
+      <button class="int-arr int-next" onclick="intNav2(1)">›</button>
+      <div class="int-auto-dots" id="intdots2"></div>
+    </div>
   </div>
 </section>
 
@@ -270,39 +298,6 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- INTERIOR PHOTOS -->
-<section class="sec" style="background:#f8fafc" id="interior">
-  <div class="sec-i">
-    <div class="sec-title">Interior</div>
-    <div class="sec-sub">Kitchen, bathroom, bedroom and living spaces</div>
-    <div class="int-gallery" id="intgal">
-      <div class="slide active">
-        <img class="int-slide-img" src="20ft_interior_01.jpg" alt="Interior"
-             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🛋️</div><p>Kitchen &amp; Living Area<br>Fully fitted L-shaped kitchen with stainless sink, open plan dining and living space with windows on three sides</p></div>'">
-      </div>
-      <div class="slide">
-        <img class="int-slide-img" src="20ft_interior_02.jpg" alt="Kitchen"
-             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🍳</div><p>Kitchen<br>L-shaped kitchen bench with stainless steel sink. Choose from 4 cupboard styles and stone-look benchtops</p></div>'">
-      </div>
-      <div class="slide">
-        <img class="int-slide-img" src="20ft_interior_03.jpg" alt="Bedroom"
-             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🛏️</div><p>Bedroom 1<br>~2.09 × 3.16m — fits a double or queen bed with bedside tables. Choose from 11 door styles</p></div>'">
-      </div>
-      <div class="slide">
-        <img class="int-slide-img" src="20ft_interior_04.jpg" alt="Bathroom"
-             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🚿</div><p>Bathroom<br>Shower, toilet and vanity. Choose your vanity style, shower screen and bathroom door from multiple options</p></div>'">
-      </div>
-      <div class="slide">
-        <img class="int-slide-img" src="20ft_interior_05.jpg" alt="Bedroom 2"
-             onerror="this.parentElement.innerHTML='<div class=int-slide-placeholder><div>🛏️</div><p>Bedroom 2<br>~2.09 × 2.30m — guest room, kids room or study. Same door style choices as bedroom 1</p></div>'">
-      </div>
-      <button class="int-arr int-prev" onclick="intNav(-1)">‹</button>
-      <button class="int-arr int-next" onclick="intNav(1)">›</button>
-      <div class="int-auto-dots" id="intdots"></div>
     </div>
   </div>
 </section>
@@ -542,23 +537,21 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 </footer>
 
 <script>
-// Main gallery
-function initGal(id, dotsId) {
+// Exterior gallery
+function initGal(id, dotsId, thumbRowId) {
   const wrap = document.getElementById(id);
   const dots = document.getElementById(dotsId);
   if(!wrap || !dots) return;
-  const imgs = Array.from(wrap.querySelectorAll('img'));
-  const valid = imgs.filter(i => !i.style.display || i.style.display !== 'none');
-  valid.forEach((img, i) => {
+  const imgs = Array.from(wrap.querySelectorAll('img')).filter(i => !i.style.display || i.style.display !== 'none');
+  imgs.forEach((img, i) => {
     const d = document.createElement('button');
     d.className = 'gdot' + (i===0?' on':'');
     d.onclick = () => showGal(id, i);
     dots.appendChild(d);
   });
-  // build thumb row
-  const thumbRow = document.getElementById('thumbrow');
+  const thumbRow = document.getElementById(thumbRowId);
   if(thumbRow) {
-    valid.forEach((img, i) => {
+    imgs.forEach((img, i) => {
       const t = document.createElement('img');
       t.src = img.src; t.className = 'thumb' + (i===0?' on':'');
       t.alt = img.alt;
@@ -571,13 +564,15 @@ function showGal(id, i) {
   const wrap = document.getElementById(id);
   const imgs = Array.from(wrap.querySelectorAll('img')).filter(el => !el.style.display || el.style.display !== 'none');
   const dots = wrap.querySelectorAll('.gdot');
-  const thumbs = document.querySelectorAll('.thumb');
   imgs.forEach(el => el.classList.remove('active'));
   dots.forEach(d => d.classList.remove('on'));
-  thumbs.forEach(t => t.classList.remove('on'));
   if(imgs[i]) imgs[i].classList.add('active');
   if(dots[i]) dots[i].classList.add('on');
-  if(thumbs[i]) thumbs[i].classList.add('on');
+  // sync thumbs
+  const row = wrap.nextElementSibling;
+  if(row && row.classList.contains('thumb-row')) {
+    Array.from(row.querySelectorAll('.thumb')).forEach((t,j) => t.classList.toggle('on', j===i));
+  }
 }
 function galNav(id, dir) {
   const wrap = document.getElementById(id);
@@ -587,32 +582,33 @@ function galNav(id, dir) {
 }
 
 // Interior auto-gallery
-let intCur = 0, intTimer;
-function initInt() {
-  const slides = document.querySelectorAll('#intgal .slide');
-  const dots = document.getElementById('intdots');
+let intCur2 = 0, intTimer2;
+function initInt2() {
+  const slides = document.querySelectorAll('#intgal2 .slide');
+  const dots = document.getElementById('intdots2');
+  if(!dots) return;
   slides.forEach((_, i) => {
     const d = document.createElement('button');
     d.className = 'gdot' + (i===0?' on':'');
-    d.onclick = () => { clearInterval(intTimer); showInt(i); };
+    d.onclick = () => { clearInterval(intTimer2); showInt2(i); };
     dots.appendChild(d);
   });
-  intTimer = setInterval(() => showInt((intCur + 1) % slides.length), 4000);
+  intTimer2 = setInterval(() => showInt2((intCur2 + 1) % slides.length), 4000);
 }
-function showInt(i) {
-  const slides = document.querySelectorAll('#intgal .slide');
-  const dots = document.querySelectorAll('#intdots .gdot');
+function showInt2(i) {
+  const slides = document.querySelectorAll('#intgal2 .slide');
+  const dots = document.querySelectorAll('#intdots2 .gdot');
   slides.forEach(s => s.classList.remove('active'));
   dots.forEach(d => d.classList.remove('on'));
   if(slides[i]) slides[i].classList.add('active');
   if(dots[i]) dots[i].classList.add('on');
-  intCur = i;
+  intCur2 = i;
 }
-function intNav(dir) {
-  clearInterval(intTimer);
-  const slides = document.querySelectorAll('#intgal .slide');
-  showInt((intCur + dir + slides.length) % slides.length);
-  intTimer = setInterval(() => showInt((intCur + 1) % slides.length), 4000);
+function intNav2(dir) {
+  clearInterval(intTimer2);
+  const slides = document.querySelectorAll('#intgal2 .slide');
+  showInt2((intCur2 + dir + slides.length) % slides.length);
+  intTimer2 = setInterval(() => showInt2((intCur2 + 1) % slides.length), 4000);
 }
 
 // Config tabs
@@ -629,8 +625,8 @@ document.addEventListener('click', e => {
     nav.classList.remove('open');
 });
 
-initGal('maingal','maingaldots');
-initInt();
+initGal('extgal','extgaldots','extthumbrow');
+initInt2();
 </script>
 </body>
 </html>
