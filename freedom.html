@@ -32,12 +32,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .sec-i{max-width:1160px;margin:0 auto}
 
 /* HERO */
-.hero-band{background:linear-gradient(135deg,#1e3a5f 0%,#2563eb 100%);padding:100px 5% 48px;color:#fff}
-.hero-band-i{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-band{background:linear-gradient(135deg,#1e3a5f 0%,#2563eb 100%);padding:48px 5%;color:#fff}
+.hero-band-i{max-width:1160px;margin:0 auto}.hero-two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-top:24px}@media(max-width:900px){.hero-two-col{grid-template-columns:1fr}}
 .hero-badge{display:inline-block;background:rgba(255,255,255,0.15);color:#fff;font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:4px;margin-bottom:14px}
 .hero-band h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.1;margin-bottom:12px}
 .hero-band p{font-size:0.93rem;color:rgba(255,255,255,0.75);line-height:1.75;margin-bottom:24px}
-.hero-stats{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap;margin-bottom:28px}
 .hero-stat{text-align:left}
 .hero-stat-n{font-size:1.4rem;font-weight:800;color:#fff}
 .hero-stat-l{font-size:0.7rem;color:rgba(255,255,255,0.6);margin-top:2px}
@@ -130,6 +130,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 
 .model-section{scroll-margin-top:108px}
 .model-divider{height:4px;background:linear-gradient(90deg,#1e3a5f,#2563eb,#1e3a5f)}
+body{padding-top:106px}
 .sw-link{padding:13px 22px;font-size:0.83rem;font-weight:600;color:rgba(255,255,255,0.55);white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none;flex-shrink:0;transition:color .2s,border-color .2s;display:block}
 .sw-link.active{color:#fff;border-bottom-color:#f59e0b}
 .sw-link:hover{color:rgba(255,255,255,0.9)}
@@ -158,7 +159,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 </div>
 
 <!-- STICKY MODEL SWITCHER -->
-<div style="background:#1e3a5f;position:sticky;top:60px;z-index:90;border-bottom:1px solid rgba(255,255,255,0.1)">
+<div style="background:#1e3a5f;position:fixed;top:60px;left:0;right:0;z-index:89;border-bottom:1px solid rgba(255,255,255,0.1)">
   <div style="max-width:1160px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch">
     <a href="#model-10ft" class="sw-link" id="sw-10ft" onclick="return scrollTo('model-10ft')">10ft <span style="font-size:0.72rem;opacity:0.7;margin-left:4px">$17,000</span></a>
     <a href="#model-20ft" class="sw-link" id="sw-20ft" onclick="return scrollTo('model-20ft')">20ft <span style="font-size:0.72rem;opacity:0.7;margin-left:4px">$26,000</span></a>
@@ -173,6 +174,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <!-- HERO -->
 <div class="hero-band">
   <div class="hero-band-i">
+    <div class="hero-two-col">
     <div>
       <div class="hero-badge">Freedom Series</div>
       <h1>10ft Expandable Home</h1>
@@ -189,10 +191,23 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
         <a href="#options" class="btn-outline">View all options ↓</a>
       </div>
     </div>
-    <div class="hero-img">
-      <img src="freedom_20ft_01.jpg" alt="Freedom 20ft expandable home" >
+    <div style="background:rgba(255,255,255,0.08);border-radius:10px;padding:20px 24px">
+      <div style="font-size:0.78rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:14px">What's included</div>
+      <div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Pre-wired (Australian standard)</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Pre-plumbed</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Electric water heater</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Double-glazed windows with fly screens</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Full L-shaped kitchen with stainless sink</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>SPC vinyl flooring</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Insulated walls, floor & ceiling</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>2–4 bedrooms + 2 bathrooms</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>12 month manufacturer warranty</div>
     </div>
-  </div>
+    <div style="background:rgba(255,255,255,0.08);border-radius:10px;padding:20px 24px">
+      <div style="font-size:0.78rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:14px">What's included</div>
+      <div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Pre-wired (Australian standard)</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Pre-plumbed</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Electric water heater</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Double-glazed windows with fly screens</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>L-shaped kitchen with stainless sink</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>SPC vinyl flooring</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Insulated walls, floor & ceiling</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>2–3 bedrooms + 1 bathroom</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>12 month manufacturer warranty</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);border-radius:10px;padding:20px 24px">
+      <div style="font-size:0.78rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:14px">What's included</div>
+      <div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Pre-wired (Australian standard)</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Pre-plumbed</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Electric water heater</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Double-glazed windows with fly screens</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>L-shaped kitchen with stainless sink</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>SPC vinyl flooring</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Insulated walls, floor & ceiling</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>2 bedrooms + 1 bathroom</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>12 month manufacturer warranty</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.08);border-radius:10px;padding:20px 24px">
+      <div style="font-size:0.78rem;font-weight:700;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:14px">What's included</div>
+      <div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Pre-wired (Australian standard)</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Pre-plumbed</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Electric water heater</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Double-glazed windows with fly screens</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Compact kitchen with sink</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>SPC vinyl flooring</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>Insulated walls, floor & ceiling</div><div style="font-size:0.82rem;color:rgba(255,255,255,0.8);display:flex;gap:8px;align-items:flex-start;margin-bottom:8px"><span style="color:#f59e0b;flex-shrink:0">✓</span>12 month manufacturer warranty</div>
+    </div>
+</div>
 </div>
 
 <!-- EXTERIOR PHOTOS -->
@@ -329,6 +344,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <!-- HERO -->
 <div class="hero-band">
   <div class="hero-band-i">
+    <div class="hero-two-col">
     <div>
       <div class="hero-badge">Freedom Series</div>
       <h1>20ft Expandable Home</h1>
@@ -345,10 +361,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
         <a href="#options" class="btn-outline">View all options ↓</a>
       </div>
     </div>
-    <div class="hero-img">
-      <img src="freedom_20ft_01.jpg" alt="Freedom 20ft expandable home" onerror="this.src='freedom_20ft_03.jpg'">
-    </div>
-  </div>
+</div>
 </div>
 
 <!-- EXTERIOR PHOTOS -->
@@ -492,6 +505,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <!-- HERO -->
 <div class="hero-band">
   <div class="hero-band-i">
+    <div class="hero-two-col">
     <div>
       <div class="hero-badge">Freedom Series</div>
       <h1>30ft Expandable Home</h1>
@@ -508,10 +522,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
         <a href="#options" class="btn-outline">View all options ↓</a>
       </div>
     </div>
-    <div class="hero-img">
-      <img src="freedom_20ft_01.jpg" alt="Freedom 20ft expandable home" >
-    </div>
-  </div>
+</div>
 </div>
 
 <!-- EXTERIOR PHOTOS -->
@@ -646,6 +657,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <!-- HERO -->
 <div class="hero-band">
   <div class="hero-band-i">
+    <div class="hero-two-col">
     <div>
       <div class="hero-badge">Freedom Series</div>
       <h1>40ft Expandable Home</h1>
@@ -662,10 +674,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
         <a href="#options" class="btn-outline">View all options ↓</a>
       </div>
     </div>
-    <div class="hero-img">
-      <img src="freedom_20ft_01.jpg" alt="Freedom 20ft expandable home" >
-    </div>
-  </div>
+</div>
 </div>
 
 <!-- EXTERIOR PHOTOS -->
