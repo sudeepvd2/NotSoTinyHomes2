@@ -45,8 +45,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn-white{background:#fff;color:#1e3a5f;padding:12px 24px;border-radius:8px;font-weight:700;font-size:0.88rem;display:inline-block}
 .btn-outline{border:2px solid rgba(255,255,255,0.4);color:#fff;padding:12px 24px;border-radius:8px;font-weight:600;font-size:0.88rem;display:inline-block}
-.hero-img{border-radius:12px;overflow:hidden;position:relative;height:380px}
-.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero-img{position:relative;height:380px;display:flex;align-items:center;justify-content:center}
+.hero-img img{width:100%;height:100%;object-fit:contain;object-position:center;mix-blend-mode:luminosity;filter:brightness(1.1) contrast(1.05)}
 
 /* GALLERY */
 .gallery-wrap{position:relative;border-radius:12px;overflow:hidden;background:#f1f5f9}
@@ -160,7 +160,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
       <div class="hero-stats">
         <div class="hero-stat"><div class="hero-stat-n">6.35×5.9m</div><div class="hero-stat-l">Expanded size</div></div>
         <div class="hero-stat"><div class="hero-stat-n">~37m²</div><div class="hero-stat-l">Floor area</div></div>
-        <div class="hero-stat"><div class="hero-stat-n">2.4m</div><div class="hero-stat-l">Ceiling height</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">2.2–2.4m</div><div class="hero-stat-l">Ceiling height</div></div>
         <div class="hero-stat"><div class="hero-stat-n">~3.5T</div><div class="hero-stat-l">Weight</div></div>
       </div>
       <div class="hero-price"><span>From</span><strong>$26,000</strong><span>incl. GST</span></div>
@@ -208,7 +208,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
           <tr><td>Expanded size</td><td>6.35 × 5.9m</td></tr>
           <tr><td>Floor area</td><td>~37m²</td></tr>
           <tr><td>Folded size</td><td>6m × 2.4m × 2.9m</td></tr>
-          <tr><td>Ceiling height</td><td>2.4m</td></tr>
+          <tr><td>Ceiling height</td><td>2.2m – 2.4m</td></tr>
           <tr><td>Weight</td><td>~3.5 tonnes</td></tr>
           <tr><td>Bedrooms</td><td>2</td></tr>
           <tr><td>Bathrooms</td><td>1 (shower, toilet, vanity)</td></tr>
