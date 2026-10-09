@@ -130,6 +130,17 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 
 .model-section{scroll-margin-top:108px}
 .model-divider{height:4px;background:linear-gradient(90deg,#1e3a5f,#2563eb,#1e3a5f)}
+/* Gallery side-by-side */
+.gallery-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.gallery-pair .gallery-wrap{margin:0}
+@media(max-width:700px){.gallery-pair{grid-template-columns:1fr}}
+/* All gallery images cover their box */
+.gallery-wrap img,.gallery-main img,.gal-img img{width:100%;height:320px;object-fit:cover;border-radius:10px;display:block}
+.gal-img{width:100%;height:320px;overflow:hidden;border-radius:10px;position:relative}
+.gal-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slide img{width:100%;height:320px;object-fit:cover;border-radius:10px}
+.thumb{width:64px;height:48px;object-fit:cover;border-radius:5px;cursor:pointer;opacity:0.6;border:2px solid transparent}
+.thumb.on{opacity:1;border-color:#2563eb}
 body{padding-top:106px}
 .sw-link{padding:13px 22px;font-size:0.83rem;font-weight:600;color:rgba(255,255,255,0.55);white-space:nowrap;border-bottom:3px solid transparent;text-decoration:none;flex-shrink:0;transition:color .2s,border-color .2s;display:block}
 .sw-link.active{color:#fff;border-bottom-color:#f59e0b}
@@ -140,11 +151,13 @@ body{padding-top:106px}
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo">Not So Tiny Homes</div>
+  <div class="nav-logo"><a href="index.html" style="color:inherit;text-decoration:none">Not So Tiny Homes</a></div>
   <div class="nav-links">
-    <a href="index.html" class="nav-back">← Back</a>
-    <a href="index.html#class1a">Certified Series</a>
+    <a href="index.html#models" class="nav-active">Relocatable Homes</a>
+    <a href="index.html#class1a">Certified (Class 1a)</a>
     <a href="index.html#sitebox">Site Office</a>
+    <a href="index.html#display">Display</a>
+    <a href="index.html#faq">FAQ</a>
     <a href="index.html#contact" class="nav-cta">Get a Quote</a>
   </div>
   <button class="hamburger" id="hamburger" onclick="document.getElementById('mobnav').classList.toggle('open')">
@@ -152,9 +165,11 @@ body{padding-top:106px}
   </button>
 </nav>
 <div class="mob-nav" id="mobnav">
-  <a href="index.html">← Back to Home</a>
-  <a href="index.html#class1a">Certified Series</a>
+  <a href="index.html#models">Relocatable Homes</a>
+  <a href="index.html#class1a">Certified (Class 1a)</a>
   <a href="index.html#sitebox">Site Office</a>
+  <a href="index.html#display">Display</a>
+  <a href="index.html#faq">FAQ</a>
   <a href="index.html#contact">Get a Quote</a>
 </div>
 
@@ -172,7 +187,7 @@ body{padding-top:106px}
 <!-- 10FT -->
 <div id="model-10ft" class="model-section">
 <!-- HERO -->
-<div class="hero-band">
+<div class="hero-band" style="background:linear-gradient(135deg,#134e4a 0%,#0f766e 100%)">
 <div class="hero-band-i">
   <div class="hero-two-col">
     <div>
@@ -200,6 +215,11 @@ body{padding-top:106px}
 </div>
 
 <!-- EXTERIOR PHOTOS -->
+
+<div class="sec-i" style="max-width:1280px;margin:32px auto;padding:0 5%">
+<div class="gallery-pair">
+<div>
+<div style="font-size:0.75rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Exterior</div>
 <section class="sec" style="background:#f8fafc;padding-bottom:32px">
   <div class="sec-i">
     <div class="sec-title">Exterior</div>
@@ -214,8 +234,9 @@ body{padding-top:106px}
     <div class="thumb-row" id="extthumbrow-10ft"></div>
   </div>
 </section>
-
-<!-- INTERIOR PHOTOS -->
+</div>
+<div>
+<div style="font-size:0.75rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Interior</div>
 <section class="sec" style="background:#fff;padding-bottom:32px">
   <div class="sec-i">
     <div class="sec-title">Interior</div>
@@ -247,6 +268,10 @@ body{padding-top:106px}
     </div>
   </div>
 </section>
+</div>
+</div>
+</div>
+
 
 <!-- SPECIFICATIONS -->
 <section class="sec">
@@ -331,7 +356,7 @@ body{padding-top:106px}
 <!-- 20FT -->
 <div id="model-20ft" class="model-section">
 <!-- HERO -->
-<div class="hero-band">
+<div class="hero-band" style="background:linear-gradient(135deg,#1e3a5f 0%,#2563eb 100%)">
 <div class="hero-band-i">
   <div class="hero-two-col">
     <div>
@@ -359,6 +384,11 @@ body{padding-top:106px}
 </div>
 
 <!-- EXTERIOR PHOTOS -->
+
+<div class="sec-i" style="max-width:1280px;margin:32px auto;padding:0 5%">
+<div class="gallery-pair">
+<div>
+<div style="font-size:0.75rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Exterior</div>
 <section class="sec" style="background:#f8fafc;padding-bottom:32px">
   <div class="sec-i">
     <div class="sec-title">Exterior</div>
@@ -374,8 +404,9 @@ body{padding-top:106px}
     <div class="thumb-row" id="extthumbrow-20ft"></div>
   </div>
 </section>
-
-<!-- INTERIOR PHOTOS -->
+</div>
+<div>
+<div style="font-size:0.75rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Interior</div>
 <section class="sec" style="background:#fff;padding-bottom:32px">
   <div class="sec-i">
     <div class="sec-title">Interior</div>
@@ -407,6 +438,10 @@ body{padding-top:106px}
     </div>
   </div>
 </section>
+</div>
+</div>
+</div>
+
 
 <!-- SPECIFICATIONS -->
 <section class="sec">
@@ -497,7 +532,7 @@ body{padding-top:106px}
 <!-- 30FT -->
 <div id="model-30ft" class="model-section">
 <!-- HERO -->
-<div class="hero-band">
+<div class="hero-band" style="background:linear-gradient(135deg,#4c1d95 0%,#7c3aed 100%)">
 <div class="hero-band-i">
   <div class="hero-two-col">
     <div>
@@ -525,6 +560,11 @@ body{padding-top:106px}
 </div>
 
 <!-- EXTERIOR PHOTOS -->
+
+<div class="sec-i" style="max-width:1280px;margin:32px auto;padding:0 5%">
+<div class="gallery-pair">
+<div>
+<div style="font-size:0.75rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Exterior</div>
 <section class="sec" style="background:#f8fafc;padding-bottom:32px">
   <div class="sec-i">
     <div class="sec-title">Exterior</div>
@@ -541,8 +581,9 @@ body{padding-top:106px}
     <div class="thumb-row" id="extthumbrow-30ft"></div>
   </div>
 </section>
-
-<!-- INTERIOR PHOTOS -->
+</div>
+<div>
+<div style="font-size:0.75rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Interior</div>
 <section class="sec" style="background:#fff;padding-bottom:32px">
   <div class="sec-i">
     <div class="sec-title">Interior</div>
@@ -560,6 +601,10 @@ body{padding-top:106px}
     </div>
   </div>
 </section>
+</div>
+</div>
+</div>
+
 
 <!-- SPECIFICATIONS -->
 <section class="sec">
@@ -654,7 +699,7 @@ body{padding-top:106px}
 <!-- 40FT -->
 <div id="model-40ft" class="model-section">
 <!-- HERO -->
-<div class="hero-band">
+<div class="hero-band" style="background:linear-gradient(135deg,#7c2d12 0%,#c2410c 100%)">
 <div class="hero-band-i">
   <div class="hero-two-col">
     <div>
@@ -682,6 +727,11 @@ body{padding-top:106px}
 </div>
 
 <!-- EXTERIOR PHOTOS -->
+
+<div class="sec-i" style="max-width:1280px;margin:32px auto;padding:0 5%">
+<div class="gallery-pair">
+<div>
+<div style="font-size:0.75rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Exterior</div>
 <section class="sec" style="background:#f8fafc;padding-bottom:32px">
   <div class="sec-i">
     <div class="sec-title">Exterior</div>
@@ -698,8 +748,9 @@ body{padding-top:106px}
     <div class="thumb-row" id="extthumbrow-40ft"></div>
   </div>
 </section>
-
-<!-- INTERIOR PHOTOS -->
+</div>
+<div>
+<div style="font-size:0.75rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Interior</div>
 <section class="sec" style="background:#fff;padding-bottom:32px">
   <div class="sec-i">
     <div class="sec-title">Interior</div>
@@ -726,6 +777,10 @@ body{padding-top:106px}
     </div>
   </div>
 </section>
+</div>
+</div>
+</div>
+
 
 <!-- SPECIFICATIONS -->
 <section class="sec">
