@@ -227,9 +227,24 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
   .layout-tab{font-size:0.65rem;padding:3px 8px}
 }
 
+/* TABLET PORTRAIT */
+@media(max-width:768px){
+  .hero-new{padding:80px 4% 36px;min-height:auto}
+  .models-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .proc-grid{grid-template-columns:1fr 1fr}
+  .c1a-grid,.disp-grid,.contact-grid{grid-template-columns:1fr}
+  .freedom-intro-grid{grid-template-columns:1fr}
+  .foot-contact{flex-direction:column;gap:6px;align-items:center}
+  .hero-btns{flex-wrap:wrap;gap:10px}
+}
+/* MOBILE */
 @media(max-width:380px){
   .models-grid,.proc-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
   .sec-hdr h2{font-size:1.3rem}
+  .hero-btns{flex-direction:column;align-items:stretch}
+  .btn-primary-hero,.btn-ghost-hero{text-align:center;width:100%}
 }
 
 /* Fix Issue 3 — prevent horizontal overflow */
