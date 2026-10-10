@@ -8,7 +8,7 @@
 <meta property="og:url" content="https://notsotinyhomes.com.au/certified.html">
 <meta property="og:title" content="Certified Granny Flats Brisbane | Not So Tiny Homes">
 <meta property="og:description" content="4-bed NCC Class 1a granny flats, engineered and certified for Brisbane and SEQ blocks. Clear pricing from home-only to turnkey.">
-<meta property="og:image" content="https://notsotinyhomes.com.au/main.jpg">
+<meta property="og:image" content="https://notsotinyhomes.com.au/images/og-certified.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Certified Granny Flats Brisbane | Not So Tiny Homes">
 <meta name="twitter:description" content="4-bed NCC Class 1a granny flats, engineered and certified for Brisbane and SEQ blocks. Clear pricing from home-only to turnkey.">
@@ -16,10 +16,9 @@
 <title>Certified Granny Flats Brisbane | Not So Tiny Homes</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-html,body{overflow-x:hidden}
-body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased;padding-top:60px}
+body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
 
@@ -28,99 +27,122 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-logo{font-weight:800;font-size:1.1rem;color:#1e293b}
 .nav-links{display:flex;align-items:center;gap:24px}
 .nav-links a{font-size:0.83rem;font-weight:600;color:#64748b}
-.nav-links a:hover,.nav-links a.on{color:#1e293b}
-.nav-cta{background:#2563eb;color:#fff!important;padding:8px 18px;border-radius:6px}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px}
-.hamburger span{display:block;width:22px;height:2px;background:#1e3a5f;border-radius:2px}
+.nav-links a:hover{color:#1e293b}
+.nav-cta{background:#f59e0b;color:#0f172a!important;padding:8px 18px;border-radius:6px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:#1e3a5f;border-radius:2px;transition:transform 0.2s}
 .mob-nav{display:none;position:fixed;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 5% 20px;flex-direction:column;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
 .mob-nav.open{display:flex}
 .mob-nav a{font-size:0.95rem;font-weight:500;color:#1e3a5f;padding:13px 0;border-bottom:1px solid #f1f5f9;display:block}
-@media(max-width:900px){.nav-links{display:none}.hamburger{display:flex}}
-
-/* LAYOUT */
-.sec{padding:64px 5%}
-.sec-i{max-width:1160px;margin:0 auto}
-.tag{display:inline-block;background:#f59e0b;color:#0f172a;font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:4px;margin-bottom:14px}
-.sec-title{font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;letter-spacing:-0.02em;color:#0f172a;margin-bottom:8px}
-.sec-sub{font-size:0.92rem;color:#64748b;max-width:620px;line-height:1.7;margin-bottom:32px}
 
 /* HERO */
-.hero{background:#0f172a;color:#fff;padding:64px 5%}
-.hero-grid{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
-.hero h1{font-size:clamp(2rem,4.2vw,3.1rem);font-weight:800;line-height:1.08;letter-spacing:-0.03em;margin-bottom:16px}
-.hero p{font-size:0.98rem;color:rgba(255,255,255,0.7);line-height:1.75;margin-bottom:28px;max-width:500px}
+.hero{background:linear-gradient(135deg,#1e3a5f 0%,#0f172a 100%);min-height:90vh;display:flex;align-items:center;padding:80px 5% 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url('freedom_40ft_01.png') center/cover no-repeat;opacity:0.07}
+.hero-i{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+.hero-tag{display:inline-block;background:#f59e0b;color:#0f172a;font-size:0.7rem;font-weight:700;padding:4px 12px;border-radius:4px;margin-bottom:18px;letter-spacing:0.04em;text-transform:uppercase}
+.hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#fff;margin-bottom:16px}
+.hero h1 span{color:#f59e0b}
+.hero-sub{font-size:0.95rem;color:rgba(255,255,255,0.72);line-height:1.8;margin-bottom:32px;max-width:440px}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn-gold{background:#f59e0b;color:#0f172a;padding:13px 26px;border-radius:8px;font-weight:700;font-size:0.9rem;display:inline-block}
-.btn-line{border:1.5px solid rgba(255,255,255,0.3);color:#fff;padding:13px 26px;border-radius:8px;font-weight:600;font-size:0.9rem;display:inline-block}
-.hero-img{border-radius:12px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.35)}
-.hero-img img{width:100%;height:360px;object-fit:cover}
+.btn-amber{background:#f59e0b;color:#0f172a;padding:13px 26px;border-radius:8px;font-weight:700;font-size:0.9rem;display:inline-block;transition:background .15s}
+.btn-amber:hover{background:#d97706}
+.btn-outline{border:2px solid rgba(255,255,255,0.3);color:#fff;padding:11px 24px;border-radius:8px;font-weight:600;font-size:0.9rem;display:inline-block;transition:border-color .15s}
+.btn-outline:hover{border-color:rgba(255,255,255,0.7)}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.hero-badge{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);padding:6px 12px;border-radius:6px;font-size:0.75rem;color:rgba(255,255,255,0.75);font-weight:500}
+.hero-panel{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:28px}
+.hero-panel-label{font-size:0.7rem;font-weight:700;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+.hero-stat{margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.hero-stat:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.hero-stat-val{font-size:1.5rem;font-weight:800;color:#f59e0b;line-height:1}
+.hero-stat-label{font-size:0.78rem;color:rgba(255,255,255,0.55);margin-top:3px}
 
-/* CARDS */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:24px}
-.card-ico{font-size:1.5rem;margin-bottom:12px}
-.card h3{font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:6px}
-.card p{font-size:0.84rem;color:#64748b;line-height:1.65}
+/* SEC */
+.sec{padding:72px 5%}
+.sec-i{max-width:1160px;margin:0 auto}
+.sec-tag{display:inline-block;font-size:0.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:16px}
+.sec-tag-amber{background:#fef3c7;color:#92400e}
+.sec-tag-blue{background:#dbeafe;color:#1e40af}
+.sec-h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:14px}
+.sec-sub{font-size:0.93rem;color:#64748b;line-height:1.8;max-width:580px}
 
-/* MODEL */
-.model-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.specs-table{width:100%;border-collapse:collapse;font-size:0.85rem}
-.specs-table tr:nth-child(odd) td{background:#f8fafc}
-.specs-table td{padding:10px 14px;border-bottom:1px solid #e2e8f0;color:#475569;vertical-align:top}
-.specs-table td:first-child{font-weight:600;color:#0f172a;width:40%}
+/* WHO IT'S FOR */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.who-card{padding:28px;border:1.5px solid #e2e8f0;border-radius:12px;transition:border-color .2s,box-shadow .2s}
+.who-card:hover{border-color:#f59e0b;box-shadow:0 4px 20px rgba(245,158,11,0.1)}
+.who-icon{font-size:2rem;margin-bottom:14px}
+.who-card h3{font-size:1rem;font-weight:700;margin-bottom:8px}
+.who-card p{font-size:0.83rem;color:#64748b;line-height:1.7}
 
-/* CERT LIST */
-.cert-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.cert{display:flex;gap:12px;align-items:flex-start;padding:16px;background:#fff;border:1px solid #e2e8f0;border-radius:10px}
-.cert-ico{font-size:1.1rem;flex-shrink:0}
-.cert strong{display:block;font-size:0.86rem;margin-bottom:2px;color:#0f172a}
-.cert span{font-size:0.78rem;color:#64748b;line-height:1.55}
+/* MODEL SPEC */
+.model-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px}
+.spec-list{margin-top:20px}
+.spec-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f1f5f9;font-size:0.85rem}
+.spec-row:last-child{border-bottom:none}
+.spec-label{color:#64748b;font-weight:500}
+.spec-val{font-weight:600;color:#1e293b;text-align:right;max-width:55%}
+.model-img-box{background:#f8fafc;border-radius:12px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center}
+.model-img-box img{width:100%;height:100%;object-fit:cover}
+.model-img-placeholder{text-align:center;color:#94a3b8;font-size:0.85rem;padding:40px}
+
+/* CERTIFICATIONS */
+.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.cert-card{padding:22px;background:#f8fafc;border-radius:10px;border:1px solid #e2e8f0}
+.cert-card-icon{font-size:1.6rem;margin-bottom:10px}
+.cert-card h3{font-size:0.88rem;font-weight:700;margin-bottom:6px}
+.cert-card p{font-size:0.78rem;color:#64748b;line-height:1.6}
+.cert-note{margin-top:24px;padding:14px 16px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;font-size:0.82rem;color:#1e40af}
 
 /* PRICING */
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:24px}
-.tier{border:1.5px solid #e2e8f0;border-radius:12px;padding:24px;display:flex;flex-direction:column;background:#fff}
-.tier.feat{border-color:#f59e0b;box-shadow:0 10px 30px rgba(245,158,11,0.12)}
-.tier-n{font-size:0.7rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
-.tier h3{font-size:1.05rem;font-weight:800;color:#0f172a;margin-bottom:8px}
-.tier-price{font-size:1.5rem;font-weight:800;color:#0f172a;margin-bottom:4px}
-.tier-note{font-size:0.75rem;color:#94a3b8;margin-bottom:14px}
-.tier ul{list-style:none;font-size:0.82rem;color:#475569;line-height:1.85}
-.tier li::before{content:'✓ ';color:#f59e0b;font-weight:700}
-.guide{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:22px 24px}
-.guide h3{font-size:0.95rem;font-weight:700;color:#0f172a;margin-bottom:12px}
-.guide-row{display:flex;justify-content:space-between;gap:16px;font-size:0.84rem;padding:8px 0;border-bottom:1px solid #fde68a;color:#475569}
-.guide-row:last-of-type{border-bottom:none}
-.guide-row strong{color:#0f172a;white-space:nowrap}
-.guide-total{display:flex;justify-content:space-between;gap:16px;font-size:0.92rem;font-weight:800;color:#0f172a;padding-top:12px;margin-top:4px;border-top:2px solid #f59e0b}
-.guide small{display:block;font-size:0.74rem;color:#92400e;margin-top:10px;line-height:1.6}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.price-card{padding:28px;border-radius:14px;border:2px solid #e2e8f0;display:flex;flex-direction:column;position:relative}
+.price-card.featured{border-color:#f59e0b;background:#fffbeb}
+.price-card-tag{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:3px;background:#f59e0b;color:#0f172a;position:absolute;top:-1px;right:20px}
+.price-card h3{font-size:0.95rem;font-weight:700;margin-bottom:8px}
+.price-val{font-size:1.8rem;font-weight:800;color:#1e3a5f;margin:12px 0 4px}
+.price-val span{font-size:1rem;font-weight:500;color:#94a3b8}
+.price-includes{font-size:0.78rem;color:#64748b;line-height:1.7;margin-bottom:18px;flex:1}
+.price-includes li{list-style:none;padding-left:1.2em;position:relative;margin-bottom:3px}
+.price-includes li::before{content:'✓';position:absolute;left:0;color:#f59e0b;font-weight:700}
+.price-note{margin-top:40px;padding:16px 20px;background:#f8fafc;border-radius:10px;border:1px solid #e2e8f0;font-size:0.82rem;color:#64748b;line-height:1.7;text-align:center}
 
-/* STEPS */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.step{display:flex;gap:14px;padding:18px;background:#fff;border:1px solid #e2e8f0;border-radius:10px}
-.step-n{width:30px;height:30px;background:rgba(245,158,11,0.12);border:2px solid #f59e0b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.78rem;color:#1e3a5f;flex-shrink:0}
-.step strong{display:block;font-size:0.88rem;color:#0f172a;margin-bottom:2px}
-.step span{font-size:0.78rem;color:#64748b;line-height:1.55}
+/* HOW IT WORKS */
+.steps{margin-top:40px;display:flex;flex-direction:column;gap:0}
+.step{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid #f1f5f9}
+.step:last-child{border-bottom:none}
+.step-n{width:36px;height:36px;border-radius:50%;background:#1e3a5f;color:#fff;font-weight:800;font-size:0.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.step h3{font-size:0.95rem;font-weight:700;margin-bottom:5px}
+.step p{font-size:0.83rem;color:#64748b;line-height:1.7}
+.step-time{display:inline-block;font-size:0.72rem;font-weight:600;color:#f59e0b;background:#fef3c7;padding:2px 8px;border-radius:3px;margin-top:6px}
+
+/* BUILD DIARY */
+.diary-box{background:linear-gradient(135deg,#1e3a5f,#0f172a);border-radius:14px;padding:40px;color:#fff;text-align:center;margin-top:40px}
+.diary-box h3{font-size:1.3rem;font-weight:800;margin-bottom:10px}
+.diary-box p{font-size:0.88rem;color:rgba(255,255,255,0.65);line-height:1.8;max-width:440px;margin:0 auto 24px}
+.diary-coming{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);padding:6px 16px;border-radius:20px;font-size:0.75rem;color:rgba(255,255,255,0.55);margin-bottom:20px}
 
 /* FAQ */
-.faq-list{max-width:760px}
+.faq-list{margin-top:36px}
 .faq-item{border-bottom:1px solid #e2e8f0}
-.faq-q{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-size:0.92rem;font-weight:600;cursor:pointer}
-.faq-q:hover{color:#2563eb}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:0.9rem;font-weight:600;cursor:pointer;color:#1e293b;gap:16px}
 .faq-ico{font-size:1.1rem;color:#94a3b8;flex-shrink:0;transition:transform .2s}
 .faq-q.open .faq-ico{transform:rotate(45deg)}
-.faq-a{font-size:0.85rem;color:#64748b;line-height:1.75;padding-bottom:18px;display:none}
+.faq-a{display:none;padding:0 0 18px;font-size:0.85rem;color:#475569;line-height:1.8}
+.faq-q.open + .faq-a{display:block}
 
-/* FORM */
-.form-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start}
-.cform{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:24px}
+/* CTA FORM */
+.cta-section{background:#f8fafc;padding:72px 5%}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;max-width:1160px;margin:0 auto}
+.cform{background:#fff;border-radius:12px;padding:28px;border:1px solid #e2e8f0;box-shadow:0 4px 20px rgba(0,0,0,0.04)}
+.cform-title{font-size:1.05rem;font-weight:700;margin-bottom:22px}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:0.78rem;font-weight:600;color:#475569;margin-bottom:5px}
+.fg input,.fg select,.fg textarea{width:100%;padding:10px 12px;border:1.5px solid #e2e8f0;border-radius:7px;font-size:0.85rem;font-family:inherit;outline:none;transition:border-color .15s;color:#1e293b;background:#fff}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#f59e0b}
+.fg textarea{min-height:90px;resize:vertical}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
-.fg label{font-size:0.72rem;font-weight:600;color:#64748b}
-.fg input,.fg select,.fg textarea{padding:10px 12px;border:1.5px solid #e2e8f0;border-radius:6px;font-size:0.85rem;font-family:inherit;color:#1e293b;outline:none;background:#fff;width:100%}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#2563eb}
-.fg textarea{resize:vertical;min-height:80px}
-.form-btn{width:100%;padding:13px;background:#0f172a;color:#fff;border:none;border-radius:7px;font-weight:700;font-size:0.9rem;cursor:pointer;font-family:inherit}
-.form-btn:hover{background:#334155}
+.form-btn{width:100%;padding:13px;background:#f59e0b;color:#0f172a;border:none;border-radius:7px;font-weight:700;font-size:0.9rem;cursor:pointer;transition:background .15s;font-family:inherit;margin-top:6px}
+.form-btn:hover{background:#d97706}
 
 /* FOOTER */
 footer{background:#0f172a;padding:28px 5%;text-align:center}
@@ -128,250 +150,462 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 .foot-contact{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;font-size:0.78rem;color:rgba(255,255,255,0.5)}
 .foot-abn{font-size:0.7rem;color:rgba(255,255,255,0.3);margin-top:6px}
 
+/* RESPONSIVE */
 @media(max-width:900px){
-  .hero-grid,.model-grid,.form-wrap{grid-template-columns:1fr}
-  .grid3,.tiers,.steps{grid-template-columns:1fr 1fr}
-  .hero-img img{height:280px}
+  .hero-i{grid-template-columns:1fr}
+  .hero-panel{display:none}
+  .who-grid{grid-template-columns:1fr 1fr}
+  .model-grid{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:1fr 1fr}
+  .pricing-grid{grid-template-columns:1fr}
+  .cta-grid{grid-template-columns:1fr}
+  .hamburger{display:flex}
+  .nav-links{display:none}
 }
 @media(max-width:600px){
-  .sec{padding:44px 4%}
-  .hero{padding:44px 4%}
-  .grid3,.tiers,.steps,.cert-list,.form-row{grid-template-columns:1fr}
-  .hero-btns a{width:100%;text-align:center}
-  .foot-contact{flex-direction:column;gap:6px}
+  .who-grid{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+  .hero h1{font-size:1.8rem}
+  .foot-contact{flex-direction:column;gap:6px;align-items:center}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-logo"><a href="index.html">Not So Tiny Homes</a></div>
+  <div class="nav-logo"><a href="index.html" style="color:inherit">Not So Tiny Homes</a></div>
   <div class="nav-links">
+    <a href="index.html">← All Models</a>
     <a href="index.html#models">Relocatable Homes</a>
-    <a href="certified.html" class="on">Certified (Class 1a)</a>
-    <a href="index.html#sitebox">Site Office</a>
-    <a href="index.html#display">Display</a>
+    <a href="#how-it-works">How It Works</a>
     <a href="#faq">FAQ</a>
-    <a href="#check" class="nav-cta">Check my block</a>
+    <a href="#check-my-block" class="nav-cta">Check my block</a>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="document.getElementById('mobnav').classList.toggle('open')">
+  <button class="hamburger" id="hamburger" onclick="document.getElementById('mobnav').classList.toggle('open')">
     <span></span><span></span><span></span>
   </button>
 </nav>
 <div class="mob-nav" id="mobnav">
-  <a href="index.html" style="color:#2563eb;font-weight:700">← Home</a>
+  <a href="index.html" style="color:#1e3a5f;font-weight:700">← All Models</a>
   <a href="index.html#models">Relocatable Homes</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#how">How it works</a>
+  <a href="#how-it-works">How It Works</a>
   <a href="#faq">FAQ</a>
-  <a href="#check" style="background:#f59e0b;color:#0f172a;border-radius:6px;text-align:center;margin-top:6px;padding:13px 0;border-bottom:none;font-weight:700">Check my block →</a>
+  <a href="#check-my-block" style="background:#f59e0b;color:#0f172a;border-radius:6px;text-align:center;margin-top:6px;padding:13px 0;border-bottom:none;font-weight:700">Check my block →</a>
 </div>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-grid">
+<section class="hero" id="hero">
+  <div class="hero-i">
     <div>
-      <div class="tag">★ Certified Series · NCC Class 1a</div>
-      <h1>A certified granny flat, without the build headaches.</h1>
-      <p>4-bed, 2-bath homes engineered for Brisbane and SEQ blocks. Built off site, certified for building approval, and installed by a licensed builder.</p>
+      <div class="hero-tag">★ Certified Series · NCC Class 1a</div>
+      <h1>A certified granny flat,<br><span>without the build headaches.</span></h1>
+      <p class="hero-sub">4-bed, 2-bath NCC Class 1a homes, engineered for Brisbane and SEQ blocks. One supplier from home to handover.</p>
       <div class="hero-btns">
-        <a href="#check" class="btn-gold">Check my block</a>
-        <a href="#pricing" class="btn-line">See pricing</a>
+        <a href="#check-my-block" class="btn-amber">Check my block →</a>
+        <a href="#pricing" class="btn-outline">See pricing</a>
+      </div>
+      <div class="hero-badges">
+        <span class="hero-badge">🏛️ RPEQ structural engineering</span>
+        <span class="hero-badge">⭐ 7-star NatHERS</span>
+        <span class="hero-badge">🪟 AS 2047 glazing</span>
+        <span class="hero-badge">🚿 WaterMark plumbing</span>
+        <span class="hero-badge">⚡ SAA electrical</span>
       </div>
     </div>
-    <div class="hero-img">
-      <img src="main.jpg" alt="40ft Certified Series expandable home" onerror="this.src='freedom_40ft_01.jpg'">
+    <div class="hero-panel">
+      <div class="hero-panel-label">Certified Series at a glance</div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">40ft · ~75 m²</div>
+        <div class="hero-stat-label">4 bedroom, 2 bathroom</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">7-star NatHERS</div>
+        <div class="hero-stat-label">Energy rated, Climate Zone 2 (Brisbane)</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">N3 wind certified</div>
+        <div class="hero-stat-label">RPEQ Form 15, 1.5 kPa floor load</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">5–7 months</div>
+        <div class="hero-stat-label">Typical start-to-move-in timeline</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- WHO IT'S FOR -->
-<section class="sec" style="background:#f8fafc">
+<section class="sec" id="who" style="background:#fff">
   <div class="sec-i">
-    <div class="sec-title">Who it's for</div>
-    <div class="sec-sub">A permanent second home on your block, without a two-year build.</div>
-    <div class="grid3">
-      <div class="card"><div class="card-ico">🏦</div><h3>Rental income</h3><p>A self-contained 4-bed home on land you already own, ready to rent.</p></div>
-      <div class="card"><div class="card-ico">👨‍👩‍👧</div><h3>Family close by</h3><p>Room for ageing parents or adult kids — close, but with their own space.</p></div>
-      <div class="card"><div class="card-ico">📈</div><h3>Add value</h3><p>A permanent, approved dwelling adds living space and value to your property.</p></div>
+    <div class="sec-tag sec-tag-amber">Who it's for</div>
+    <h2 class="sec-h2">A certified second home on your block</h2>
+    <p class="sec-sub">Class 1a approval means it's a real house — on titled land, eligible for finance, approved by council.</p>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon">🏠</div>
+        <h3>Rental income</h3>
+        <p>A four-bedroom, two-bathroom approved dwelling on your existing lot. Rent it out and let it pay for itself.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">👨‍👩‍👧</div>
+        <h3>Family close by</h3>
+        <p>Parents moving in, adult kids needing space, or a multi-generational setup — fully independent, right next door.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">📈</div>
+        <h3>Add value to your property</h3>
+        <p>A certified secondary dwelling on your lot increases the usable area and potentially the market value of your block.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- THE MODEL -->
-<section class="sec">
+<section class="sec" id="model" style="background:#f8fafc">
   <div class="sec-i">
+    <div class="sec-tag sec-tag-amber">The Model</div>
+    <h2 class="sec-h2">40ft Certified Series</h2>
+    <p class="sec-sub">A single model, built to NCC Class 1a, sized to maximise liveability on a standard Brisbane block.</p>
     <div class="model-grid">
       <div>
-        <div class="tag">40ft Certified</div>
-        <div class="sec-title">The model</div>
-        <div class="sec-sub" style="margin-bottom:20px">Our 40ft Certified home is built to Australian specification for permanent placement. A 20ft Certified model is also available.</div>
-        <table class="specs-table">
-          <tr><td>Layout</td><td>4 bedrooms · 2 bathrooms · kitchen · open-plan living &amp; dining</td></tr>
-          <tr><td>Size</td><td>~11.15 × 6.78 m · ~75 m²</td></tr>
-          <tr><td>Windows</td><td>10 thermal-break, Low-E double-glazed windows (AS 2047)</td></tr>
-          <tr><td>Roof</td><td>Pitched insulated composite roof</td></tr>
-          <tr><td>Flooring</td><td>4 mm SPC premium flooring</td></tr>
-          <tr><td>Kitchen</td><td>Induction cooktop, oven and rangehood</td></tr>
-          <tr><td>Plumbing</td><td>WaterMark certified fittings</td></tr>
-          <tr><td>Electrical</td><td>SAA certified, Australian-standard wiring</td></tr>
-          <tr><td>Access</td><td>Ramp with handrails (1:14)</td></tr>
-        </table>
+        <div class="spec-list">
+          <div class="spec-row"><span class="spec-label">Size</span><span class="spec-val">40ft (12.2 m) × 6.2 m · approx. 75 m²</span></div>
+          <div class="spec-row"><span class="spec-label">Bedrooms / Bathrooms</span><span class="spec-val">4 bed · 2 bath</span></div>
+          <div class="spec-row"><span class="spec-label">Glazing</span><span class="spec-val">10 × thermal-break Low-E double-glazed windows (AS 2047)</span></div>
+          <div class="spec-row"><span class="spec-label">Roof</span><span class="spec-val">Pitched roof — better drainage, improved thermal performance</span></div>
+          <div class="spec-row"><span class="spec-label">Flooring</span><span class="spec-val">4 mm SPC luxury vinyl plank throughout</span></div>
+          <div class="spec-row"><span class="spec-label">Accessibility</span><span class="spec-val">Access ramp (DDA-compliant threshold)</span></div>
+          <div class="spec-row"><span class="spec-label">Structure</span><span class="spec-val">Steel frame, N3 wind rating, 1.5 kPa floor load</span></div>
+          <div class="spec-row"><span class="spec-label">Energy rating</span><span class="spec-val">7-star NatHERS (Climate Zone 2)</span></div>
+          <div class="spec-row"><span class="spec-label">Plumbing</span><span class="spec-val">WaterMark certified fittings throughout</span></div>
+          <div class="spec-row"><span class="spec-label">Electrical</span><span class="spec-val">SAA certified — connected by licensed Australian electrician</span></div>
+        </div>
       </div>
       <div>
-        <img src="40ft_layout_01.jpg" alt="40ft 4-bedroom floor plan" style="width:100%;border-radius:12px;border:1px solid #e2e8f0;background:#f8fafc;margin-bottom:14px" onerror="this.style.display='none'">
-        <img src="40ft_interior_01.jpeg" alt="40ft interior" style="width:100%;height:240px;object-fit:cover;border-radius:12px" onerror="this.style.display='none'">
+        <div class="model-img-box">
+          <img src="freedom_40ft_01.png" alt="40ft Certified Series — 4 bed 2 bath expandable home" onerror="this.parentNode.innerHTML='<div class=\'model-img-placeholder\'>📐 Render coming soon</div>'">
+        </div>
+        <div style="margin-top:20px;padding:16px;background:#fff;border-radius:10px;border:1.5px solid #e2e8f0;font-size:0.82rem;color:#64748b;line-height:1.7">
+          Floor plans available in 7 layouts (A–G) to suit different site orientations, entry points and living arrangements. <a href="configure-options.html" style="color:#1e3a5f;font-weight:600;text-decoration:underline">Browse all options →</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- WHAT'S CERTIFIED -->
-<section class="sec" style="background:#f8fafc">
+<section class="sec" id="certifications" style="background:#fff">
   <div class="sec-i">
-    <div class="sec-title">What's certified</div>
-    <div class="sec-sub">The documentation your building certifier needs, prepared for your site.</div>
-    <div class="cert-list">
-      <div class="cert"><div class="cert-ico">🔧</div><div><strong>RPEQ structural engineering</strong><span>Form 15 for the steel frame — N3 wind and 1.5 kPa floor load. Footings designed for your soil.</span></div></div>
-      <div class="cert"><div class="cert-ico">⭐</div><div><strong>7-star NatHERS energy rating</strong><span>Assessed for your block's orientation and climate zone.</span></div></div>
-      <div class="cert"><div class="cert-ico">🪟</div><div><strong>AS 2047 certified glazing</strong><span>Tested thermal-break, double-glazed windows and doors.</span></div></div>
-      <div class="cert"><div class="cert-ico">🚿</div><div><strong>WaterMark plumbing &amp; SAA electrical</strong><span>Australian certified fittings, connected by licensed trades.</span></div></div>
+    <div class="sec-tag sec-tag-blue">What's certified</div>
+    <h2 class="sec-h2">Every document a certifier needs</h2>
+    <p class="sec-sub">We prepare the engineering and compliance documentation. You hand it to your private certifier.</p>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-card-icon">🔧</div>
+        <h3>RPEQ Form 15</h3>
+        <p>Structural engineer's certification — N3 wind (AS 4055), 1.5 kPa floor load. Site-specific engineering report included.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card-icon">⭐</div>
+        <h3>NatHERS 7-star</h3>
+        <p>Energy efficiency assessment to NCC 2022 for Climate Zone 2 (Brisbane and SEQ). Certificate issued by accredited assessor.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card-icon">🪟</div>
+        <h3>AS 2047 Glazing</h3>
+        <p>Tested and certified aluminium double-glazed windows and sliding doors meeting the Australian Standard.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card-icon">🚿</div>
+        <h3>WaterMark Plumbing</h3>
+        <p>All internal plumbing fittings carry WaterMark certification. Licensed plumber connects services on-site.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card-icon">⚡</div>
+        <h3>SAA Electrical</h3>
+        <p>All electrical components are SAA certified. A licensed Australian electrician completes the connection and issues a compliance certificate.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-card-icon">📄</div>
+        <h3>Building certifier package</h3>
+        <p>Architectural drawings, engineering reports, energy assessment and specification — formatted for your certifier's application.</p>
+      </div>
+    </div>
+    <div class="cert-note">
+      📋 Engineering documentation is available to your private building certifier. Approval depends on your block, lot size and council planning rules — we'll tell you upfront if there's anything to look out for.
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section class="sec" id="pricing">
+<section class="sec" id="pricing" style="background:#f8fafc">
   <div class="sec-i">
-    <div class="sec-title">What it costs — no surprises</div>
-    <div class="sec-sub">Every block is different, so we give you a written cost breakdown for your site before you commit.</div>
-    <div class="tiers">
-      <div class="tier">
-        <div class="tier-n">Option 1</div>
-        <h3>Home</h3>
-        <div class="tier-price">From $65,000</div>
-        <div class="tier-note">Shipped to Brisbane</div>
-        <ul>
-          <li>Certified Series home</li>
-          <li>Australian specification</li>
-          <li>Sea freight &amp; insurance</li>
+    <div class="sec-tag sec-tag-amber">Pricing</div>
+    <h2 class="sec-h2">What it costs — no surprises</h2>
+    <p class="sec-sub">Choose what suits your situation. All prices are indicative — we give you a written breakdown before you commit.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Home only</h3>
+        <div class="price-val">from $<span style="font-size:1.4rem;font-weight:800;color:#1e3a5f">TBC</span></div>
+        <ul class="price-includes">
+          <li>Certified Series 40ft home</li>
+          <li>Australian spec — 4 bed, 2 bath</li>
+          <li>Sea freight CIF Brisbane</li>
         </ul>
+        <a href="#check-my-block" style="display:block;text-align:center;padding:10px;border:2px solid #e2e8f0;border-radius:7px;font-weight:600;font-size:0.83rem;color:#1e3a5f;transition:border-color .15s" onmouseover="this.style.borderColor='#f59e0b'" onmouseout="this.style.borderColor='#e2e8f0'">Get a quote</a>
       </div>
-      <div class="tier feat">
-        <div class="tier-n">Option 2 · Most popular</div>
+      <div class="price-card featured">
+        <div class="price-card-tag">Most popular</div>
         <h3>Home + compliance</h3>
-        <div class="tier-price">Quoted per site</div>
-        <div class="tier-note">Delivered to your block</div>
-        <ul>
-          <li>Everything in Option 1</li>
-          <li>RPEQ engineering &amp; NatHERS</li>
-          <li>Building certifier</li>
+        <div class="price-val">from $<span style="font-size:1.4rem;font-weight:800;color:#1e3a5f">TBC</span></div>
+        <ul class="price-includes">
+          <li>Everything in Home only</li>
+          <li>RPEQ structural engineering</li>
+          <li>NatHERS 7-star assessment</li>
+          <li>Building certifier documentation</li>
           <li>Import duty &amp; port clearance</li>
-          <li>Delivery &amp; crane</li>
+          <li>Delivery to site + crane</li>
         </ul>
+        <a href="#check-my-block" class="btn-amber" style="display:block;text-align:center;padding:10px;border-radius:7px;font-weight:700;font-size:0.88rem">Get a quote</a>
       </div>
-      <div class="tier">
-        <div class="tier-n">Option 3</div>
+      <div class="price-card">
         <h3>Turnkey</h3>
-        <div class="tier-price">Quoted per site</div>
-        <div class="tier-note">Ready to move in</div>
-        <ul>
-          <li>Everything in Option 2</li>
-          <li>Site prep &amp; footings</li>
-          <li>Water, sewer &amp; power connected</li>
-          <li>QBCC-licensed partner builder</li>
+        <div class="price-val">from $<span style="font-size:1.4rem;font-weight:800;color:#1e3a5f">TBC</span></div>
+        <ul class="price-includes">
+          <li>Everything in Home + compliance</li>
+          <li>Site preparation</li>
+          <li>Footings &amp; slab</li>
+          <li>Service connections (QBCC builder)</li>
+          <li>Fixed price for the home itself</li>
         </ul>
+        <a href="#check-my-block" style="display:block;text-align:center;padding:10px;border:2px solid #e2e8f0;border-radius:7px;font-weight:600;font-size:0.83rem;color:#1e3a5f;transition:border-color .15s" onmouseover="this.style.borderColor='#f59e0b'" onmouseout="this.style.borderColor='#e2e8f0'">Get a quote</a>
       </div>
     </div>
-    <div class="guide">
-      <h3>Real example: a recent Brisbane 4-bed project</h3>
-      <div class="guide-row"><span>Home &amp; shipping (premium 4-bed spec)</span><strong>~$62,000</strong></div>
-      <div class="guide-row"><span>Engineering, NatHERS, certification &amp; plumbing approval</span><strong>~$9,400</strong></div>
-      <div class="guide-row"><span>Duty, port, delivery &amp; crane</span><strong>~$10,700</strong></div>
-      <div class="guide-row"><span>Project management &amp; contingency</span><strong>~$17,000</strong></div>
-      <div class="guide-row"><span>Builder: site prep, footings, connections, warranty insurance</span><strong>~$26,000–$47,000</strong></div>
-      <div class="guide-total"><span>All-in estimate</span><span>~$125,000–$147,000</span></div>
-      <small>A guide only, from an estimate prepared in September 2026. Your price depends on your block, soil, access and service connections.</small>
+    <div class="price-note">
+      Factory-built off site, so most of the work is done before it arrives. That means less time on site, fewer trades, and a fixed price for the home itself.<br>
+      <strong>Every block is different.</strong> We give you a written cost breakdown for your site before you commit.
     </div>
+
+    <!-- REAL EXAMPLE COST BREAKDOWN -->
+    <div style="margin-top:48px;background:#fff;border:2px solid #e2e8f0;border-radius:16px;padding:32px;max-width:680px;margin-left:auto;margin-right:auto">
+      <div style="display:inline-block;background:#f59e0b;color:#0f172a;font-size:0.68rem;font-weight:700;padding:4px 10px;border-radius:4px;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:16px">Real example</div>
+      <h3 style="font-size:1.1rem;font-weight:700;color:#1e3a5f;margin-bottom:4px">A recent Brisbane project — 4 bed, 2 bath, laundry</h3>
+      <p style="font-size:0.8rem;color:#64748b;margin-bottom:20px">Cost estimate prepared September 2026. Your price will vary based on your block, soil type, access and service connections.</p>
+      <table style="width:100%;border-collapse:collapse;font-size:0.85rem">
+        <tbody>
+          <tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:10px 4px;color:#374151">Home &amp; shipping (premium 4-bed, 2-bath, laundry spec)</td>
+            <td style="padding:10px 4px;text-align:right;font-weight:600;color:#1e3a5f;white-space:nowrap">~$62,000</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:10px 4px;color:#374151">Engineering, NatHERS, certification &amp; plumbing approval</td>
+            <td style="padding:10px 4px;text-align:right;font-weight:600;color:#1e3a5f;white-space:nowrap">~$9,400</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:10px 4px;color:#374151">Duty, port, delivery &amp; crane</td>
+            <td style="padding:10px 4px;text-align:right;font-weight:600;color:#1e3a5f;white-space:nowrap">~$10,700</td>
+          </tr>
+          <tr style="border-bottom:1px solid #f1f5f9">
+            <td style="padding:10px 4px;color:#374151">Project management &amp; contingency</td>
+            <td style="padding:10px 4px;text-align:right;font-weight:600;color:#1e3a5f;white-space:nowrap">~$17,000</td>
+          </tr>
+          <tr style="border-bottom:1px solid #e2e8f0">
+            <td style="padding:10px 4px;color:#374151">Builder: site prep, footings, connections &amp; warranty insurance</td>
+            <td style="padding:10px 4px;text-align:right;font-weight:600;color:#1e3a5f;white-space:nowrap">~$30,000</td>
+          </tr>
+          <tr style="background:#fffbeb">
+            <td style="padding:12px 4px;font-weight:700;color:#1e3a5f">All-in estimate</td>
+            <td style="padding:12px 4px;text-align:right;font-weight:800;color:#d97706;font-size:1rem;white-space:nowrap">~$129,000</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.75rem;color:#94a3b8;margin-top:14px;line-height:1.6">A guide only, from an estimate prepared in September 2026. Your price depends on your block, soil, access and service connections.</p>
+    </div>
+
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="sec" id="how" style="background:#f8fafc">
+<section class="sec" id="how-it-works" style="background:#fff">
   <div class="sec-i">
-    <div class="sec-title">How it works</div>
-    <div class="sec-sub">Allow around 5–7 months from start to move-in.</div>
-    <div class="steps">
-      <div class="step"><div class="step-n">1</div><div><strong>Check your block</strong><span>We confirm the home suits your lot and council rules.</span></div></div>
-      <div class="step"><div class="step-n">2</div><div><strong>Engineering &amp; design</strong><span>Site drawings, soil report and footing design.</span></div></div>
-      <div class="step"><div class="step-n">3</div><div><strong>NatHERS assessment</strong><span>7-star energy rating for your site.</span></div></div>
-      <div class="step"><div class="step-n">4</div><div><strong>Building approval</strong><span>Your certifier reviews and issues the approval.</span></div></div>
-      <div class="step"><div class="step-n">5</div><div><strong>Production &amp; shipping</strong><span>40–50 days production, ~35 days sea freight, port clearance.</span></div></div>
-      <div class="step"><div class="step-n">6</div><div><strong>Install &amp; move in</strong><span>Builder places the home, connects services and gets final sign-off.</span></div></div>
+    <div class="sec-tag sec-tag-blue">How it works</div>
+    <h2 class="sec-h2">From enquiry to move-in</h2>
+    <p class="sec-sub">Six steps — we manage most of them.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 48px;margin-top:40px">
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">1</div>
+          <div>
+            <h3>Check your block</h3>
+            <p>Tell us your suburb, lot size and what you need the dwelling for. We'll flag any zoning issues upfront, before you spend a dollar.</p>
+            <span class="step-time">~ 1–2 days</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">2</div>
+          <div>
+            <h3>Choose your model</h3>
+            <p>Select size, floor plan and finishes using our configure page. We confirm what's feasible for your site.</p>
+            <span class="step-time">~ 1 week</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">3</div>
+          <div>
+            <h3>Engineering &amp; design</h3>
+            <p>We commission site-specific structural drawings and an RPEQ Form 15. Your certifier gets a complete package.</p>
+            <span class="step-time">~ 3–4 weeks</span>
+          </div>
+        </div>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">4</div>
+          <div>
+            <h3>NatHERS &amp; building approval</h3>
+            <p>Energy assessment and building certifier review. Private certification is typically faster than a council DA.</p>
+            <span class="step-time">~ 2–4 weeks</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">5</div>
+          <div>
+            <h3>Production &amp; shipping</h3>
+            <p>40–50 days factory production in Australia spec, then ~35 days sea freight. Port clearance handled by our customs broker.</p>
+            <span class="step-time">~ 10–12 weeks</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n">6</div>
+          <div>
+            <h3>Delivery &amp; installation</h3>
+            <p>Crane delivery to site. Our QBCC-licensed builder handles footings, service connections and site fit-out. Final inspection and handover.</p>
+            <span class="step-time">~ 2–4 weeks on site</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:28px;padding:14px 20px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;font-size:0.83rem;color:#1e40af;text-align:center">
+      ⏱️ Total timeline: allow around <strong>5–7 months from enquiry to move-in.</strong> Every block is different — your certifier and council rules affect the approval step.
+    </div>
+  </div>
+</section>
+
+<!-- BUILD DIARY -->
+<section class="sec" id="build-diary" style="background:#f8fafc">
+  <div class="sec-i">
+    <div class="diary-box">
+      <div class="diary-coming">Coming soon</div>
+      <h3>Follow our first Brisbane Certified build</h3>
+      <p>We'll be documenting the complete build — site prep, delivery day, installation and handover — for the first Certified Series home in Brisbane. Register below to be notified when it goes live.</p>
+      <a href="#check-my-block" class="btn-amber" style="display:inline-block">Register your interest →</a>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="sec" id="faq">
+<section class="sec" id="faq" style="background:#fff">
   <div class="sec-i">
-    <div class="sec-title">Common questions</div>
-    <div class="faq-list" style="margin-top:20px">
-      <div class="faq-item"><div class="faq-q">Will it be approved on my block?<span class="faq-ico">+</span></div><div class="faq-a">The home is engineered and documented for building approval, but every lot is different. Lot size, setbacks, sewer location and council rules all matter. Send us your address and we'll check before you spend anything.</div></div>
-      <div class="faq-item"><div class="faq-q">Can I get finance?<span class="faq-ico">+</span></div><div class="faq-a">It's a permanent, certified dwelling on titled land, but lending rules vary. Talk to your lender or mortgage broker about construction finance early — we can provide the documents they ask for.</div></div>
-      <div class="faq-item"><div class="faq-q">What does the builder do?<span class="faq-ico">+</span></div><div class="faq-a">A QBCC-licensed builder prepares the site, builds the footings, places and ties down the home, arranges the electrician and plumber to connect services, takes out home warranty insurance and manages inspections through to final sign-off.</div></div>
-      <div class="faq-item"><div class="faq-q">Can I use my own builder?<span class="faq-ico">+</span></div><div class="faq-a">Yes. We'll give your builder the engineering, drawings and specifications. Or we can introduce our partner builder.</div></div>
-      <div class="faq-item"><div class="faq-q">How long does it take?<span class="faq-ico">+</span></div><div class="faq-a">Allow around 5–7 months: approvals first, then 40–50 days production, about 35 days sea freight, port clearance and installation.</div></div>
+    <div class="sec-tag sec-tag-amber">FAQ</div>
+    <h2 class="sec-h2">Common questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.classList.toggle('open')">Do I need council approval?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Yes — a Certified Series home is a permanent, council-approved secondary dwelling. We prepare the engineering and compliance documents; your private building certifier processes the application. Approval depends on your lot size, zoning and council rules. We'll tell you upfront if there are any site-specific issues.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.classList.toggle('open')">Can I finance it through a home loan?<span class="faq-ico">+</span></div>
+        <div class="faq-a">It's a permanent, certified dwelling on titled land — the same classification as a traditionally built home. That makes it eligible for construction finance. Talk to your lender or broker about the best structure for your situation — we can provide specs and documentation to support your application.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.classList.toggle('open')">How long does the whole process take?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Allow around 5–7 months from enquiry to move-in. Engineering and building approval takes 5–8 weeks. Factory production is 40–50 days, sea freight ~35 days. Site installation and connections by our licensed builder takes 2–4 weeks on site. Every block is different — approval timelines vary.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.classList.toggle('open')">What does the QBCC builder do?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Our QBCC-licensed partner builder handles site preparation, footings, crane day logistics, and connecting power, water and sewer. They're on site for 2–4 weeks and issue all required compliance certificates. You can use your own QBCC-licensed builder if you prefer — we'll brief them on the installation requirements.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.classList.toggle('open')">Can I use my own builder?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Yes. We can introduce our partner builder or work with yours — as long as they hold a current QBCC licence for residential construction work. We'll provide your builder with the full installation manual and engineering drawings.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.classList.toggle('open')">What's included in the price?<span class="faq-ico">+</span></div>
+        <div class="faq-a">We give you a full written breakdown for your site. It covers the home and shipping, engineering, NatHERS, building certification, import duty, port clearance, delivery and crane. Site preparation, footings and service connections are done by a QBCC-licensed builder — included in our Turnkey tier, or quoted separately if you use your own builder.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.classList.toggle('open')">Is plumbing and electrical certified?<span class="faq-ico">+</span></div>
+        <div class="faq-a">Yes. All Certified Series homes come with WaterMark certified plumbing fittings and SAA certified electrical components. A licensed Australian plumber and electrician connect services on arrival and issue compliance certificates.</div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- CHECK MY BLOCK -->
-<section class="sec" id="check" style="background:#f8fafc">
-  <div class="sec-i">
-    <div class="form-wrap">
-      <div>
-        <div class="sec-title">Check my block</div>
-        <div class="sec-sub" style="margin-bottom:20px">Tell us about your site and we'll let you know if a Certified home will fit, with a rough cost breakdown. No obligation.</div>
-        <div style="font-size:0.88rem;color:#475569;line-height:2">
-          📞 0405 274 801<br>
-          ✉️ info@notsotinyhomes.com.au<br>
-          🏢 Kiteworks Pty Ltd · ABN 99 692 292 274
+<!-- CTA FORM -->
+<section class="cta-section" id="check-my-block">
+  <div class="cta-grid">
+    <div>
+      <div class="sec-tag sec-tag-amber">Check my block</div>
+      <h2 class="sec-h2" style="max-width:380px">Tell us about your site — we'll tell you what's possible</h2>
+      <p style="font-size:0.88rem;color:#64748b;line-height:1.8;margin-top:12px;max-width:380px">Before you commit to anything, we give you an honest assessment: whether your block suits a Certified Series home, any zoning or lot-size flags, and a written cost breakdown for your site.</p>
+      <div style="margin-top:28px;display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:1.2rem">📍</span><div><strong style="font-size:0.85rem">Waterford, Brisbane QLD</strong><div style="font-size:0.78rem;color:#64748b">Display home arriving soon — register below to be notified</div></div></div>
+        <div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:1.2rem">📞</span><div><strong style="font-size:0.85rem">0405 274 801</strong><div style="font-size:0.78rem;color:#64748b">Monday – Friday, 8am – 5pm AEST</div></div></div>
+        <div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:1.2rem">✉️</span><div><strong style="font-size:0.85rem">info@notsotinyhomes.com.au</strong><div style="font-size:0.78rem;color:#64748b">We respond within one business day</div></div></div>
+      </div>
+    </div>
+    <div class="cform">
+      <div class="cform-title">Get a free site assessment</div>
+      <form action="https://formspree.io/f/xrejqove" method="POST" id="cert-form">
+        <div class="form-row">
+          <div class="fg"><label>First name</label><input type="text" name="first_name" placeholder="First name" required></div>
+          <div class="fg"><label>Last name</label><input type="text" name="last_name" placeholder="Last name" required></div>
         </div>
-      </div>
-      <div class="cform">
-        <form action="https://formspree.io/f/xrejqove" method="POST" id="check-form">
-          <input type="hidden" name="interest" value="certified-check-my-block">
-          <div class="form-row">
-            <div class="fg"><label>Name</label><input type="text" name="name" required></div>
-            <div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="0400 000 000"></div>
-          </div>
-          <div class="fg"><label>Email</label><input type="email" name="email" required></div>
-          <div class="form-row">
-            <div class="fg"><label>Suburb</label><input type="text" name="suburb" required></div>
-            <div class="fg"><label>Lot size (approx.)</label><input type="text" name="lot_size" placeholder="e.g. 600 m²"></div>
-          </div>
-          <div class="fg"><label>What's it for?</label>
-            <select name="purpose">
-              <option value="">Please select...</option>
-              <option>Rental income</option>
-              <option>Family member</option>
-              <option>Add value to property</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="fg"><label>Anything else?</label><textarea name="message" placeholder="Access, slope, existing sheds, timing..."></textarea></div>
-          <button type="submit" class="form-btn" id="check-btn">Check my block</button>
-          <div id="check-ok" style="display:none;margin-top:12px;padding:12px;background:#d1fae5;color:#065f46;border-radius:6px;font-size:0.85rem">✅ Thanks! We'll be in touch within one business day.</div>
-          <div id="check-err" style="display:none;margin-top:12px;padding:12px;background:#fee2e2;color:#991b1b;border-radius:6px;font-size:0.85rem">❌ Something went wrong. Please email info@notsotinyhomes.com.au</div>
-        </form>
-      </div>
+        <div class="form-row">
+          <div class="fg"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
+          <div class="fg"><label>Phone</label><input type="tel" name="phone" placeholder="0400 000 000"></div>
+        </div>
+        <div class="fg"><label>Suburb / council of your block</label><input type="text" name="suburb_council" placeholder="e.g. Capalaba, Brisbane City Council" required></div>
+        <div class="fg">
+          <label>What is it for?</label>
+          <select name="purpose" required>
+            <option value="">Please select...</option>
+            <option value="rental">Rental income</option>
+            <option value="family">Family — parents or adult children</option>
+            <option value="value">Add value to property</option>
+            <option value="other">Other / not sure yet</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Approximate lot size</label>
+          <select name="lot_size">
+            <option value="">Not sure</option>
+            <option value="under400">Under 400 m²</option>
+            <option value="400-600">400–600 m²</option>
+            <option value="600-1000">600–1,000 m²</option>
+            <option value="over1000">Over 1,000 m²</option>
+          </select>
+        </div>
+        <div class="fg"><label>Anything else we should know?</label><textarea name="message" placeholder="Council, site access, specific requirements..."></textarea></div>
+        <input type="hidden" name="form_type" value="certified_series_site_check">
+        <button type="submit" class="form-btn" id="cert-submit-btn">Send site details →</button>
+        <div id="cert-success" style="display:none;margin-top:12px;padding:12px;background:#d1fae5;color:#065f46;border-radius:6px;font-size:0.85rem;font-weight:500">✅ Thank you — we'll come back with an assessment within one business day.</div>
+        <div id="cert-error" style="display:none;margin-top:12px;padding:12px;background:#fee2e2;color:#991b1b;border-radius:6px;font-size:0.85rem;font-weight:500">❌ Something went wrong. Please email us at info@notsotinyhomes.com.au</div>
+      </form>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="foot-logo">Not So Tiny Homes</div>
   <div class="foot-contact">
@@ -383,31 +617,35 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 </footer>
 
 <script>
-document.querySelectorAll('.faq-q').forEach(function(q){
-  q.addEventListener('click', function(){
-    var a = q.nextElementSibling, open = a.style.display === 'block';
-    a.style.display = open ? 'none' : 'block';
-    q.classList.toggle('open', !open);
-  });
+// Hamburger close on outside click
+document.addEventListener('click', e => {
+  const nav = document.getElementById('mobnav');
+  const btn = document.getElementById('hamburger');
+  if(nav && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target))
+    nav.classList.remove('open');
 });
-document.querySelectorAll('#mobnav a').forEach(function(a){
-  a.addEventListener('click', function(){ document.getElementById('mobnav').classList.remove('open'); });
-});
-var f = document.getElementById('check-form');
-f.addEventListener('submit', async function(e){
+
+// Form submission
+document.getElementById('cert-form').addEventListener('submit', async function(e){
   e.preventDefault();
-  var btn = document.getElementById('check-btn');
-  btn.textContent = 'Sending...'; btn.disabled = true;
+  const btn = document.getElementById('cert-submit-btn');
+  btn.disabled = true; btn.textContent = 'Sending…';
   try {
-    var r = await fetch(f.action, {method:'POST', body:new FormData(f), headers:{'Accept':'application/json'}});
-    if (!r.ok) throw new Error();
-    document.getElementById('check-ok').style.display = 'block';
-    document.getElementById('check-err').style.display = 'none';
-    f.reset(); btn.textContent = 'Sent ✓';
-  } catch (err) {
-    document.getElementById('check-err').style.display = 'block';
-    btn.textContent = 'Check my block'; btn.disabled = false;
+    const res = await fetch(this.action, {
+      method:'POST',
+      body: new FormData(this),
+      headers: {'Accept':'application/json'}
+    });
+    if(res.ok){
+      document.getElementById('cert-success').style.display = 'block';
+      this.reset();
+    } else {
+      document.getElementById('cert-error').style.display = 'block';
+    }
+  } catch(err){
+    document.getElementById('cert-error').style.display = 'block';
   }
+  btn.disabled = false; btn.textContent = 'Send site details →';
 });
 </script>
 </body>
