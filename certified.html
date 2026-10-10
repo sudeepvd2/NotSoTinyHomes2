@@ -94,7 +94,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .cert-note{margin-top:24px;padding:14px 16px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;font-size:0.82rem;color:#1e40af}
 
 /* PRICING */
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px;max-width:760px;margin-left:auto;margin-right:auto}
 .price-card{padding:28px;border-radius:14px;border:2px solid #e2e8f0;display:flex;flex-direction:column;position:relative}
 .price-card.featured{border-color:#f59e0b;background:#fffbeb}
 .price-card-tag{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:3px;background:#f59e0b;color:#0f172a;position:absolute;top:-1px;right:20px}
@@ -157,7 +157,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
   .who-grid{grid-template-columns:1fr 1fr}
   .model-grid{grid-template-columns:1fr}
   .cert-grid{grid-template-columns:1fr 1fr}
-  .pricing-grid{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr;max-width:100%}
   .cta-grid{grid-template-columns:1fr}
   .hamburger{display:flex}
   .nav-links{display:none}
@@ -344,41 +344,35 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
   <div class="sec-i">
     <div class="sec-tag sec-tag-amber">Pricing</div>
     <h2 class="sec-h2">What it costs — no surprises</h2>
-    <p class="sec-sub">Choose what suits your situation. All prices are indicative — we give you a written breakdown before you commit.</p>
+    <p class="sec-sub">Two clear options. All prices are indicative — we give you a written breakdown before you commit.</p>
     <div class="pricing-grid">
-      <div class="price-card">
-        <h3>Home only</h3>
-        <div class="price-val">from $<span style="font-size:1.4rem;font-weight:800;color:#1e3a5f">TBC</span></div>
-        <ul class="price-includes">
-          <li>Certified Series 40ft home</li>
-          <li>Australian spec — 4 bed, 2 bath, laundry</li>
-          <li>Sea freight CIF Brisbane</li>
-        </ul>
-        <a href="#check-my-block" style="display:block;text-align:center;padding:10px;border:2px solid #e2e8f0;border-radius:7px;font-weight:600;font-size:0.83rem;color:#1e3a5f;transition:border-color .15s" onmouseover="this.style.borderColor='#f59e0b'" onmouseout="this.style.borderColor='#e2e8f0'">Get a quote</a>
-      </div>
       <div class="price-card featured">
         <div class="price-card-tag">Most popular</div>
-        <h3>Home + compliance</h3>
-        <div class="price-val">from $<span style="font-size:1.4rem;font-weight:800;color:#1e3a5f">TBC</span></div>
+        <h3>Certified Series</h3>
+        <div class="price-val">from $<span style="font-size:1.4rem;font-weight:800;color:#1e3a5f">99,000</span></div>
+        <p style="font-size:0.8rem;color:#64748b;margin:8px 0 14px">Home + full compliance docs. You engage your own builder for site work.</p>
         <ul class="price-includes">
-          <li>Everything in Home only</li>
-          <li>RPEQ structural engineering</li>
-          <li>NatHERS 7-star assessment</li>
-          <li>Building certifier documentation</li>
-          <li>Import duty &amp; port clearance</li>
-          <li>Delivery to site + crane</li>
+          <li>40ft home — NCC Class 1a spec</li>
+          <li>4 bed · 2 bath · laundry (or 3-bed config)</li>
+          <li>Sea freight CIF Brisbane + delivery to site</li>
+          <li>RPEQ Form 15 structural engineering</li>
+          <li>NatHERS 7-star energy rating certificate</li>
+          <li>AS 2047 glazing &amp; WaterMark plumbing docs</li>
+          <li>Full engineering drawing set for council/certifier</li>
         </ul>
         <a href="#check-my-block" class="btn-amber" style="display:block;text-align:center;padding:10px;border-radius:7px;font-weight:700;font-size:0.88rem">Get a quote</a>
       </div>
       <div class="price-card">
+        <div class="price-card-tag" style="background:#e2e8f0;color:#475569">SEQ only</div>
         <h3>Turnkey</h3>
-        <div class="price-val">from $<span style="font-size:1.4rem;font-weight:800;color:#1e3a5f">TBC</span></div>
+        <div class="price-val">from $<span style="font-size:1.4rem;font-weight:800;color:#1e3a5f">125,000</span></div>
+        <p style="font-size:0.8rem;color:#64748b;margin:8px 0 14px">Everything managed end to end. We handle home, compliance and builder.</p>
         <ul class="price-includes">
-          <li>Everything in Home + compliance</li>
-          <li>Site preparation</li>
-          <li>Footings &amp; slab</li>
-          <li>Service connections (QBCC builder)</li>
-          <li>Fixed price for the home itself</li>
+          <li>Everything in Certified Series</li>
+          <li>Site preparation &amp; footings</li>
+          <li>Service connections (QBCC licensed builder)</li>
+          <li>Final inspection &amp; handover</li>
+          <li>Builder warranty insurance</li>
         </ul>
         <a href="#check-my-block" style="display:block;text-align:center;padding:10px;border:2px solid #e2e8f0;border-radius:7px;font-weight:600;font-size:0.83rem;color:#1e3a5f;transition:border-color .15s" onmouseover="this.style.borderColor='#f59e0b'" onmouseout="this.style.borderColor='#e2e8f0'">Get a quote</a>
       </div>
