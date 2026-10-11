@@ -94,7 +94,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .cert-note{margin-top:24px;padding:14px 16px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;font-size:0.82rem;color:#1e40af}
 
 /* PRICING */
-.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px;max-width:760px;margin-left:auto;margin-right:auto}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px;max-width:1060px;margin-left:auto;margin-right:auto}
 .price-card{padding:28px;border-radius:14px;border:2px solid #e2e8f0;display:flex;flex-direction:column;position:relative}
 .price-card.featured{border-color:#f59e0b;background:#fffbeb}
 .price-card-tag{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:3px;background:#f59e0b;color:#0f172a;position:absolute;top:-1px;right:20px}
@@ -201,7 +201,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
     <div>
       <div class="hero-tag">★ Certified Series · NCC Class 1a</div>
       <h1>A certified granny flat,<br><span>without the build headaches.</span></h1>
-      <p class="hero-sub">4-bed, 2-bath NCC Class 1a homes with laundry, engineered for Brisbane and SEQ blocks. One supplier from home to handover.</p>
+      <p class="hero-sub">NCC Class 1a homes engineered for Brisbane and SEQ blocks. 20ft 2-bed from $75k or 40ft 4-bed from $99k — one supplier from home to handover.</p>
       <div class="hero-btns">
         <a href="#check-my-block" class="btn-amber">Check my block →</a>
         <a href="#pricing" class="btn-outline">See pricing</a>
@@ -217,8 +217,12 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
     <div class="hero-panel">
       <div class="hero-panel-label">Certified Series at a glance</div>
       <div class="hero-stat">
+        <div class="hero-stat-val">20ft · ~40 m²</div>
+        <div class="hero-stat-label">2 bed · 1 bath · from $75,000</div>
+      </div>
+      <div class="hero-stat">
         <div class="hero-stat-val">40ft · ~70 m²</div>
-        <div class="hero-stat-label">4 bed · 2 bath · laundry</div>
+        <div class="hero-stat-label">4 bed · 2 bath · laundry · from $99,000</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-val">7-star NatHERS</div>
@@ -344,13 +348,28 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
   <div class="sec-i">
     <div class="sec-tag sec-tag-amber">Pricing</div>
     <h2 class="sec-h2">What it costs — no surprises</h2>
-    <p class="sec-sub">Two clear options. All prices are indicative — we give you a written breakdown before you commit.</p>
+    <p class="sec-sub">Three clear options — choose the size and service level that suits your block. All prices are indicative; we give you a written breakdown before you commit.</p>
     <div class="pricing-grid">
+      <div class="price-card">
+        <h3>20ft Certified</h3>
+        <div class="price-val">from $<span style="font-size:1.4rem;font-weight:800;color:#1e3a5f">75,000</span></div>
+        <p style="font-size:0.8rem;color:#64748b;margin:8px 0 14px">Compact 2-bed home with full NCC Class 1a compliance docs. You engage your own builder for site work.</p>
+        <ul class="price-includes">
+          <li>20ft home — NCC Class 1a spec</li>
+          <li>2 bed · 1 bath · ~40 m²</li>
+          <li>Sea freight CIF Brisbane + delivery to site</li>
+          <li>RPEQ Form 15 structural engineering</li>
+          <li>NatHERS 7-star energy rating certificate</li>
+          <li>AS 2047 glazing &amp; WaterMark plumbing docs</li>
+          <li>Full engineering drawing set for council/certifier</li>
+        </ul>
+        <a href="#check-my-block" class="btn-amber" style="display:block;text-align:center;padding:10px;border-radius:7px;font-weight:700;font-size:0.88rem">Get a quote</a>
+      </div>
       <div class="price-card featured">
         <div class="price-card-tag">Most popular</div>
-        <h3>Certified Series</h3>
+        <h3>40ft Certified</h3>
         <div class="price-val">from $<span style="font-size:1.4rem;font-weight:800;color:#1e3a5f">99,000</span></div>
-        <p style="font-size:0.8rem;color:#64748b;margin:8px 0 14px">Home + full compliance docs. You engage your own builder for site work.</p>
+        <p style="font-size:0.8rem;color:#64748b;margin:8px 0 14px">Full-size 4-bed home with complete compliance docs. You engage your own builder for site work.</p>
         <ul class="price-includes">
           <li>40ft home — NCC Class 1a spec</li>
           <li>4 bed · 2 bath · laundry (or 3-bed config)</li>
@@ -368,7 +387,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
         <div class="price-val">from $<span style="font-size:1.4rem;font-weight:800;color:#1e3a5f">125,000</span></div>
         <p style="font-size:0.8rem;color:#64748b;margin:8px 0 14px">Everything managed end to end. We handle home, compliance and builder.</p>
         <ul class="price-includes">
-          <li>Everything in Certified Series</li>
+          <li>Everything in 40ft Certified</li>
           <li>Site preparation &amp; footings</li>
           <li>Service connections (QBCC licensed builder)</li>
           <li>Final inspection &amp; handover</li>
