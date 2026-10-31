@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SiteBox Folding — Not So Tiny Homes</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:60px;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}
+.nav-logo{font-weight:800;font-size:1.1rem;color:#1e293b}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-size:0.83rem;font-weight:600;color:#64748b}
+.nav-links a:hover{color:#1e293b}
+.nav-cta{background:#f59e0b;color:#0f172a!important;padding:8px 18px;border-radius:6px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:2px;background:#1e3a5f;border-radius:2px}
+.mob-nav{display:none;position:fixed;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 5% 20px;flex-direction:column;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.mob-nav.open{display:flex}
+.mob-nav a{font-size:0.95rem;font-weight:500;color:#1e3a5f;padding:13px 0;border-bottom:1px solid #f1f5f9;display:block}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#0f4c75 100%);min-height:88vh;display:flex;align-items:center;padding:100px 5% 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(245,158,11,0.08) 0%,transparent 65%)}
+.hero-i{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:#fbbf24;font-size:0.7rem;font-weight:700;padding:5px 12px;border-radius:20px;margin-bottom:20px;letter-spacing:0.05em;text-transform:uppercase}
+.hero h1{font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:900;line-height:1.05;letter-spacing:-0.04em;color:#fff;margin-bottom:18px}
+.hero h1 em{color:#f59e0b;font-style:normal}
+.hero-sub{font-size:0.95rem;color:rgba(255,255,255,0.68);line-height:1.8;margin-bottom:32px;max-width:460px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-amber{background:#f59e0b;color:#0f172a;padding:13px 26px;border-radius:8px;font-weight:700;font-size:0.9rem;display:inline-block;transition:background .15s}
+.btn-amber:hover{background:#d97706}
+.btn-outline{border:2px solid rgba(255,255,255,0.25);color:#fff;padding:11px 24px;border-radius:8px;font-weight:600;font-size:0.9rem;display:inline-block;transition:border-color .15s}
+.btn-outline:hover{border-color:rgba(255,255,255,0.6)}
+
+/* STAT TILES */
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;overflow:hidden}
+.stat-tile{padding:20px 16px;text-align:center;border-right:1px solid rgba(255,255,255,0.08)}
+.stat-tile:last-child{border-right:none}
+.stat-val{font-size:1.25rem;font-weight:800;color:#f59e0b;line-height:1;margin-bottom:4px;font-variant-numeric:tabular-nums}
+.stat-label{font-size:0.68rem;color:rgba(255,255,255,0.45);font-weight:500;letter-spacing:0.03em}
+
+/* HERO IMAGE PANEL */
+.hero-img-panel{position:relative}
+.hero-img-box{border-radius:16px;overflow:hidden;background:#0f172a;aspect-ratio:4/3;border:1px solid rgba(255,255,255,0.1);box-shadow:0 32px 64px rgba(0,0,0,0.4)}
+.hero-img-box img{width:100%;height:100%;object-fit:cover;opacity:0.9}
+.hero-img-badge{position:absolute;bottom:16px;left:16px;background:rgba(15,23,42,0.85);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px 14px}
+.hero-img-badge-val{font-size:1rem;font-weight:800;color:#f59e0b}
+.hero-img-badge-label{font-size:0.68rem;color:rgba(255,255,255,0.55);margin-top:1px}
+
+/* SECTION BASE */
+.sec{padding:72px 5%}
+.sec-i{max-width:1160px;margin:0 auto}
+.sec-tag{display:inline-block;font-size:0.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:14px}
+.sec-tag-amber{background:#fef3c7;color:#92400e}
+.sec-tag-blue{background:#dbeafe;color:#1e40af}
+.sec-tag-slate{background:#f1f5f9;color:#475569}
+.sec-h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:12px}
+.sec-sub{font-size:0.92rem;color:#64748b;line-height:1.8;max-width:580px}
+
+/* USE CASES */
+.use-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.use-card{padding:24px;border:1.5px solid #e2e8f0;border-radius:12px;transition:border-color .2s,box-shadow .2s}
+.use-card:hover{border-color:#f59e0b;box-shadow:0 4px 20px rgba(245,158,11,0.1)}
+.use-icon{font-size:2rem;margin-bottom:12px}
+.use-card h3{font-size:0.92rem;font-weight:700;margin-bottom:6px}
+.use-card p{font-size:0.8rem;color:#64748b;line-height:1.7}
+
+/* SPEC TABLES */
+.spec-section{margin-top:48px}
+.spec-group{margin-bottom:32px}
+.spec-group-title{font-size:0.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#94a3b8;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #f1f5f9}
+.spec-table{width:100%;border-collapse:collapse}
+.spec-table tr{border-bottom:1px solid #f8fafc}
+.spec-table tr:last-child{border-bottom:none}
+.spec-table td{padding:9px 4px;font-size:0.82rem}
+.spec-table td:first-child{color:#64748b;font-weight:500;width:42%}
+.spec-table td:last-child{color:#1e293b;font-weight:600;text-align:right}
+.spec-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:24px}
+
+/* WIND RATING */
+.wind-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+.wind-card{padding:28px;border-radius:14px;border:2px solid #e2e8f0;position:relative;overflow:hidden}
+.wind-card.upgraded{border-color:#f59e0b;background:#fffbeb}
+.wind-card-tag{font-size:0.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:3px;background:#f59e0b;color:#0f172a;display:inline-block;margin-bottom:14px}
+.wind-card-tag.std{background:#e2e8f0;color:#475569}
+.wind-speed{font-size:2rem;font-weight:900;color:#1e3a5f;line-height:1;margin-bottom:4px}
+.wind-sub{font-size:0.8rem;color:#64748b;margin-bottom:14px}
+.wind-desc{font-size:0.8rem;color:#475569;line-height:1.7}
+
+/* ADD-ONS */
+.addon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+.addon-card{padding:18px 16px;background:#f8fafc;border-radius:10px;border:1px solid #e2e8f0;text-align:center;transition:border-color .2s,background .2s}
+.addon-card:hover{border-color:#f59e0b;background:#fffbeb}
+.addon-icon{font-size:1.5rem;margin-bottom:8px}
+.addon-card p{font-size:0.78rem;font-weight:600;color:#1e293b;line-height:1.4}
+
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}
+.gallery-img{border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:#f1f5f9}
+.gallery-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.gallery-img:hover img{transform:scale(1.03)}
+.gallery-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:0.78rem;background:#f8fafc}
+
+/* DEPLOY STEPS */
+.deploy-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;border:1.5px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.deploy-step{padding:24px;border-right:1.5px solid #e2e8f0;position:relative}
+.deploy-step:last-child{border-right:none}
+.deploy-num{width:32px;height:32px;border-radius:50%;background:#1e3a5f;color:#fff;font-weight:800;font-size:0.82rem;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.deploy-step h3{font-size:0.88rem;font-weight:700;margin-bottom:6px}
+.deploy-step p{font-size:0.78rem;color:#64748b;line-height:1.6}
+.deploy-time{display:inline-block;font-size:0.7rem;font-weight:600;color:#f59e0b;background:#fef3c7;padding:2px 8px;border-radius:3px;margin-top:8px}
+
+/* CTA */
+.cta-band{background:linear-gradient(135deg,#1e3a5f 0%,#0f172a 100%);padding:60px 5%;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(245,158,11,0.12) 0%,transparent 60%)}
+.cta-band h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:12px;position:relative}
+.cta-band p{font-size:0.9rem;color:rgba(255,255,255,0.6);max-width:480px;margin:0 auto 28px;line-height:1.8;position:relative}
+.cta-band .btn-amber{position:relative}
+.contact-row{display:flex;gap:32px;justify-content:center;margin-top:24px;flex-wrap:wrap;position:relative}
+.contact-item{font-size:0.82rem;color:rgba(255,255,255,0.5)}
+.contact-item strong{color:rgba(255,255,255,0.85);display:block;font-size:0.85rem}
+
+/* FOOTER */
+footer{background:#0f172a;padding:28px 5%;text-align:center}
+.foot-logo{font-weight:800;color:#fff;margin-bottom:6px}
+.foot-contact{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;font-size:0.78rem;color:rgba(255,255,255,0.45)}
+.foot-abn{font-size:0.7rem;color:rgba(255,255,255,0.25);margin-top:6px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-i{grid-template-columns:1fr}
+  .hero-img-panel{display:none}
+  .stat-strip{grid-template-columns:repeat(2,1fr)}
+  .stat-tile:nth-child(2){border-right:none}
+  .stat-tile:nth-child(3){border-top:1px solid rgba(255,255,255,0.08)}
+  .use-grid{grid-template-columns:1fr 1fr}
+  .spec-cols{grid-template-columns:1fr}
+  .wind-grid{grid-template-columns:1fr}
+  .addon-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .deploy-strip{grid-template-columns:1fr}
+  .deploy-step{border-right:none;border-bottom:1.5px solid #e2e8f0}
+  .deploy-step:last-child{border-bottom:none}
+  .hamburger{display:flex}
+  .nav-links{display:none}
+}
+@media(max-width:600px){
+  .use-grid{grid-template-columns:1fr}
+  .addon-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:1fr}
+  .stat-strip{grid-template-columns:repeat(2,1fr)}
+  .hero-btns{flex-direction:column}
+  .foot-contact{flex-direction:column;gap:6px;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><a href="../index.html" style="color:inherit">Not So Tiny Homes</a></div>
+  <div class="nav-links">
+    <a href="../index.html">← All Models</a>
+    <a href="#specs">Specifications</a>
+    <a href="#wind-rating">Wind Rating</a>
+    <a href="#add-ons">Add-ons</a>
+    <a href="#enquire" class="nav-cta">Get a quote</a>
+  </div>
+  <button class="hamburger" id="hamburger" onclick="document.getElementById('mobnav').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mob-nav" id="mobnav">
+  <a href="../index.html" style="font-weight:700">← All Models</a>
+  <a href="#specs">Specifications</a>
+  <a href="#wind-rating">Wind Rating</a>
+  <a href="#add-ons">Add-ons</a>
+  <a href="#enquire" style="background:#f59e0b;color:#0f172a;border-radius:6px;text-align:center;margin-top:6px;padding:13px 0;border-bottom:none;font-weight:700">Get a quote →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-i">
+    <div>
+      <div class="hero-tag">⚡ Folding SiteBox · Standard Export Model</div>
+      <h1>Deployable in<br><em>minutes.</em></h1>
+      <p class="hero-sub">A fully self-contained folding unit built for remote sites, worker accommodation, and temporary offices across Australia. Ships flat, stands up on-site with no tools.</p>
+      <div class="hero-btns">
+        <a href="#enquire" class="btn-amber">Get a quote →</a>
+        <a href="#specs" class="btn-outline">View full specs</a>
+      </div>
+      <div class="stat-strip">
+        <div class="stat-tile">
+          <div class="stat-val">5,800 mm</div>
+          <div class="stat-label">Deployed length</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-val">800 kg</div>
+          <div class="stat-label">Transport weight</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-val">320 mm</div>
+          <div class="stat-label">Folded depth</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-val">1.5 kPa</div>
+          <div class="stat-label">Floor live load</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img-panel">
+      <div class="hero-img-box">
+        <img src="../images/sitebox/sitebox-01.jpg" alt="SiteBox Folding Unit deployed on site" onerror="this.src='../images/sitebox/sitebox-02.jpg';this.onerror=null">
+      </div>
+      <div class="hero-img-badge">
+        <div class="hero-img-badge-val">89–102 km/h</div>
+        <div class="hero-img-badge-label">Standard wind rating</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="sec" id="use-cases" style="background:#fff">
+  <div class="sec-i">
+    <div class="sec-tag sec-tag-amber">Where it works</div>
+    <h2 class="sec-h2">Built for where infrastructure isn't</h2>
+    <p class="sec-sub">Ships flat on a standard truck. Crane or forklift it into position, unfold, plug in. Ready in minutes.</p>
+    <div class="use-grid">
+      <div class="use-card">
+        <div class="use-icon">⛏️</div>
+        <h3>Remote Site Offices</h3>
+        <p>Mining, construction and agricultural sites where you need a secure, weatherproof office that can be relocated as the project moves.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-icon">🏕️</div>
+        <h3>Worker Accommodation</h3>
+        <p>Temporary bunkrooms or single occupancy quarters for fly-in fly-out crews, seasonal workers or emergency deployments.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-icon">🏗️</div>
+        <h3>Construction Site Welfare</h3>
+        <p>Site sheds, lunchrooms and first aid stations. Class B fire rated, electrical fitted, easy to reposition between stages.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-icon">🏪</div>
+        <h3>Pop-up Retail & Events</h3>
+        <p>Brand activations, market stalls, ticketing booths and temporary kiosks. Deploy at an event, fold up and move on.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-icon">🚑</div>
+        <h3>Emergency & Disaster Response</h3>
+        <p>Rapid deployable units for command posts, medical triage, or temporary sheltering in disaster-affected areas.</p>
+      </div>
+      <div class="use-card">
+        <div class="use-icon">🌾</div>
+        <h3>Farm & Rural Storage</h3>
+        <p>Secure on-property storage, equipment rooms or overnight accommodation for remote properties without mains power.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPLOY STEPS -->
+<section class="sec" style="background:#f8fafc;padding-top:0;padding-bottom:72px">
+  <div class="sec-i">
+    <div class="sec-tag sec-tag-blue">Deployment</div>
+    <h2 class="sec-h2">Three steps. Minutes, not days.</h2>
+    <p class="sec-sub">No on-site construction. No tools required for the fold-out itself.</p>
+    <div class="deploy-strip">
+      <div class="deploy-step">
+        <div class="deploy-num">1</div>
+        <h3>Transport flat</h3>
+        <p>Ships at only 320 mm deep — multiple units per truck or container. Crane or forklift compatible with standard lifting lugs.</p>
+        <span class="deploy-time">Standard logistics</span>
+      </div>
+      <div class="deploy-step">
+        <div class="deploy-num">2</div>
+        <h3>Position & unfold</h3>
+        <p>Crane into final position, then unfold the walls. No specialist trades. No concrete slab required for temporary placements.</p>
+        <span class="deploy-time">Minutes on site</span>
+      </div>
+      <div class="deploy-step">
+        <div class="deploy-num">3</div>
+        <h3>Connect power & go</h3>
+        <p>Australian-standard electrical pre-wired. Connect your generator or site supply — circuit breaker, sockets and lighting are ready.</p>
+        <span class="deploy-time">Same day use</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIFICATIONS -->
+<section class="sec" id="specs" style="background:#fff">
+  <div class="sec-i">
+    <div class="sec-tag sec-tag-slate">Full specifications</div>
+    <h2 class="sec-h2">Standard Export Model — complete spec sheet</h2>
+    <p class="sec-sub">All dimensions and materials for the standard folding SiteBox as supplied.</p>
+
+    <div class="spec-section">
+
+      <!-- DIMENSIONS & FRAME -->
+      <div class="spec-cols">
+        <div>
+          <div class="spec-group">
+            <div class="spec-group-title">Dimensions</div>
+            <table class="spec-table">
+              <tr><td>External (deployed)</td><td>5,800 × 2,460 × 2,430 mm</td></tr>
+              <tr><td>Internal</td><td>5,670 × 2,340 × 2,320 mm</td></tr>
+              <tr><td>Folded / transport</td><td>5,800 × 2,460 × 320 mm</td></tr>
+              <tr><td>Transport weight</td><td>800 kg</td></tr>
+            </table>
+          </div>
+          <div class="spec-group">
+            <div class="spec-group-title">Steel Frame — Q235B</div>
+            <table class="spec-table">
+              <tr><td>Top main beam</td><td>Rect. tube 60 × 60 × 1.3 mm</td></tr>
+              <tr><td>Bottom main beam</td><td>Rect. tube 60 × 120 × 1.3 mm</td></tr>
+              <tr><td>Front &amp; rear beams</td><td>Rect. tube 60 × 60 × 1.3 mm</td></tr>
+              <tr><td>Side wall frame</td><td>Rect. tube 50 × 60 × 1.0 mm</td></tr>
+              <tr><td>Floor support</td><td>Rect. tube 30 × 30 × 1.2 mm</td></tr>
+              <tr><td>Roof support</td><td>Rect. tube 30 × 30 × 1.3 mm</td></tr>
+              <tr><td>Lifting lugs</td><td>Q235B · 150 × 105 × 6 mm</td></tr>
+              <tr><td>Folding hinges</td><td>Galvanised · 13 mm</td></tr>
+              <tr><td>Frame coating</td><td>Electrostatic powder / matte black</td></tr>
+            </table>
+          </div>
+          <div class="spec-group">
+            <div class="spec-group-title">Floor</div>
+            <table class="spec-table">
+              <tr><td>Floorboard</td><td>18 mm fire-resistant MgO board</td></tr>
+              <tr><td>Floor live load</td><td>1.5 kPa (153 kgf/m²)</td></tr>
+              <tr><td>Fire rating</td><td>Class B (complete unit)</td></tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="spec-group">
+            <div class="spec-group-title">Roof</div>
+            <table class="spec-table">
+              <tr><td>Outer panel</td><td>Corrugated sheet · 0.35 mm</td></tr>
+              <tr><td>Interior ceiling</td><td>831-profile single-layer · 0.35 mm</td></tr>
+              <tr><td>Insulation</td><td>50 mm glass wool · 16 kg/m³</td></tr>
+              <tr><td>R-value (approx.)</td><td>~R2.0</td></tr>
+            </table>
+          </div>
+          <div class="spec-group">
+            <div class="spec-group-title">Wall Panels</div>
+            <table class="spec-table">
+              <tr><td>Side walls</td><td>50 mm FR EPS sandwich panel</td></tr>
+              <tr><td>Front &amp; rear</td><td>50 mm FR EPS sandwich panel</td></tr>
+              <tr><td>Steel skin thickness</td><td>0.25 ± 0.01 mm</td></tr>
+              <tr><td>EPS core density</td><td>12 kg/m³</td></tr>
+              <tr><td>Exterior texture</td><td>Orange-peel finish</td></tr>
+              <tr><td>Interior texture</td><td>Smooth finish</td></tr>
+              <tr><td>Wall R-value (approx.)</td><td>~R1.6</td></tr>
+            </table>
+          </div>
+          <div class="spec-group">
+            <div class="spec-group-title">Doors, Windows &amp; Electrical</div>
+            <table class="spec-table">
+              <tr><td>Security door</td><td>970 × 1,970 mm · warm white</td></tr>
+              <tr><td>Windows</td><td>2 × single-glazed uPVC + security bars · 930 × 930 mm</td></tr>
+              <tr><td>Wiring — sockets</td><td>Copper building wire · 2.5 mm²</td></tr>
+              <tr><td>Wiring — lighting</td><td>Copper building wire · 1.5 mm²</td></tr>
+              <tr><td>Circuit breaker</td><td>1 × 20A</td></tr>
+              <tr><td>Outlets</td><td>1 × standard socket · 1 × A/C socket</td></tr>
+              <tr><td>Lighting</td><td>1 × switch + 1 × light fitting</td></tr>
+              <tr><td>Electrical standard</td><td>Australian standard (AS/NZS 5000)</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WIND RATING -->
+<section class="sec" id="wind-rating" style="background:#f8fafc">
+  <div class="sec-i">
+    <div class="sec-tag sec-tag-blue">Wind rating</div>
+    <h2 class="sec-h2">Standard or upgraded — your site, your spec</h2>
+    <p class="sec-sub">The standard model covers most Australian sites. Cyclone and high-wind regions can be addressed with an RPEQ engineering upgrade.</p>
+    <div class="wind-grid">
+      <div class="wind-card">
+        <div class="wind-card-tag std">Standard</div>
+        <div class="wind-speed">89–102 km/h</div>
+        <div class="wind-sub">Beaufort Scale 10</div>
+        <div class="wind-desc">Standard rating covers the majority of Australian sites including most of Queensland, New South Wales, Victoria and South Australia. Suitable for typical remote site and construction use.</div>
+      </div>
+      <div class="wind-card upgraded">
+        <div class="wind-card-tag">Upgraded — Wind Region C</div>
+        <div class="wind-speed">122+ km/h</div>
+        <div class="wind-sub">AS 4055 N1 · N3+ available</div>
+        <div class="wind-desc">Achievable with Australian RPEQ engineering sign-off. Manufacturer provides structural drawings for upgrade. N3+ ratings (180+ km/h) available for cyclone-rated regions. Contact us to discuss your site's wind region and what's required.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" id="gallery" style="background:#fff">
+  <div class="sec-i">
+    <div class="sec-tag sec-tag-amber">Gallery</div>
+    <h2 class="sec-h2">SiteBox in the field</h2>
+    <div class="gallery-grid">
+      <div class="gallery-img">
+        <img src="../images/sitebox/sitebox-01.jpg" alt="SiteBox folding unit — deployed" onerror="this.parentElement.innerHTML='<div class=\'gallery-img-placeholder\'>SiteBox exterior</div>'">
+      </div>
+      <div class="gallery-img">
+        <img src="../images/sitebox/sitebox-02.jpg" alt="SiteBox — interior" onerror="this.parentElement.innerHTML='<div class=\'gallery-img-placeholder\'>SiteBox interior</div>'">
+      </div>
+      <div class="gallery-img" style="background:#f8fafc;border-radius:10px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center">
+        <div style="text-align:center;padding:24px">
+          <div style="font-size:2rem;margin-bottom:8px">📸</div>
+          <p style="font-size:0.78rem;color:#94a3b8;font-weight:500">More photos available<br>on request</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section class="sec" id="add-ons" style="background:#f8fafc">
+  <div class="sec-i">
+    <div class="sec-tag sec-tag-amber">Optional add-ons</div>
+    <h2 class="sec-h2">Customise for your site</h2>
+    <p class="sec-sub">All add-ons factory-fitted before shipping. Specify what you need at order stage.</p>
+    <div class="addon-grid">
+      <div class="addon-card">
+        <div class="addon-icon">🚿</div>
+        <p>Toilet / Bathroom Pod</p>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon">🛏️</div>
+        <p>Bunk Beds</p>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon">🏠</div>
+        <p>Vinyl Flooring</p>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon">🔲</div>
+        <p>18 mm MgO Floor Upgrade</p>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon">⚡</div>
+        <p>Additional Electrical Circuits</p>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon">❄️</div>
+        <p>Air Conditioning Unit</p>
+      </div>
+      <div class="addon-card">
+        <div class="addon-icon">🧱</div>
+        <p>Rockwool / PU Wall Insulation</p>
+      </div>
+      <div class="addon-card" style="background:#fff;border:2px dashed #e2e8f0">
+        <div class="addon-icon">💬</div>
+        <p style="color:#94a3b8">Ask us about custom options</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="enquire">
+  <h2>Ready to quote your site?</h2>
+  <p>Tell us your location, site type and how many units you need. We'll come back with pricing, lead times and delivery options — usually within one business day.</p>
+  <a href="mailto:info@notsotinyhomes.com.au?subject=SiteBox%20Enquiry" class="btn-amber">Email us your enquiry →</a>
+  <div class="contact-row">
+    <div class="contact-item"><strong>📞 0405 274 801</strong>Mon – Fri · 8am – 5pm AEST</div>
+    <div class="contact-item"><strong>✉️ info@notsotinyhomes.com.au</strong>Response within one business day</div>
+    <div class="contact-item"><strong>📍 Waterford, Brisbane QLD</strong>Kiteworks Pty Ltd · ABN 99 692 292 274</div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-logo">Not So Tiny Homes</div>
+  <div class="foot-contact">
+    <span>📞 0405 274 801</span>
+    <span>✉️ info@notsotinyhomes.com.au</span>
+    <span>📍 Waterford, Brisbane QLD</span>
+  </div>
+  <div class="foot-abn">© 2026 Kiteworks Pty Ltd · ABN 99 692 292 274 t/a Not So Tiny Homes</div>
+</footer>
+
+<script>
+document.addEventListener('click', e => {
+  const nav = document.getElementById('mobnav');
+  const btn = document.getElementById('hamburger');
+  if(nav && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target))
+    nav.classList.remove('open');
+});
+</script>
+</body>
+</html>
