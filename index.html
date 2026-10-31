@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -275,7 +275,7 @@ html,body{overflow-x:hidden}
 </div>
   <div class="nav-links">
     <a href="#models" onclick="toggleModels()">Relocatable Homes</a>
-    <a href="certified.html">Certified Series</a>
+    <a href="pages/certified.html">Certified Series</a>
     <a href="#sitebox">Site Office</a>
     <a href="#display">Display</a>
     <a href="#faq">FAQ</a>
@@ -289,7 +289,7 @@ html,body{overflow-x:hidden}
 <!-- Fix Issue 4 — mobile nav with visible CTA -->
 <div class="nav-mobile" id="mobile-nav">
   <a href="#models" onclick="closeNav()">Relocatable Homes</a>
-  <a href="certified.html" onclick="closeNav()">Certified Series (Class 1a)</a>
+  <a href="pages/certified.html" onclick="closeNav()">Certified Series (Class 1a)</a>
   <a href="#sitebox" onclick="closeNav()">Site Office</a>
   <a href="#display" onclick="closeNav()">Display Unit</a>
   <a href="#faq" onclick="closeNav()">FAQ</a>
@@ -327,7 +327,7 @@ html,body{overflow-x:hidden}
     left:50%;
     top:50%;
     transform:translate(-50%,-50%);
-    background:url('main.jpg') center center/contain no-repeat;
+    background:url('images/hero/hero-main.jpg') center center/contain no-repeat;
 
     filter:blur(2px);     /* less blur */
     opacity:0.5;          /* slightly stronger */
@@ -562,7 +562,7 @@ justify-content:center;
           <li>✓ We manage engineering &amp; certification</li>
         </ul>
         <div style="font-size:1.5rem;font-weight:800;color:#f59e0b;margin-bottom:14px">from $<span style="font-size:1.5rem;font-weight:800">75,000</span></div>
-        <a href="certified.html" style="display:inline-block;background:#f59e0b;color:#0f172a;padding:10px 18px;border-radius:7px;font-weight:600;font-size:0.82rem;text-align:center">See what's included →</a>
+        <a href="pages/certified.html" style="display:inline-block;background:#f59e0b;color:#0f172a;padding:10px 18px;border-radius:7px;font-weight:600;font-size:0.82rem;text-align:center">See what's included →</a>
       </div>
 
       <!-- SiteBox Series — teal/green -->
@@ -621,10 +621,10 @@ justify-content:center;
     </div>
     <div class="freedom-intro-grid">
       <div>
-        <img src="freedom_20ft_01.jpg"
+        <img src="images/freedom-20ft/exterior-01.jpg"
              alt="Freedom Series expandable home"
              style="width:100%;border-radius:12px;object-fit:cover;height:320px;box-shadow:0 12px 40px rgba(30,58,95,0.12)"
-             onerror="this.src='freedom_30ft_01.jpg'">
+             onerror="this.src='images/freedom-30ft/exterior-01.jpg'">
       </div>
       <div>
         <h3 style="font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:16px">What is a relocatable expandable home?</h3>
@@ -650,8 +650,8 @@ justify-content:center;
         <!-- 10ft -->
         <div class="model-card">
           <div class="model-gallery" id="g10">
-            <img src="freedom_10ft_01.jpg" class="active" alt="10ft white" onerror="this.src='freedom_10ft_01.jpg'">
-            <img src="freedom_10ft_02.jpg" alt="10ft outdoor">
+            <img src="images/freedom-10ft/exterior-01.jpg" class="active" alt="10ft white" onerror="this.src='images/freedom-10ft/exterior-01.jpg'">
+            <img src="images/freedom-10ft/exterior-02.jpg" alt="10ft outdoor">
             <span class="model-badge">10ft</span>
             <button class="gallery-arr gallery-prev" onclick="gNav('g10',-1)">‹</button>
             <button class="gallery-arr gallery-next" onclick="gNav('g10',1)">›</button>
@@ -662,8 +662,8 @@ justify-content:center;
             <button class="layout-tab" onclick="setLayout('lt10','lp10',1)">1 Bed</button>
           </div>
           <div class="layout-preview" id="lp10">
-            <img src="10ft_layout_01.jpg" class="active" alt="10ft layout">
-            <img src="10ft_floor_plan_01.png" alt="10ft floor plan">
+            <img src="images/freedom-10ft/layout-01.jpg" class="active" alt="10ft layout">
+            <img src="images/freedom-10ft/floor-plan-01.png" alt="10ft floor plan">
 
             <button class="layout-arr layout-arr-prev" onclick="lNav('lp10',-1)">‹</button>
             <button class="layout-arr layout-arr-next" onclick="lNav('lp10',1)">›</button>
@@ -680,7 +680,7 @@ justify-content:center;
             </div>
             <div style="display:flex;gap:8px;margin-top:auto">
               <button class="model-btn" style="flex:1" onclick="openModal('10ft')">Get a quote</button>
-              <a href="freedom-10ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.85rem;padding:10px;text-align:center">More details</a>
+              <a href="pages/freedom-10ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.85rem;padding:10px;text-align:center">More details</a>
             </div>
             <div style="margin-top:8px">
               <a style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:9px;border-radius:7px;border:1.5px solid #e2e8f0;font-size:0.78rem;font-weight:600;color:#b0b8c9;text-align:center;cursor:default">📄 Brochure Coming Soon</a>
@@ -691,8 +691,8 @@ justify-content:center;
         <!-- 20ft -->
         <div class="model-card">
           <div class="model-gallery" id="g20">
-            <img src="freedom_20ft_01.jpg" class="active" alt="20ft white" onerror="this.src='freedom_20ft_01.jpg'">
-            <img src="freedom_20ft_03.jpg" alt="20ft angle">
+            <img src="images/freedom-20ft/exterior-01.jpg" class="active" alt="20ft white" onerror="this.src='images/freedom-20ft/exterior-01.jpg'">
+            <img src="images/freedom-20ft/exterior-03.jpg" alt="20ft angle">
             <span class="model-badge">20ft · Popular</span>
             <button class="gallery-arr gallery-prev" onclick="gNav('g20',-1)">‹</button>
             <button class="gallery-arr gallery-next" onclick="gNav('g20',1)">›</button>
@@ -704,8 +704,8 @@ justify-content:center;
             <button class="layout-tab" onclick="setLayout('lt20','lp20',2)">Studio</button>
           </div>
           <div class="layout-preview" id="lp20">
-            <img src="20ft_layout_01.jpg" class="active" alt="20ft layout">
-            <img src="20ft_floor_plan_01.jpg" alt="20ft floor plan 1">
+            <img src="images/freedom-20ft/layout-01.jpg" class="active" alt="20ft layout">
+            <img src="images/freedom-20ft/floor-plan-01.jpg" alt="20ft floor plan 1">
             <img src="20ft_floor_plan_02.jpg" alt="20ft floor plan 2">
             <img src="20ft_floor_plan_03.jpg" alt="20ft floor plan 3">
             <img src="20ft_floor_plan_04.jpg" alt="20ft floor plan 4">
@@ -724,7 +724,7 @@ justify-content:center;
             </div>
             <div style="display:flex;gap:8px;margin-top:auto">
               <button class="model-btn" style="flex:1" onclick="openModal('20ft')">Get a quote</button>
-              <a href="freedom-20ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.85rem;padding:10px;text-align:center">More details</a>
+              <a href="pages/freedom-20ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.85rem;padding:10px;text-align:center">More details</a>
             </div>
             <div style="margin-top:8px">
               <a style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:9px;border-radius:7px;border:1.5px solid #e2e8f0;font-size:0.78rem;font-weight:600;color:#b0b8c9;text-align:center;cursor:default">📄 Brochure Coming Soon</a>
@@ -735,9 +735,9 @@ justify-content:center;
         <!-- 30ft -->
         <div class="model-card">
           <div class="model-gallery" id="g30">
-            <img src="freedom_30ft_01.jpg" class="active" alt="30ft exterior">
-            <img src="freedom_30ft_02.png" alt="30ft angle">
-            <img src="freedom_30ft_03.jpg" alt="30ft lifestyle">
+            <img src="images/freedom-30ft/exterior-01.jpg" class="active" alt="30ft exterior">
+            <img src="images/freedom-30ft/exterior-02.png" alt="30ft angle">
+            <img src="images/freedom-30ft/exterior-03.jpg" alt="30ft lifestyle">
             <img src="freedom_30ft_04.jpg" alt="30ft exterior">
             <span class="model-badge">30ft</span>
             <button class="gallery-arr gallery-prev" onclick="gNav('g30',-1)">‹</button>
@@ -749,9 +749,9 @@ justify-content:center;
             <button class="layout-tab" onclick="setLayout('lt30','lp30',1)">2 Bed</button>
           </div>
           <div class="layout-preview" id="lp30">
-            <img src="30ft_layout_01.jpg" class="active" alt="30ft layout 1">
-            <img src="30ft_layout_02.jpg" alt="30ft layout 2">
-            <img src="30ft_floor_plan_01.png" alt="30ft floor plan">
+            <img src="images/freedom-30ft/layout-01.jpg" class="active" alt="30ft layout 1">
+            <img src="images/freedom-30ft/layout-02.jpg" alt="30ft layout 2">
+            <img src="images/freedom-30ft/floor-plan-01.png" alt="30ft floor plan">
 
             <button class="layout-arr layout-arr-prev" onclick="lNav('lp30',-1)">‹</button>
             <button class="layout-arr layout-arr-next" onclick="lNav('lp30',1)">›</button>
@@ -768,7 +768,7 @@ justify-content:center;
             </div>
             <div style="display:flex;gap:8px;margin-top:auto">
               <button class="model-btn" style="flex:1" onclick="openModal('30ft')">Get a quote</button>
-              <a href="freedom-30ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.85rem;padding:10px;text-align:center">More details</a>
+              <a href="pages/freedom-30ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.85rem;padding:10px;text-align:center">More details</a>
             </div>
             <div style="margin-top:8px">
               <a style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:9px;border-radius:7px;border:1.5px solid #e2e8f0;font-size:0.78rem;font-weight:600;color:#b0b8c9;text-align:center;cursor:default">📄 Brochure Coming Soon</a>
@@ -779,10 +779,10 @@ justify-content:center;
         <!-- 40ft -->
         <div class="model-card">
           <div class="model-gallery" id="g40">
-            <img src="freedom_40ft_01.png" class="active" alt="40ft expandable home">
-            <img src="freedom_40ft_02.jpg" alt="40ft exterior">
-            <img src="freedom_40ft_03.jpg" alt="40ft white exterior">
-            <img src="freedom_40ft_03.png" alt="40ft angle">
+            <img src="images/freedom-40ft/exterior-01.png" class="active" alt="40ft expandable home">
+            <img src="images/freedom-40ft/exterior-02.jpg" alt="40ft exterior">
+            <img src="images/freedom-40ft/exterior-03.jpg" alt="40ft white exterior">
+            <img src="images/freedom-40ft/exterior-03b.png" alt="40ft angle">
             <span class="model-badge">40ft</span>
             <button class="gallery-arr gallery-prev" onclick="gNav('g40',-1)">‹</button>
             <button class="gallery-arr gallery-next" onclick="gNav('g40',1)">›</button>
@@ -794,9 +794,9 @@ justify-content:center;
             <button class="layout-tab" onclick="setLayout('lt40','lp40',2)">2 Bed</button>
           </div>
           <div class="layout-preview" id="lp40">
-            <img src="40ft_layout_01.jpg" class="active" alt="40ft layout 1">
-            <img src="40ft_layout_02.jpg" alt="40ft layout 2">
-            <img src="40ft_layout_03.jpg" alt="40ft layout 3">
+            <img src="images/freedom-40ft/layout-01.jpg" class="active" alt="40ft layout 1">
+            <img src="images/freedom-40ft/layout-02.jpg" alt="40ft layout 2">
+            <img src="images/freedom-40ft/layout-03.jpg" alt="40ft layout 3">
             <button class="layout-arr layout-arr-prev" onclick="lNav('lp40',-1)">‹</button>
             <button class="layout-arr layout-arr-next" onclick="lNav('lp40',1)">›</button>
             <div class="layout-dots" id="ld40"></div>
@@ -812,10 +812,10 @@ justify-content:center;
             </div>
             <div style="display:flex;gap:8px;margin-top:auto">
               <button class="model-btn" style="flex:1" onclick="openModal('40ft')">Get a quote</button>
-              <a href="freedom-40ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.85rem;padding:10px;text-align:center">More details</a>
+              <a href="pages/freedom-40ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.85rem;padding:10px;text-align:center">More details</a>
             </div>
             <div style="margin-top:8px">
-              <a href="40ft Brochure_Std.html" style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:9px;border-radius:7px;border:1.5px solid #e2e8f0;font-size:0.78rem;font-weight:600;color:#475569;text-align:center">📄 View Brochure</a>
+              <a href="pages/40ft-brochure-std.html" style="display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:9px;border-radius:7px;border:1.5px solid #e2e8f0;font-size:0.78rem;font-weight:600;color:#475569;text-align:center">📄 View Brochure</a>
             </div>
           </div>
         </div>
@@ -858,10 +858,10 @@ justify-content:center;
         </div>
       </div>
       <div>
-        <img src="main.jpg"
+        <img src="images/hero/hero-main.jpg"
              alt="40ft Class 1a certified expandable home"
              style="width:100%;border-radius:10px;margin-bottom:24px;object-fit:cover;height:220px"
-             onerror="this.src='freedom_30ft_01.jpg'">
+             onerror="this.src='images/freedom-30ft/exterior-01.jpg'">
         <h3 style="font-size:1rem;font-weight:700;margin-bottom:16px;color:#1e3a5f">How certification works</h3>
         <div class="c1a-steps">
           <div class="c1a-step"><div class="step-n">1</div><div class="step-t"><strong>Choose your model</strong><span>Select size and configuration — 20ft to 40ft</span></div></div>
@@ -889,7 +889,7 @@ justify-content:center;
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
       <div>
-<img src="sitebox02.jpg"
+<img src="images/sitebox/sitebox-02.jpg"
      alt="SiteBox foldable site unit"
      style="
         width:100%;
@@ -992,7 +992,7 @@ justify-content:center;
   <div class="sec-i">
     <div class="disp-grid">
       <div class="disp-img">
-        <img src="display_unit.jpg" alt="20ft expandable prefab home white panels black trim">
+        <img src="images/hero/hero-display-unit.jpg" alt="20ft expandable prefab home white panels black trim">
         <span class="disp-loc">📍 Waterford, Brisbane QLD</span>
       </div>
       <div>
@@ -1118,22 +1118,22 @@ justify-content:center;
 // Gallery images per model
 const galleryLayouts = {
   lp10: [
-    '10ft_layout_01.jpg',
-    '10ft_layout_01.jpg'
+    'images/freedom-10ft/layout-01.jpg',
+    'images/freedom-10ft/layout-01.jpg'
   ],
   lp20: [
-    '20ft_floor_plan_01.jpg',
-    '10ft_layout_01.jpg',
-    '10ft_layout_01.jpg'
+    'images/freedom-20ft/floor-plan-01.jpg',
+    'images/freedom-10ft/layout-01.jpg',
+    'images/freedom-10ft/layout-01.jpg'
   ],
   lp30: [
-    '30ft_layout_02.jpg',
-    '20ft_floor_plan_01.jpg'
+    'images/freedom-30ft/layout-02.jpg',
+    'images/freedom-20ft/floor-plan-01.jpg'
   ],
   lp40: [
-    '40ft_layout_01.jpg',
-    '30ft_layout_02.jpg',
-    '20ft_floor_plan_01.jpg'
+    'images/freedom-40ft/layout-01.jpg',
+    'images/freedom-30ft/layout-02.jpg',
+    'images/freedom-20ft/floor-plan-01.jpg'
   ]
 };
 

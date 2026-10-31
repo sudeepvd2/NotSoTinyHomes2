@@ -1,0 +1,168 @@
+﻿NSTH Website Reorganise Log
+============================================================
+MOVED   freedom-10ft.html  ->  pages\freedom-10ft.html
+MOVED   freedom-20ft.html  ->  pages\freedom-20ft.html
+MOVED   freedom-30ft.html  ->  pages\freedom-30ft.html
+MOVED   freedom-40ft.html  ->  pages\freedom-40ft.html
+MOVED   certified.html  ->  pages\certified.html
+MOVED   configure-options.html  ->  pages\configure-options.html
+MOVED   40ft Brochure_Std.html  ->  pages\40ft-brochure-std.html
+MOVED   main.jpg  ->  images\hero\hero-main.jpg
+MOVED   display_unit.jpg  ->  images\hero\hero-display-unit.jpg
+MOVED   class1a_3d.jpg  ->  images\hero\hero-class1a-3d.jpg
+MOVED   sitebox.jpg  ->  images\sitebox\sitebox-01.jpg
+MOVED   sitebox02.jpg  ->  images\sitebox\sitebox-02.jpg
+MOVED   freedom_10ft_01.jpg  ->  images\freedom-10ft\exterior-01.jpg
+MOVED   freedom_10ft_02.jpg  ->  images\freedom-10ft\exterior-02.jpg
+MOVED   10ft_floor_plan_01.png  ->  images\freedom-10ft\floor-plan-01.png
+MOVED   10ft_layout_01.jpg  ->  images\freedom-10ft\layout-01.jpg
+MOVED   freedom_20ft_01.jpg  ->  images\freedom-20ft\exterior-01.jpg
+MOVED   freedom_20ft_02.png  ->  images\freedom-20ft\exterior-02.png
+MOVED   freedom_20ft_03.jpg  ->  images\freedom-20ft\exterior-03.jpg
+MOVED   freedom_20ft_04.jpg  ->  images\freedom-20ft\exterior-04.jpg
+MOVED   20ft_floor_plan_01.jpg  ->  images\freedom-20ft\floor-plan-01.jpg
+MOVED   20ft_layout_01.jpg  ->  images\freedom-20ft\layout-01.jpg
+MOVED   20ft_interior_01.jpg  ->  images\freedom-20ft\interior-01.jpg
+MOVED   20ft_interior_02.jpg  ->  images\freedom-20ft\interior-02.jpg
+MOVED   20ft_interior_03.jpg  ->  images\freedom-20ft\interior-03.jpg
+MOVED   20ft_interior_04.jpg  ->  images\freedom-20ft\interior-04.jpg
+MOVED   20ft_interior_05.jpg  ->  images\freedom-20ft\interior-05.jpg
+MOVED   20ft_interior_06.jpg  ->  images\freedom-20ft\interior-06.jpg
+MOVED   20ft_interior_07.avif  ->  images\freedom-20ft\interior-07.avif
+MOVED   20ft_interior_08.avif  ->  images\freedom-20ft\interior-08.avif
+MOVED   20ft_interior_09.jpeg  ->  images\freedom-20ft\interior-09.jpg
+MOVED   20ft_interior_10.jpeg  ->  images\freedom-20ft\interior-10.jpg
+MOVED   20ft_interior_11.jpeg  ->  images\freedom-20ft\interior-11.jpg
+MOVED   freedom_30ft_01.jpg  ->  images\freedom-30ft\exterior-01.jpg
+MOVED   freedom_30ft_02.png  ->  images\freedom-30ft\exterior-02.png
+MOVED   freedom_30ft_03.jpg  ->  images\freedom-30ft\exterior-03.jpg
+MOVED   30ft_floor_plan_01.png  ->  images\freedom-30ft\floor-plan-01.png
+MOVED   30ft_layout_01.jpg  ->  images\freedom-30ft\layout-01.jpg
+MOVED   30ft_layout_02.jpg  ->  images\freedom-30ft\layout-02.jpg
+MOVED   30ft_interior_01.jpeg  ->  images\freedom-30ft\interior-01.jpg
+MOVED   30ft_interior_02.jpeg  ->  images\freedom-30ft\interior-02.jpg
+MOVED   certified_30ft_01.jpg  ->  images\freedom-30ft\certified-01.jpg
+MOVED   freedom_40ft_01.png  ->  images\freedom-40ft\exterior-01.png
+MOVED   freedom_40ft_02.jpg  ->  images\freedom-40ft\exterior-02.jpg
+MOVED   freedom_40ft_03.jpg  ->  images\freedom-40ft\exterior-03.jpg
+MOVED   freedom_40ft_03.png  ->  images\freedom-40ft\exterior-03b.png
+MOVED   40ft_floor_plan_custom_01.jpg  ->  images\freedom-40ft\floor-plan-custom-01.jpg
+MOVED   40ft_interior_01.jpeg  ->  images\freedom-40ft\interior-01.jpg
+MOVED   40ft_interior_02.jpeg  ->  images\freedom-40ft\interior-02.jpg
+MOVED   40ft_interior_03.jpeg  ->  images\freedom-40ft\interior-03.jpg
+MOVED   40ft_interior_04.jpeg  ->  images\freedom-40ft\interior-04.jpg
+MOVED   40ft_interior_05.jpeg  ->  images\freedom-40ft\interior-05.jpg
+MOVED   40ft_layout_01.jpg  ->  images\freedom-40ft\layout-01.jpg
+MOVED   40ft_layout_02.jpg  ->  images\freedom-40ft\layout-02.jpg
+MOVED   40ft_layout_03.jpg  ->  images\freedom-40ft\layout-03.jpg
+MOVED   40ft_layout_custom_01.jpg  ->  images\freedom-40ft\layout-custom-01.jpg
+MOVED   40ft_layout_custom_02.jpg.png  ->  images\freedom-40ft\layout-custom-02.png
+
+HTML PATH UPDATES
+------------------------------------------------------------
+
+UPDATED C:\NSTHWebsite\index.html
+  10ft_floor_plan_01.png  ->  images/freedom-10ft/floor-plan-01.png
+  20ft_floor_plan_01.jpg  ->  images/freedom-20ft/floor-plan-01.jpg
+  30ft_layout_02.jpg  ->  images/freedom-30ft/layout-02.jpg
+  main.jpg  ->  images/hero/hero-main.jpg
+  freedom_30ft_02.png  ->  images/freedom-30ft/exterior-02.png
+  freedom_20ft_01.jpg  ->  images/freedom-20ft/exterior-01.jpg
+  freedom-10ft.html  ->  pages/freedom-10ft.html
+  certified.html  ->  pages/certified.html
+  freedom_20ft_03.jpg  ->  images/freedom-20ft/exterior-03.jpg
+  sitebox02.jpg  ->  images/sitebox/sitebox-02.jpg
+  freedom_30ft_01.jpg  ->  images/freedom-30ft/exterior-01.jpg
+  freedom-20ft.html  ->  pages/freedom-20ft.html
+  freedom_40ft_03.png  ->  images/freedom-40ft/exterior-03b.png
+  freedom_40ft_01.png  ->  images/freedom-40ft/exterior-01.png
+  20ft_layout_01.jpg  ->  images/freedom-20ft/layout-01.jpg
+  freedom_30ft_03.jpg  ->  images/freedom-30ft/exterior-03.jpg
+  freedom_40ft_02.jpg  ->  images/freedom-40ft/exterior-02.jpg
+  freedom_10ft_01.jpg  ->  images/freedom-10ft/exterior-01.jpg
+  40ft Brochure_Std.html  ->  pages/40ft-brochure-std.html
+  40ft_layout_02.jpg  ->  images/freedom-40ft/layout-02.jpg
+  freedom_10ft_02.jpg  ->  images/freedom-10ft/exterior-02.jpg
+  freedom_40ft_03.jpg  ->  images/freedom-40ft/exterior-03.jpg
+  40ft_layout_03.jpg  ->  images/freedom-40ft/layout-03.jpg
+  freedom-30ft.html  ->  pages/freedom-30ft.html
+  30ft_floor_plan_01.png  ->  images/freedom-30ft/floor-plan-01.png
+  freedom-40ft.html  ->  pages/freedom-40ft.html
+  10ft_layout_01.jpg  ->  images/freedom-10ft/layout-01.jpg
+  40ft_layout_01.jpg  ->  images/freedom-40ft/layout-01.jpg
+  display_unit.jpg  ->  images/hero/hero-display-unit.jpg
+  30ft_layout_01.jpg  ->  images/freedom-30ft/layout-01.jpg
+
+UPDATED C:\NSTHWebsite\pages\certified.html
+  main.jpg  ->  ../images/hero/hero-main.jpg
+  certified.html  ->  certified.html
+  freedom_40ft_01.png  ->  ../images/freedom-40ft/exterior-01.png
+  configure-options.html  ->  configure-options.html
+
+UPDATED C:\NSTHWebsite\pages\freedom-10ft.html
+  10ft_floor_plan_01.png  ->  ../images/freedom-10ft/floor-plan-01.png
+  freedom-10ft.html  ->  freedom-10ft.html
+  certified.html  ->  certified.html
+  freedom-20ft.html  ->  freedom-20ft.html
+  freedom_10ft_01.jpg  ->  ../images/freedom-10ft/exterior-01.jpg
+  freedom_10ft_02.jpg  ->  ../images/freedom-10ft/exterior-02.jpg
+  freedom-30ft.html  ->  freedom-30ft.html
+  freedom-40ft.html  ->  freedom-40ft.html
+  10ft_layout_01.jpg  ->  ../images/freedom-10ft/layout-01.jpg
+  configure-options.html  ->  configure-options.html
+
+UPDATED C:\NSTHWebsite\pages\freedom-20ft.html
+  20ft_floor_plan_01.jpg  ->  ../images/freedom-20ft/floor-plan-01.jpg
+  20ft_interior_02.jpg  ->  ../images/freedom-20ft/interior-02.jpg
+  20ft_interior_04.jpg  ->  ../images/freedom-20ft/interior-04.jpg
+  freedom_20ft_01.jpg  ->  ../images/freedom-20ft/exterior-01.jpg
+  20ft_interior_01.jpg  ->  ../images/freedom-20ft/interior-01.jpg
+  20ft_interior_06.jpg  ->  ../images/freedom-20ft/interior-06.jpg
+  freedom-10ft.html  ->  freedom-10ft.html
+  certified.html  ->  certified.html
+  freedom_20ft_03.jpg  ->  ../images/freedom-20ft/exterior-03.jpg
+  freedom_20ft_02.png  ->  ../images/freedom-20ft/exterior-02.png
+  freedom-20ft.html  ->  freedom-20ft.html
+  20ft_interior_03.jpg  ->  ../images/freedom-20ft/interior-03.jpg
+  20ft_interior_05.jpg  ->  ../images/freedom-20ft/interior-05.jpg
+  freedom-30ft.html  ->  freedom-30ft.html
+  freedom-40ft.html  ->  freedom-40ft.html
+  freedom_20ft_04.jpg  ->  ../images/freedom-20ft/exterior-04.jpg
+  configure-options.html  ->  configure-options.html
+
+UPDATED C:\NSTHWebsite\pages\freedom-30ft.html
+  30ft_interior_01.jpeg  ->  ../images/freedom-30ft/interior-01.jpg
+  30ft_layout_02.jpg  ->  ../images/freedom-30ft/layout-02.jpg
+  30ft_interior_02.jpeg  ->  ../images/freedom-30ft/interior-02.jpg
+  freedom_30ft_02.png  ->  ../images/freedom-30ft/exterior-02.png
+  freedom-10ft.html  ->  freedom-10ft.html
+  certified.html  ->  certified.html
+  freedom_30ft_01.jpg  ->  ../images/freedom-30ft/exterior-01.jpg
+  freedom-20ft.html  ->  freedom-20ft.html
+  freedom_30ft_03.jpg  ->  ../images/freedom-30ft/exterior-03.jpg
+  freedom-30ft.html  ->  freedom-30ft.html
+  30ft_floor_plan_01.png  ->  ../images/freedom-30ft/floor-plan-01.png
+  freedom-40ft.html  ->  freedom-40ft.html
+  configure-options.html  ->  configure-options.html
+  30ft_layout_01.jpg  ->  ../images/freedom-30ft/layout-01.jpg
+
+UPDATED C:\NSTHWebsite\pages\freedom-40ft.html
+  40ft_floor_plan_custom_01.jpg  ->  ../images/freedom-40ft/floor-plan-custom-01.jpg
+  freedom-10ft.html  ->  freedom-10ft.html
+  certified.html  ->  certified.html
+  40ft_interior_04.jpeg  ->  ../images/freedom-40ft/interior-04.jpg
+  40ft_interior_05.jpeg  ->  ../images/freedom-40ft/interior-05.jpg
+  freedom-20ft.html  ->  freedom-20ft.html
+  freedom_40ft_03.png  ->  ../images/freedom-40ft/exterior-03b.png
+  freedom_40ft_01.png  ->  ../images/freedom-40ft/exterior-01.png
+  40ft_interior_02.jpeg  ->  ../images/freedom-40ft/interior-02.jpg
+  freedom_40ft_02.jpg  ->  ../images/freedom-40ft/exterior-02.jpg
+  40ft_layout_02.jpg  ->  ../images/freedom-40ft/layout-02.jpg
+  40ft_interior_03.jpeg  ->  ../images/freedom-40ft/interior-03.jpg
+  freedom_40ft_03.jpg  ->  ../images/freedom-40ft/exterior-03.jpg
+  40ft_layout_03.jpg  ->  ../images/freedom-40ft/layout-03.jpg
+  freedom-30ft.html  ->  freedom-30ft.html
+  freedom-40ft.html  ->  freedom-40ft.html
+  configure-options.html  ->  configure-options.html
+  40ft_layout_01.jpg  ->  ../images/freedom-40ft/layout-01.jpg
+  40ft_interior_01.jpeg  ->  ../images/freedom-40ft/interior-01.jpg
