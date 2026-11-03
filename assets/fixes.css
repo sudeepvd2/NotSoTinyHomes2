@@ -57,3 +57,18 @@ footer .foot-abn{color:#cbd5e1}
 .sb-photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
 .sb-photos img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px}
 @media (max-width:420px){.sb-tiers{grid-template-columns:1fr}}
+
+/* Hero: plain background, whole house always visible */
+.hero-new{background:#fff!important;padding:96px 5% 40px!important;min-height:0!important;overflow:visible!important}
+.hero-new::before,.hero-new::after{display:none!important;content:none!important}
+.hero-new .hero-content{max-width:1000px!important;width:100%}
+.hero-new .hero-content h1{margin-bottom:20px}
+.hero-new .hero-btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.hero-house{display:block;width:100%;height:auto;max-height:min(58vh,520px);object-fit:contain;margin:28px auto 0}
+.hero-new .hero-cap{font-size:.875rem;color:#64748b;margin:8px 0 0;max-width:none}
+@media (max-width:540px){
+  .hero-new{padding:84px 16px 28px!important}
+  .hero-new .hero-btns{flex-direction:column;align-items:stretch;width:100%}
+  .hero-house{margin-top:20px;max-height:none}
+}
+@media (max-height:500px){.hero-new{padding-top:76px!important}.hero-house{max-height:70vh}}
