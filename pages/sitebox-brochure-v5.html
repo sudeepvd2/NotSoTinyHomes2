@@ -5,163 +5,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>Folding SiteBox Unit | Not So Tiny Homes</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:60px;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}
-.nav-logo{font-weight:800;font-size:1.1rem;color:#1e293b}
-.nav-links{display:flex;align-items:center;gap:24px}
-.nav-links a{font-size:0.9375rem;font-weight:600;color:#64748b}
-.nav-links a:hover{color:#1e293b}
-.nav-cta{background:#f59e0b;color:#0f172a!important;padding:8px 18px;border-radius:6px}
-.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-.hamburger span{display:block;width:22px;height:2px;background:#1e3a5f;border-radius:2px}
-.mob-nav{display:none;position:fixed;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 5% 20px;flex-direction:column;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
-.mob-nav.open{display:flex}
-.mob-nav a{font-size:0.95rem;font-weight:500;color:#1e3a5f;padding:13px 0;border-bottom:1px solid #f1f5f9;display:block}
-
-/* HERO */
-.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#0f4c75 100%);min-height:88vh;display:flex;align-items:center;padding:100px 5% 60px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(245,158,11,0.08) 0%,transparent 65%)}
-.hero-i{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}
-.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:#fbbf24;font-size:0.9375rem;font-weight:700;padding:5px 12px;border-radius:20px;margin-bottom:20px;letter-spacing:0.05em;text-transform:uppercase}
-.hero h1{font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:900;line-height:1.05;letter-spacing:-0.04em;color:#fff;margin-bottom:18px}
-.hero h1 em{color:#f59e0b;font-style:normal}
-.hero-sub{font-size:0.95rem;color:rgba(255,255,255,0.68);line-height:1.8;margin-bottom:32px;max-width:460px}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn-amber{background:#f59e0b;color:#0f172a;padding:13px 26px;border-radius:8px;font-weight:700;font-size:0.9375rem;display:inline-block;transition:background .15s}
-.btn-amber:hover{background:#d97706}
-.btn-outline{border:2px solid rgba(255,255,255,0.25);color:#fff;padding:11px 24px;border-radius:8px;font-weight:600;font-size:0.9375rem;display:inline-block;transition:border-color .15s}
-.btn-outline:hover{border-color:rgba(255,255,255,0.6)}
-
-/* STAT TILES */
-.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;overflow:hidden}
-.stat-tile{padding:20px 16px;text-align:center;border-right:1px solid rgba(255,255,255,0.08)}
-.stat-tile:last-child{border-right:none}
-.stat-val{font-size:1.25rem;font-weight:800;color:#f59e0b;line-height:1;margin-bottom:4px;font-variant-numeric:tabular-nums}
-.stat-label{font-size:0.9375rem;color:rgba(255,255,255,0.45);font-weight:500;letter-spacing:0.03em}
-
-/* HERO IMAGE PANEL */
-.hero-img-panel{position:relative}
-.hero-img-box{border-radius:16px;overflow:hidden;background:#0f172a;aspect-ratio:4/3;border:1px solid rgba(255,255,255,0.1);box-shadow:0 32px 64px rgba(0,0,0,0.4)}
-.hero-img-box img{width:100%;height:100%;object-fit:cover;opacity:0.9}
-.hero-img-badge{position:absolute;bottom:16px;left:16px;background:rgba(15,23,42,0.85);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px 14px}
-.hero-img-badge-val{font-size:1rem;font-weight:800;color:#f59e0b}
-.hero-img-badge-label{font-size:0.9375rem;color:rgba(255,255,255,0.55);margin-top:1px}
-
-/* SECTION BASE */
-.sec{padding:72px 5%}
-.sec-i{max-width:1160px;margin:0 auto}
-.sec-tag{display:inline-block;font-size:0.9375rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:14px}
-.sec-tag-amber{background:#fef3c7;color:#92400e}
-.sec-tag-blue{background:#dbeafe;color:#1e40af}
-.sec-tag-slate{background:#f1f5f9;color:#475569}
-.sec-h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:12px}
-.sec-sub{font-size:0.9375rem;color:#64748b;line-height:1.8;max-width:580px}
-
-/* USE CASES */
-.use-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
-.use-card{padding:24px;border:1.5px solid #e2e8f0;border-radius:12px;transition:border-color .2s,box-shadow .2s}
-.use-card:hover{border-color:#f59e0b;box-shadow:0 4px 20px rgba(245,158,11,0.1)}
-.use-icon{font-size:2rem;margin-bottom:12px}
-.use-card h3{font-size:0.9375rem;font-weight:700;margin-bottom:6px}
-.use-card p{font-size:0.9375rem;color:#64748b;line-height:1.7}
-
-/* SPEC TABLES */
-.spec-section{margin-top:48px}
-.spec-group{margin-bottom:32px}
-.spec-group-title{font-size:0.9375rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#94a3b8;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #f1f5f9}
-.spec-table{width:100%;border-collapse:collapse}
-.spec-table tr{border-bottom:1px solid #f8fafc}
-.spec-table tr:last-child{border-bottom:none}
-.spec-table td{padding:9px 4px;font-size:0.9375rem}
-.spec-table td:first-child{color:#64748b;font-weight:500;width:42%}
-.spec-table td:last-child{color:#1e293b;font-weight:600;text-align:right}
-.spec-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:24px}
-
-/* WIND RATING */
-.wind-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
-.wind-card{padding:28px;border-radius:14px;border:2px solid #e2e8f0;position:relative;overflow:hidden}
-.wind-card.upgraded{border-color:#f59e0b;background:#fffbeb}
-.wind-card-tag{font-size:0.9375rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:3px;background:#f59e0b;color:#0f172a;display:inline-block;margin-bottom:14px}
-.wind-card-tag.std{background:#e2e8f0;color:#475569}
-.wind-speed{font-size:2rem;font-weight:900;color:#1e3a5f;line-height:1;margin-bottom:4px}
-.wind-sub{font-size:0.9375rem;color:#64748b;margin-bottom:14px}
-.wind-desc{font-size:0.9375rem;color:#475569;line-height:1.7}
-
-/* ADD-ONS */
-.addon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
-.addon-card{padding:18px 16px;background:#f8fafc;border-radius:10px;border:1px solid #e2e8f0;text-align:center;transition:border-color .2s,background .2s}
-.addon-card:hover{border-color:#f59e0b;background:#fffbeb}
-.addon-icon{font-size:1.5rem;margin-bottom:8px}
-.addon-card p{font-size:0.9375rem;font-weight:600;color:#1e293b;line-height:1.4}
-
-/* GALLERY */
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}
-.gallery-img{border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:#f1f5f9}
-.gallery-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
-.gallery-img:hover img{transform:scale(1.03)}
-.gallery-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:0.9375rem;background:#f8fafc}
-
-/* DEPLOY STEPS */
-.deploy-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;border:1.5px solid #e2e8f0;border-radius:12px;overflow:hidden}
-.deploy-step{padding:24px;border-right:1.5px solid #e2e8f0;position:relative}
-.deploy-step:last-child{border-right:none}
-.deploy-num{width:32px;height:32px;border-radius:50%;background:#1e3a5f;color:#fff;font-weight:800;font-size:0.9375rem;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
-.deploy-step h3{font-size:0.9375rem;font-weight:700;margin-bottom:6px}
-.deploy-step p{font-size:0.9375rem;color:#64748b;line-height:1.6}
-.deploy-time{display:inline-block;font-size:0.9375rem;font-weight:600;color:#f59e0b;background:#fef3c7;padding:2px 8px;border-radius:3px;margin-top:8px}
-
-/* CTA */
-.cta-band{background:linear-gradient(135deg,#1e3a5f 0%,#0f172a 100%);padding:60px 5%;text-align:center;position:relative;overflow:hidden}
-.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(245,158,11,0.12) 0%,transparent 60%)}
-.cta-band h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:12px;position:relative}
-.cta-band p{font-size:0.9375rem;color:rgba(255,255,255,0.6);max-width:480px;margin:0 auto 28px;line-height:1.8;position:relative}
-.cta-band .btn-amber{position:relative}
-.contact-row{display:flex;gap:32px;justify-content:center;margin-top:24px;flex-wrap:wrap;position:relative}
-.contact-item{font-size:0.9375rem;color:rgba(255,255,255,0.5)}
-.contact-item strong{color:rgba(255,255,255,0.85);display:block;font-size:0.9375rem}
-
-/* FOOTER */
-footer{background:#0f172a;padding:28px 5%;text-align:center}
-.foot-logo{font-weight:800;color:#fff;margin-bottom:6px}
-.foot-contact{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;font-size:0.9375rem;color:rgba(255,255,255,0.45)}
-.foot-abn{font-size:0.9375rem;color:rgba(255,255,255,0.25);margin-top:6px}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero-i{grid-template-columns:1fr}
-  .hero-img-panel{display:none}
-  .stat-strip{grid-template-columns:repeat(2,1fr)}
-  .stat-tile:nth-child(2){border-right:none}
-  .stat-tile:nth-child(3){border-top:1px solid rgba(255,255,255,0.08)}
-  .use-grid{grid-template-columns:1fr 1fr}
-  .spec-cols{grid-template-columns:1fr}
-  .wind-grid{grid-template-columns:1fr}
-  .addon-grid{grid-template-columns:repeat(2,1fr)}
-  .gallery-grid{grid-template-columns:1fr 1fr}
-  .deploy-strip{grid-template-columns:1fr}
-  .deploy-step{border-right:none;border-bottom:1.5px solid #e2e8f0}
-  .deploy-step:last-child{border-bottom:none}
-  .hamburger{display:flex}
-  .nav-links{display:none}
-}
-@media(max-width:600px){
-  .use-grid{grid-template-columns:1fr}
-  .addon-grid{grid-template-columns:repeat(2,1fr)}
-  .gallery-grid{grid-template-columns:1fr}
-  .stat-strip{grid-template-columns:repeat(2,1fr)}
-  .hero-btns{flex-direction:column}
-  .foot-contact{flex-direction:column;gap:6px;align-items:center}
-}
-</style>
-<meta content="A 5.8 m folding steel unit for site offices and storage, from $4,500 incl. GST plus delivery. Specifications, limits and add-ons." name="description"/><link rel="stylesheet" href="../assets/fixes.css">
+<link rel="preload" href="../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:60px;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}.nav-logo{font-weight:800;font-size:1.1rem;color:#1e293b}.nav-links{display:flex;align-items:center;gap:24px}.nav-links a{font-size:0.9375rem;font-weight:600;color:#64748b}.nav-links a:hover{color:#1e293b}.nav-cta{background:#f59e0b;color:#0f172a!important;padding:8px 18px;border-radius:6px}.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.hamburger span{display:block;width:22px;height:2px;background:#1e3a5f;border-radius:2px}.mob-nav{display:none;position:fixed;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 5% 20px;flex-direction:column;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,0.08)}.mob-nav.open{display:flex}.mob-nav a{font-size:0.95rem;font-weight:500;color:#1e3a5f;padding:13px 0;border-bottom:1px solid #f1f5f9;display:block}.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#0f4c75 100%);min-height:88vh;display:flex;align-items:center;padding:100px 5% 60px;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(245,158,11,0.08) 0%,transparent 65%)}.hero-i{max-width:1160px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative}.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:#fbbf24;font-size:0.9375rem;font-weight:700;padding:5px 12px;border-radius:20px;margin-bottom:20px;letter-spacing:0.05em;text-transform:uppercase}.hero h1{font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:900;line-height:1.05;letter-spacing:-0.04em;color:#fff;margin-bottom:18px}.hero h1 em{color:#f59e0b;font-style:normal}.hero-sub{font-size:0.95rem;color:rgba(255,255,255,0.68);line-height:1.8;margin-bottom:32px;max-width:460px}.hero-btns{display:flex;gap:12px;flex-wrap:wrap}.btn-amber{background:#f59e0b;color:#0f172a;padding:13px 26px;border-radius:8px;font-weight:700;font-size:0.9375rem;display:inline-block;transition:background .15s}.btn-amber:hover{background:#d97706}.btn-outline{border:2px solid rgba(255,255,255,0.25);color:#fff;padding:11px 24px;border-radius:8px;font-weight:600;font-size:0.9375rem;display:inline-block;transition:border-color .15s}.btn-outline:hover{border-color:rgba(255,255,255,0.6)}.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:44px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;overflow:hidden}.stat-tile{padding:20px 16px;text-align:center;border-right:1px solid rgba(255,255,255,0.08)}.stat-tile:last-child{border-right:none}.stat-val{font-size:1.25rem;font-weight:800;color:#f59e0b;line-height:1;margin-bottom:4px;font-variant-numeric:tabular-nums}.stat-label{font-size:0.9375rem;color:rgba(255,255,255,0.45);font-weight:500;letter-spacing:0.03em}.hero-img-panel{position:relative}.hero-img-box{border-radius:16px;overflow:hidden;background:#0f172a;aspect-ratio:4/3;border:1px solid rgba(255,255,255,0.1);box-shadow:0 32px 64px rgba(0,0,0,0.4)}.hero-img-box img{width:100%;height:100%;object-fit:cover;opacity:0.9}.hero-img-badge{position:absolute;bottom:16px;left:16px;background:rgba(15,23,42,0.85);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px 14px}.hero-img-badge-val{font-size:1rem;font-weight:800;color:#f59e0b}.hero-img-badge-label{font-size:0.9375rem;color:rgba(255,255,255,0.55);margin-top:1px}.sec{padding:72px 5%}.sec-i{max-width:1160px;margin:0 auto}.sec-tag{display:inline-block;font-size:0.9375rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:14px}.sec-tag-amber{background:#fef3c7;color:#92400e}.sec-tag-blue{background:#dbeafe;color:#1e40af}.sec-tag-slate{background:#f1f5f9;color:#475569}.sec-h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:12px}.sec-sub{font-size:0.9375rem;color:#64748b;line-height:1.8;max-width:580px}.use-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}.use-card{padding:24px;border:1.5px solid #e2e8f0;border-radius:12px;transition:border-color .2s,box-shadow .2s}.use-card:hover{border-color:#f59e0b;box-shadow:0 4px 20px rgba(245,158,11,0.1)}.use-icon{font-size:2rem;margin-bottom:12px}.use-card h3{font-size:0.9375rem;font-weight:700;margin-bottom:6px}.use-card p{font-size:0.9375rem;color:#64748b;line-height:1.7}.spec-section{margin-top:48px}.spec-group{margin-bottom:32px}.spec-group-title{font-size:0.9375rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#94a3b8;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #f1f5f9}.spec-table{width:100%;border-collapse:collapse}.spec-table tr{border-bottom:1px solid #f8fafc}.spec-table tr:last-child{border-bottom:none}.spec-table td{padding:9px 4px;font-size:0.9375rem}.spec-table td:first-child{color:#64748b;font-weight:500;width:42%}.spec-table td:last-child{color:#1e293b;font-weight:600;text-align:right}.spec-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:24px}.wind-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}.wind-card{padding:28px;border-radius:14px;border:2px solid #e2e8f0;position:relative;overflow:hidden}.wind-card.upgraded{border-color:#f59e0b;background:#fffbeb}.wind-card-tag{font-size:0.9375rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:3px;background:#f59e0b;color:#0f172a;display:inline-block;margin-bottom:14px}.wind-card-tag.std{background:#e2e8f0;color:#475569}.wind-speed{font-size:2rem;font-weight:900;color:#1e3a5f;line-height:1;margin-bottom:4px}.wind-sub{font-size:0.9375rem;color:#64748b;margin-bottom:14px}.wind-desc{font-size:0.9375rem;color:#475569;line-height:1.7}.addon-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}.addon-card{padding:18px 16px;background:#f8fafc;border-radius:10px;border:1px solid #e2e8f0;text-align:center;transition:border-color .2s,background .2s}.addon-card:hover{border-color:#f59e0b;background:#fffbeb}.addon-icon{font-size:1.5rem;margin-bottom:8px}.addon-card p{font-size:0.9375rem;font-weight:600;color:#1e293b;line-height:1.4}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:32px}.gallery-img{border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:#f1f5f9}.gallery-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.gallery-img:hover img{transform:scale(1.03)}.gallery-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:0.9375rem;background:#f8fafc}.deploy-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;border:1.5px solid #e2e8f0;border-radius:12px;overflow:hidden}.deploy-step{padding:24px;border-right:1.5px solid #e2e8f0;position:relative}.deploy-step:last-child{border-right:none}.deploy-num{width:32px;height:32px;border-radius:50%;background:#1e3a5f;color:#fff;font-weight:800;font-size:0.9375rem;display:flex;align-items:center;justify-content:center;margin-bottom:12px}.deploy-step h3{font-size:0.9375rem;font-weight:700;margin-bottom:6px}.deploy-step p{font-size:0.9375rem;color:#64748b;line-height:1.6}.deploy-time{display:inline-block;font-size:0.9375rem;font-weight:600;color:#f59e0b;background:#fef3c7;padding:2px 8px;border-radius:3px;margin-top:8px}.cta-band{background:linear-gradient(135deg,#1e3a5f 0%,#0f172a 100%);padding:60px 5%;text-align:center;position:relative;overflow:hidden}.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(245,158,11,0.12) 0%,transparent 60%)}.cta-band h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;margin-bottom:12px;position:relative}.cta-band p{font-size:0.9375rem;color:rgba(255,255,255,0.6);max-width:480px;margin:0 auto 28px;line-height:1.8;position:relative}.cta-band .btn-amber{position:relative}.contact-row{display:flex;gap:32px;justify-content:center;margin-top:24px;flex-wrap:wrap;position:relative}.contact-item{font-size:0.9375rem;color:rgba(255,255,255,0.5)}.contact-item strong{color:rgba(255,255,255,0.85);display:block;font-size:0.9375rem}footer{background:#0f172a;padding:28px 5%;text-align:center}.foot-logo{font-weight:800;color:#fff;margin-bottom:6px}.foot-contact{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;font-size:0.9375rem;color:rgba(255,255,255,0.45)}.foot-abn{font-size:0.9375rem;color:rgba(255,255,255,0.25);margin-top:6px}@media(max-width:900px){.hero-i{grid-template-columns:1fr}.hero-img-panel{display:none}.stat-strip{grid-template-columns:repeat(2,1fr)}.stat-tile:nth-child(2){border-right:none}.stat-tile:nth-child(3){border-top:1px solid rgba(255,255,255,0.08)}.use-grid{grid-template-columns:1fr 1fr}.spec-cols{grid-template-columns:1fr}.wind-grid{grid-template-columns:1fr}.addon-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:1fr 1fr}.deploy-strip{grid-template-columns:1fr}.deploy-step{border-right:none;border-bottom:1.5px solid #e2e8f0}.deploy-step:last-child{border-bottom:none}.hamburger{display:flex}.nav-links{display:none}}@media(max-width:600px){.use-grid{grid-template-columns:1fr}.addon-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:1fr}.stat-strip{grid-template-columns:repeat(2,1fr)}.hero-btns{flex-direction:column}.foot-contact{flex-direction:column;gap:6px;align-items:center}}</style>
+<meta content="Folding steel SiteBox units for site offices and storage. Standard from $4,500 and Premium Upgraded with N3+ wind rating at $6,500, incl. GST, plus delivery." name="description"/><link href="../assets/fixes.css" rel="stylesheet"/>
 </head>
 <body>
 <nav>
@@ -188,9 +34,9 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <section class="hero">
 <div class="hero-i">
 <div>
-<div class="hero-tag">Folding SiteBox · From $4,500 incl. GST</div>
+<div class="hero-tag">Folding SiteBox · Standard and Premium Upgraded</div>
 <h1>Folds out in<br/><em>minutes.</em></h1>
-<p class="hero-sub">A 5.8 m folding steel unit for site offices, storage and similar uses. It is an empty shell with basic wiring and ships flat. Delivery, lifting and connection are extra.</p>
+<p class="hero-sub">A 5.8 m folding steel unit for site offices, storage and similar uses. Standard from $4,500, or Premium Upgraded with an N3+ wind rating for tougher conditions at $6,500. Prices include GST. Delivery, lifting and connection are extra.</p>
 <div class="hero-btns">
 <a class="btn-amber" href="#enquire">Get a quote →</a>
 <a class="btn-outline" href="#specs">View full specs</a>
@@ -216,7 +62,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 </div>
 <div class="hero-img-panel">
 <div class="hero-img-box">
-<img alt="SiteBox Folding Unit deployed on site" src="../images/sitebox/sitebox-01.jpg"/>
+<img alt="SiteBox Folding Unit deployed on site" decoding="async" height="800" loading="lazy" sizes="(max-width:760px) 100vw, 50vw" src="../images/web/sitebox/sitebox-01-640.webp" srcset="../images/web/sitebox/sitebox-01-320.webp 320w, ../images/web/sitebox/sitebox-01-640.webp 640w" width="800"/>
 </div>
 <div class="hero-img-badge">
 <div class="hero-img-badge-val">89–102 km/h</div>
@@ -230,14 +76,13 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <div class="sec-i">
 <div class="sec-tag sec-tag-amber">Where it works</div>
 <h2 class="sec-h2">Where a SiteBox can work</h2>
-<p class="sec-sub">Check approvals, tie-down and wind requirements for your site before you order. It is not sold as accommodation.</p>
+<p class="sec-sub">Check approvals and tie-down requirements for your site before you order. It is not sold as accommodation.</p>
 <div class="use-grid">
 <div class="use-card">
 <div class="use-icon">⛏️</div>
 <h3>Remote Site Offices</h3>
 <p>Mining, construction and agricultural sites where you need a secure, weatherproof office that can be relocated as the project moves.</p>
 </div>
-
 <div class="use-card">
 <div class="use-icon">🏗️</div>
 <h3>Construction Site Sheds</h3>
@@ -248,7 +93,6 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <h3>Pop-up Retail & Events</h3>
 <p>Brand activations, market stalls, ticketing booths and temporary kiosks. Deploy at an event, fold up and move on.</p>
 </div>
-
 <div class="use-card">
 <div class="use-icon">🌾</div>
 <h3>Farm & Rural Storage</h3>
@@ -323,7 +167,6 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <table class="spec-table">
 <tr><td>Floorboard</td><td>18 mm fire-resistant MgO board</td></tr>
 <tr><td>Floor live load</td><td>1.5 kPa (153 kgf/m²)</td></tr>
-
 </table>
 </div>
 </div>
@@ -359,7 +202,6 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <tr><td>Circuit breaker</td><td>1 × 20A</td></tr>
 <tr><td>Outlets</td><td>1 × standard socket · 1 × A/C socket</td></tr>
 <tr><td>Lighting</td><td>1 × switch + 1 × light fitting</td></tr>
-
 </table>
 </div>
 </div>
@@ -370,23 +212,11 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <!-- WIND RATING -->
 <section class="sec" id="wind-rating" style="background:#f8fafc">
 <div class="sec-i">
-<div class="sec-tag sec-tag-blue">Wind rating</div>
-<h2 class="sec-h2">Check the wind rating for your site</h2>
-<p class="sec-sub">The standard rating is below the wind classes normally used for houses in South East Queensland. Check with an engineer before you order.</p>
-<div class="wind-grid">
-<div class="wind-card">
-<div class="wind-card-tag std">Standard</div>
-<div class="wind-speed">89–102 km/h</div>
-<div class="wind-sub">Beaufort Scale 10</div>
-<div class="wind-desc">Manufacturer rating for the standard model. Whether it suits your site depends on your wind region, shielding and how the unit is tied down.</div>
-</div>
-<div class="wind-card upgraded">
-<div class="wind-card-tag">Upgrade option</div>
-<div class="wind-speed">By engineering</div>
-<div class="wind-sub">Subject to RPEQ sign-off</div>
-<div class="wind-desc">An upgrade with Australian RPEQ engineering sign-off may be possible. Higher-rated options may be available. Ask us about your site.</div>
-</div>
-</div>
+<div class="sec-tag sec-tag-blue">Choose your version</div>
+<h2 class="sec-h2">Standard or Premium Upgraded</h2>
+<p class="sec-sub">The main difference is how much wind each version is rated for. The Standard rating is below the wind classes normally used for houses in South East Queensland, so choose Premium Upgraded for tougher conditions.</p>
+<div class="wind-grid"><div class="wind-card"><div class="wind-card-tag std">Standard</div><div class="wind-speed">From $4,500</div><div class="wind-sub">Rated 89 to 102 km/h by the manufacturer</div><div class="wind-desc">For sheltered or lower-wind sites. Whether it suits your site depends on your wind region, shielding and tie-down. Check with an engineer if you are unsure.</div></div>
+<div class="wind-card upgraded"><div class="wind-card-tag">Premium Upgraded</div><div class="wind-speed">$6,500</div><div class="wind-sub">N3+ wind rating</div><div class="wind-desc">For tougher conditions. The wind class for your site and the tie-down are confirmed by an engineer. Ask us for the full Premium specification.</div></div></div>
 </div>
 </section>
 <!-- GALLERY -->
@@ -394,20 +224,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <div class="sec-i">
 <div class="sec-tag sec-tag-amber">Gallery</div>
 <h2 class="sec-h2">Pictures</h2>
-<div class="gallery-grid">
-<div class="gallery-img">
-<img alt="SiteBox folding unit — deployed" src="../images/sitebox/sitebox-01.jpg"/>
-</div>
-<div class="gallery-img">
-<img alt="SiteBox — interior" src="../images/sitebox/sitebox-02.jpg"/>
-</div>
-<div class="gallery-img" style="background:#f8fafc;border-radius:10px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center">
-<div style="text-align:center;padding:24px">
-<div style="font-size:2rem;margin-bottom:8px">📸</div>
-<p style="font-size:0.9375rem;color:#94a3b8;font-weight:500">More photos available<br/>on request</p>
-</div>
-</div>
-</div>
+<div class="gallery-grid"><div class="gallery-img"><img alt="SiteBox Premium Upgraded exterior with sliding door" decoding="async" height="1200" loading="lazy" sizes="(max-width:760px) 100vw, 50vw" src="../images/web/sitebox/premium-exterior-640.webp" srcset="../images/web/sitebox/premium-exterior-320.webp 320w, ../images/web/sitebox/premium-exterior-640.webp 640w, ../images/web/sitebox/premium-exterior-1200.webp 1200w" width="1200"/></div><div class="gallery-img"><img alt="SiteBox Premium Upgraded end wall with window" decoding="async" height="1200" loading="lazy" sizes="(max-width:760px) 100vw, 50vw" src="../images/web/sitebox/premium-end-640.webp" srcset="../images/web/sitebox/premium-end-320.webp 320w, ../images/web/sitebox/premium-end-640.webp 640w, ../images/web/sitebox/premium-end-1200.webp 1200w" width="1200"/></div><div class="gallery-img"><img alt="SiteBox Premium Upgraded interior" decoding="async" height="1200" loading="lazy" sizes="(max-width:760px) 100vw, 50vw" src="../images/web/sitebox/premium-interior-640.webp" srcset="../images/web/sitebox/premium-interior-320.webp 320w, ../images/web/sitebox/premium-interior-640.webp 640w, ../images/web/sitebox/premium-interior-1200.webp 1200w" width="1200"/></div><div class="gallery-img"><img alt="Stages of a SiteBox folding out" decoding="async" height="800" loading="lazy" sizes="(max-width:760px) 100vw, 50vw" src="../images/web/sitebox/sitebox-01-640.webp" srcset="../images/web/sitebox/sitebox-01-320.webp 320w, ../images/web/sitebox/sitebox-01-640.webp 640w" width="800"/></div><div class="gallery-img"><img alt="SiteBox Standard units in timber-look and white finishes" decoding="async" height="623" loading="lazy" sizes="(max-width:760px) 100vw, 50vw" src="../images/web/sitebox/sitebox-02-640.webp" srcset="../images/web/sitebox/sitebox-02-320.webp 320w, ../images/web/sitebox/sitebox-02-640.webp 640w, ../images/web/sitebox/sitebox-02-1200.webp 1200w" width="1200"/></div></div>
 </div>
 </section>
 <!-- ADD-ONS -->
@@ -421,7 +238,6 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <div class="addon-icon">🚿</div>
 <p>Toilet / Bathroom Pod</p>
 </div>
-
 <div class="addon-card">
 <div class="addon-icon">🏠</div>
 <p>Vinyl Flooring</p>
@@ -467,7 +283,7 @@ footer{background:#0f172a;padding:28px 5%;text-align:center}
 <span>✉️ info@notsotinyhomes.com.au</span>
 <span>📍 Waterford, Brisbane QLD</span>
 </div>
-<div class="foot-abn">© 2026 Kiteworks Pty Ltd · ABN 99 692 292 274 t/a Not So Tiny Homes</div><div class="foot-abn foot-legal">Kiteworks Pty Ltd does not hold a QBCC licence and cannot perform building work valued in excess of $3,300. Site work and service connections are carried out by licensed builders and trades. <a href="../pages/privacy.html">Privacy</a></div>
+<div class="foot-abn">© 2026 Kiteworks Pty Ltd · ABN 99 692 292 274 t/a Not So Tiny Homes</div>
 </footer>
 <script>
 document.addEventListener('click', e => {

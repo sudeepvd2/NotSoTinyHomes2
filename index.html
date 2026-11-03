@@ -15,258 +15,9 @@
 <meta content="Folding steel homes and site units supplied from Waterford QLD. Freedom Series from $17,000 incl. GST, plus delivery and site costs. Check approvals before you buy." name="twitter:description"/>
 <link href="https://notsotinyhomes.com.au/" rel="canonical"/>
 <title>Not So Tiny Homes — Expandable Homes Brisbane and SEQ</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:60px;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}
-.nav-logo{
-    font-weight:800;
-    font-size:1.1rem;
-    letter-spacing:-0.02em;
-    color:#1e293b;
-}
-.nav-links{display:flex;align-items:center;gap:24px}
-.nav-links a{
-    font-size:0.9375rem;
-    font-weight:600;
-    color:#334155;
-}
-.nav-links a:hover{color:#1e293b}
-.nav-enquire{background:#1e293b;color:#fff!important;padding:8px 18px;border-radius:6px;font-weight:600!important}
-
-
-/* HERO */
-.hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;padding-top:60px}
-.hero-half{display:flex;flex-direction:column;justify-content:center;padding:72px 6%;position:relative;overflow:hidden}
-.hero-freedom{background:#f8faff;border-right:1px solid #e2e8f0}
-.hero-certified{background:#f8fafc}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.08}
-.hero-content{position:relative;z-index:1;max-width:460px}
-.product-line-label{display:inline-block;font-size:0.9375rem;font-weight:600;letter-spacing:0.04em;padding:4px 10px;border-radius:4px;margin-bottom:20px}
-.freedom-label{background:#2563eb;color:#fff}
-.certified-label{background:#f59e0b;color:#0f172a}
-.hero-content h1{font-size:clamp(1.9rem,3.2vw,2.7rem);font-weight:800;line-height:1.1;letter-spacing:-0.03em;margin-bottom:14px}
-.hero-content p{font-size:0.9375rem;color:#64748b;line-height:1.75;margin-bottom:28px;max-width:380px}
-.hero-price strong{font-size:1.7rem;font-weight:800;color:#1e293b;display:block;line-height:1;margin-bottom:2px}
-.hero-price{font-size:0.9375rem;color:#94a3b8;margin-bottom:24px}
-.hero-features{display:flex;flex-direction:column;gap:8px;margin-bottom:32px}
-.hero-feature{font-size:0.9375rem;color:#475569;display:flex;align-items:center;gap:8px}
-.hero-feature::before{content:'';width:5px;height:5px;border-radius:50%;flex-shrink:0}
-.freedom-feature::before{background:#2563eb}
-.certified-feature::before{background:#f59e0b}
-.hero-cta{display:inline-block;padding:12px 24px;border-radius:7px;font-weight:600;font-size:0.9375rem;transition:all .15s;width:fit-content}
-.freedom-cta{background:#2563eb;color:#fff}
-.freedom-cta:hover{background:#1e3a5f}
-.certified-cta{background:#1e3a5f;color:#fff}
-.certified-cta:hover{background:#0f172a}
-
-/* SECTIONS */
-.sec{padding:80px 5%}
-.sec-i{max-width:1160px;margin:0 auto}
-.sec-hdr{margin-bottom:48px}
-.sec-hdr h2{font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:10px}
-.sec-hdr p{font-size:0.9375rem;color:#64748b;max-width:520px;line-height:1.7}
-
-/* MODELS */
-.models-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.model-card{border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;transition:box-shadow .2s,transform .2s;background:#fff;display:flex;flex-direction:column}
-.model-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.08);transform:translateY(-2px)}
-.model-img{height:180px;overflow:hidden;position:relative}
-.model-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
-.model-card:hover .model-img img{transform:scale(1.04)}
-.model-badge{position:absolute;top:10px;left:10px;font-size:0.9375rem;font-weight:700;padding:3px 8px;border-radius:3px;background:rgba(30,41,59,0.82);color:#fff}
-.model-layout{height:110px;overflow:hidden;border-bottom:1px solid #f1f5f9}
-.model-layout img{width:100%;height:100%;object-fit:cover}
-.model-body{padding:18px;flex:1;display:flex;flex-direction:column}
-.model-name{font-size:0.98rem;font-weight:700;margin-bottom:3px}
-.model-desc{font-size:0.9375rem;color:#94a3b8;margin-bottom:12px}
-.model-specs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
-.model-spec{font-size:0.9375rem;padding:3px 7px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:3px;color:#475569}
-.model-btn{display:block;text-align:center;padding:9px;border-radius:5px;font-size:0.9375rem;font-weight:600;transition:all .15s;background:#1e293b;color:#fff;margin-top:auto;cursor:pointer;border:none;font-family:inherit;width:100%}
-.model-btn:hover{background:#334155}
-
-/* WHY */
-.why-sec{background:#f8fafc}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.why-card{padding:28px 22px;background:#fff;border-radius:10px;border:1px solid #e2e8f0}
-.why-icon{font-size:1.4rem;margin-bottom:14px}
-.why-title{font-size:0.9375rem;font-weight:700;margin-bottom:7px}
-.why-desc{font-size:0.9375rem;color:#64748b;line-height:1.6}
-
-/* CLASS 1A */
-.c1a-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.badge-list{display:flex;flex-direction:column;gap:12px}
-.c1a-badge{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px}
-.c1a-badge-icon{font-size:1rem;flex-shrink:0;margin-top:1px}
-.c1a-badge strong{display:block;font-size:0.9375rem;font-weight:600;margin-bottom:2px}
-.c1a-badge span{font-size:0.9375rem;color:#64748b}
-.c1a-steps{display:flex;flex-direction:column;gap:18px}
-.c1a-step{display:flex;gap:14px}
-.step-n{width:26px;height:26px;background:rgba(245,158,11,0.1);border:2px solid #f59e0b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9375rem;color:#1e3a5f;flex-shrink:0;margin-top:2px}
-.step-t strong{display:block;font-size:0.9375rem;font-weight:600;margin-bottom:2px}
-.step-t span{font-size:0.9375rem;color:#64748b}
-
-/* PROCESS */
-.proc-sec{background:#f8fafc}
-.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-.proc-step{text-align:center;padding:0 8px}
-.proc-icon{width:44px;height:44px;border-radius:50%;background:#fff;border:2px solid #e2e8f0;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.1rem}
-.proc-title{font-size:0.9375rem;font-weight:700;margin-bottom:6px}
-.proc-desc{font-size:0.9375rem;color:#64748b;line-height:1.6}
-
-/* DISPLAY */
-.disp-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.disp-img{border-radius:12px;overflow:hidden;position:relative}
-.disp-img img{width:100%;height:380px;object-fit:cover}
-.disp-loc{position:absolute;bottom:14px;left:14px;background:rgba(30,41,59,0.85);color:#fff;font-size:0.9375rem;font-weight:600;padding:5px 11px;border-radius:4px}
-.disp-pts{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
-.disp-pt{font-size:0.9375rem;display:flex;align-items:flex-start;gap:8px}
-.disp-pt::before{content:'✓';color:#2563eb;font-weight:700;flex-shrink:0;margin-top:1px}
-
-/* FAQ */
-.faq-sec{background:#f8fafc}
-.faq-list{max-width:720px}
-.faq-item{border-bottom:1px solid #e2e8f0}
-.faq-q{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-size:0.9375rem;font-weight:600;cursor:pointer;transition:color .15s}
-.faq-q:hover{color:#2563eb}
-.faq-ico{font-size:1.1rem;color:#94a3b8;flex-shrink:0;transition:transform .2s}
-.faq-q.open .faq-ico{transform:rotate(45deg)}
-.faq-a{font-size:0.9375rem;color:#64748b;line-height:1.75;padding-bottom:18px;display:none}
-
-/* CONTACT */
-.contact-sec{background:#fff}
-.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start}
-.contact-dets{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
-.cd{display:flex;gap:10px;align-items:center}
-.cd-ico{width:34px;height:34px;background:#f1f5f9;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.9375rem;flex-shrink:0}
-.cd strong{display:block;font-size:0.9375rem;color:#94a3b8;margin-bottom:1px}
-.cd span{font-size:0.9375rem;color:#1e293b}
-.cform{background:#f8fafc;border-radius:12px;padding:24px;border:1px solid #e2e8f0;width:100%;box-sizing:border-box;max-width:100%}
-.cform-title{font-size:1rem;font-weight:700;margin-bottom:22px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
-.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
-.fg label{font-size:0.9375rem;font-weight:600;color:#64748b}
-.fg input,.fg select,.fg textarea{padding:10px 12px;border:1.5px solid #e2e8f0;border-radius:6px;font-size:0.9375rem;font-family:inherit;color:#1e293b;outline:none;transition:border-color .15s;background:#fff;width:100%;box-sizing:border-box}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#2563eb}
-.fg textarea{resize:vertical;min-height:88px}
-.form-btn{width:100%;padding:12px;background:#1e293b;color:#fff;border:none;border-radius:6px;font-weight:700;font-size:0.9375rem;cursor:pointer;transition:background .15s;font-family:inherit}
-.form-btn:hover{background:#334155}
-
-/* FOOTER */
-footer{background:#0f172a;padding:28px 5%;text-align:center}
-.foot-logo{font-weight:800;color:#fff;margin-bottom:6px}
-.foot-contact{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;font-size:0.9375rem;color:rgba(255,255,255,0.5)}
-.foot-abn{font-size:0.9375rem;color:rgba(255,255,255,0.3);margin-top:6px}
-
-
-
-/* MODAL */
-.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;align-items:center;justify-content:center;padding:20px}
-.modal-box{background:#fff;border-radius:14px;padding:36px;max-width:420px;width:100%;text-align:center}
-.modal-size{font-size:1.4rem;font-weight:800;color:#1e293b;margin-bottom:6px}
-.modal-sub{font-size:0.9375rem;color:#64748b;margin-bottom:28px}
-.modal-btn{width:100%;padding:14px 20px;border-radius:8px;border:2px solid;font-weight:700;font-size:0.9375rem;cursor:pointer;font-family:inherit;text-align:left;margin-bottom:10px;transition:all .15s}
-.modal-btn-title{font-size:1rem;margin-bottom:3px}
-.modal-btn-sub{font-size:0.9375rem;font-weight:400}
-.modal-cancel{padding:8px;border:none;background:none;color:#94a3b8;cursor:pointer;font-family:inherit;font-size:0.9375rem;margin-top:4px}
-
-/* RESPONSIVE */
-.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-.nav-hamburger span{display:block;width:22px;height:2px;background:#1e3a5f;border-radius:2px;transition:transform 0.2s}
-.nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 5% 20px;flex-direction:column;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
-.nav-mobile.open{display:flex}
-.nav-mobile a{font-size:0.95rem;font-weight:500;color:#1e3a5f;padding:13px 0;border-bottom:1px solid #f1f5f9;text-decoration:none;display:block}
-.nav-mobile a:last-child{border-bottom:none}
-.nav-mobile-cta{display:none;margin-top:12px;background:#2563eb;color:#fff !important;padding:12px 20px;border-radius:8px;text-align:center;font-weight:700 !important}
-
-@media(max-width:900px){
-  /* Nav */
-  .nav-links{display:none}
-  .nav-hamburger{display:flex}
-  .nav-mobile-cta{display:inline-block}
-
-  /* Hero — stack vertically, show content, hide image only */
-  .hero{grid-template-columns:1fr}
-  .hero-freedom{border-right:none;border-bottom:1px solid #e2e8f0}
-  .hero-inner{flex-direction:column;text-align:center;gap:32px}
-  .hero-img-wrap{display:none}
-  .hero-btns{justify-content:center;flex-wrap:wrap}
-  .hero-new{padding:80px 5% 40px;min-height:auto}
-
-  /* Sections */
-  .three-products{grid-template-columns:1fr !important}
-  .freedom-intro-grid{grid-template-columns:1fr}
-  .models-grid{grid-template-columns:1fr 1fr}
-  .why-grid{grid-template-columns:1fr 1fr}
-  .c1a-grid,.disp-grid,.contact-grid,.sitebox-grid{grid-template-columns:1fr}
-  .proc-grid{grid-template-columns:1fr 1fr}
-  .foot-top{grid-template-columns:1fr 1fr}
-  div[style*="grid-template-columns:1fr 1fr;gap:48px"]{grid-template-columns:1fr !important}
-}
-
-@media(max-width:540px){
-  /* Nav */
-  nav{padding:0 4%}
-
-  /* Hero */
-  .hero-new{padding:72px 4% 32px;min-height:auto}
-  .hero-btns{flex-direction:column;align-items:stretch;gap:10px}
-  .btn-primary-hero,.btn-ghost-hero{text-align:center;width:100%;box-sizing:border-box}
-
-  /* Sections */
-  .sec{padding:40px 4% !important}
-  .sec-hdr{margin-bottom:24px}
-  .sec-hdr h2{font-size:1.5rem}
-  .three-products{grid-template-columns:1fr !important}
-  .models-grid,.why-grid,.proc-grid{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
-  .foot-top{grid-template-columns:1fr}
-  .freedom-intro-grid{grid-template-columns:1fr}
-  .c1a-grid{grid-template-columns:1fr;gap:24px}
-  .contact-grid{grid-template-columns:1fr;gap:32px}
-  div[style*="grid-template-columns:1fr 1fr;gap:48px"]{grid-template-columns:1fr !important;gap:24px !important}
-  div[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr !important}
-  div[style*="grid-template-columns: 1fr 1fr 1fr"]{grid-template-columns:1fr !important}
-  .foot-contact{flex-direction:column;gap:4px;align-items:center}
-  .proc-grid{grid-template-columns:1fr 1fr}
-  .layout-tab{font-size:0.9375rem;padding:3px 8px}
-}
-
-/* TABLET PORTRAIT */
-@media(max-width:768px){
-  .hero-new{padding:80px 4% 36px;min-height:auto}
-  .models-grid{grid-template-columns:1fr 1fr}
-  .why-grid{grid-template-columns:1fr 1fr}
-  .proc-grid{grid-template-columns:1fr 1fr}
-  .c1a-grid,.disp-grid,.contact-grid{grid-template-columns:1fr}
-  .freedom-intro-grid{grid-template-columns:1fr}
-  .foot-contact{flex-direction:column;gap:6px;align-items:center}
-  .hero-btns{flex-wrap:wrap;gap:10px}
-}
-/* MOBILE */
-@media(max-width:380px){
-  .models-grid,.proc-grid{grid-template-columns:1fr}
-  .why-grid{grid-template-columns:1fr}
-  .sec-hdr h2{font-size:1.3rem}
-  .hero-btns{flex-direction:column;align-items:stretch}
-  .btn-primary-hero,.btn-ghost-hero{text-align:center;width:100%}
-}
-
-/* Fix Issue 3 — prevent horizontal overflow */
-html,body{overflow-x:hidden}
-
-/* hamburger defined above media queries */
-
-/* Fix Issue 2 — three products CSS class */
-.three-products{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
-</style>
-<link rel="stylesheet" href="assets/fixes.css">
+<link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}a{text-decoration:none;color:inherit}img{display:block;max-width:100%}nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:60px;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}.nav-logo{font-weight:800;font-size:1.1rem;letter-spacing:-0.02em;color:#1e293b;}.nav-links{display:flex;align-items:center;gap:24px}.nav-links a{font-size:0.9375rem;font-weight:600;color:#334155;}.nav-links a:hover{color:#1e293b}.nav-enquire{background:#1e293b;color:#fff!important;padding:8px 18px;border-radius:6px;font-weight:600!important}.hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;padding-top:60px}.hero-half{display:flex;flex-direction:column;justify-content:center;padding:72px 6%;position:relative;overflow:hidden}.hero-freedom{background:#f8faff;border-right:1px solid #e2e8f0}.hero-certified{background:#f8fafc}.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.08}.hero-content{position:relative;z-index:1;max-width:460px}.product-line-label{display:inline-block;font-size:0.9375rem;font-weight:600;letter-spacing:0.04em;padding:4px 10px;border-radius:4px;margin-bottom:20px}.freedom-label{background:#2563eb;color:#fff}.certified-label{background:#f59e0b;color:#0f172a}.hero-content h1{font-size:clamp(1.9rem,3.2vw,2.7rem);font-weight:800;line-height:1.1;letter-spacing:-0.03em;margin-bottom:14px}.hero-content p{font-size:0.9375rem;color:#64748b;line-height:1.75;margin-bottom:28px;max-width:380px}.hero-price strong{font-size:1.7rem;font-weight:800;color:#1e293b;display:block;line-height:1;margin-bottom:2px}.hero-price{font-size:0.9375rem;color:#94a3b8;margin-bottom:24px}.hero-features{display:flex;flex-direction:column;gap:8px;margin-bottom:32px}.hero-feature{font-size:0.9375rem;color:#475569;display:flex;align-items:center;gap:8px}.hero-feature::before{content:'';width:5px;height:5px;border-radius:50%;flex-shrink:0}.freedom-feature::before{background:#2563eb}.certified-feature::before{background:#f59e0b}.hero-cta{display:inline-block;padding:12px 24px;border-radius:7px;font-weight:600;font-size:0.9375rem;transition:all .15s;width:fit-content}.freedom-cta{background:#2563eb;color:#fff}.freedom-cta:hover{background:#1e3a5f}.certified-cta{background:#1e3a5f;color:#fff}.certified-cta:hover{background:#0f172a}.sec{padding:80px 5%}.sec-i{max-width:1160px;margin:0 auto}.sec-hdr{margin-bottom:48px}.sec-hdr h2{font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:800;letter-spacing:-0.02em;margin-bottom:10px}.sec-hdr p{font-size:0.9375rem;color:#64748b;max-width:520px;line-height:1.7}.models-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.model-card{border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;transition:box-shadow .2s,transform .2s;background:#fff;display:flex;flex-direction:column}.model-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.08);transform:translateY(-2px)}.model-img{height:180px;overflow:hidden;position:relative}.model-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.model-card:hover .model-img img{transform:scale(1.04)}.model-badge{position:absolute;top:10px;left:10px;font-size:0.9375rem;font-weight:700;padding:3px 8px;border-radius:3px;background:rgba(30,41,59,0.82);color:#fff}.model-layout{height:110px;overflow:hidden;border-bottom:1px solid #f1f5f9}.model-layout img{width:100%;height:100%;object-fit:cover}.model-body{padding:18px;flex:1;display:flex;flex-direction:column}.model-name{font-size:0.98rem;font-weight:700;margin-bottom:3px}.model-desc{font-size:0.9375rem;color:#94a3b8;margin-bottom:12px}.model-specs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}.model-spec{font-size:0.9375rem;padding:3px 7px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:3px;color:#475569}.model-btn{display:block;text-align:center;padding:9px;border-radius:5px;font-size:0.9375rem;font-weight:600;transition:all .15s;background:#1e293b;color:#fff;margin-top:auto;cursor:pointer;border:none;font-family:inherit;width:100%}.model-btn:hover{background:#334155}.why-sec{background:#f8fafc}.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}.why-card{padding:28px 22px;background:#fff;border-radius:10px;border:1px solid #e2e8f0}.why-icon{font-size:1.4rem;margin-bottom:14px}.why-title{font-size:0.9375rem;font-weight:700;margin-bottom:7px}.why-desc{font-size:0.9375rem;color:#64748b;line-height:1.6}.c1a-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}.badge-list{display:flex;flex-direction:column;gap:12px}.c1a-badge{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px}.c1a-badge-icon{font-size:1rem;flex-shrink:0;margin-top:1px}.c1a-badge strong{display:block;font-size:0.9375rem;font-weight:600;margin-bottom:2px}.c1a-badge span{font-size:0.9375rem;color:#64748b}.c1a-steps{display:flex;flex-direction:column;gap:18px}.c1a-step{display:flex;gap:14px}.step-n{width:26px;height:26px;background:rgba(245,158,11,0.1);border:2px solid #f59e0b;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9375rem;color:#1e3a5f;flex-shrink:0;margin-top:2px}.step-t strong{display:block;font-size:0.9375rem;font-weight:600;margin-bottom:2px}.step-t span{font-size:0.9375rem;color:#64748b}.proc-sec{background:#f8fafc}.proc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.proc-step{text-align:center;padding:0 8px}.proc-icon{width:44px;height:44px;border-radius:50%;background:#fff;border:2px solid #e2e8f0;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.1rem}.proc-title{font-size:0.9375rem;font-weight:700;margin-bottom:6px}.proc-desc{font-size:0.9375rem;color:#64748b;line-height:1.6}.disp-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.disp-img{border-radius:12px;overflow:hidden;position:relative}.disp-img img{width:100%;height:380px;object-fit:cover}.disp-loc{position:absolute;bottom:14px;left:14px;background:rgba(30,41,59,0.85);color:#fff;font-size:0.9375rem;font-weight:600;padding:5px 11px;border-radius:4px}.disp-pts{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}.disp-pt{font-size:0.9375rem;display:flex;align-items:flex-start;gap:8px}.disp-pt::before{content:'✓';color:#2563eb;font-weight:700;flex-shrink:0;margin-top:1px}.faq-sec{background:#f8fafc}.faq-list{max-width:720px}.faq-item{border-bottom:1px solid #e2e8f0}.faq-q{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-size:0.9375rem;font-weight:600;cursor:pointer;transition:color .15s}.faq-q:hover{color:#2563eb}.faq-ico{font-size:1.1rem;color:#94a3b8;flex-shrink:0;transition:transform .2s}.faq-q.open .faq-ico{transform:rotate(45deg)}.faq-a{font-size:0.9375rem;color:#64748b;line-height:1.75;padding-bottom:18px;display:none}.contact-sec{background:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start}.contact-dets{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}.cd{display:flex;gap:10px;align-items:center}.cd-ico{width:34px;height:34px;background:#f1f5f9;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.9375rem;flex-shrink:0}.cd strong{display:block;font-size:0.9375rem;color:#94a3b8;margin-bottom:1px}.cd span{font-size:0.9375rem;color:#1e293b}.cform{background:#f8fafc;border-radius:12px;padding:24px;border:1px solid #e2e8f0;width:100%;box-sizing:border-box;max-width:100%}.cform-title{font-size:1rem;font-weight:700;margin-bottom:22px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}.fg label{font-size:0.9375rem;font-weight:600;color:#64748b}.fg input,.fg select,.fg textarea{padding:10px 12px;border:1.5px solid #e2e8f0;border-radius:6px;font-size:0.9375rem;font-family:inherit;color:#1e293b;outline:none;transition:border-color .15s;background:#fff;width:100%;box-sizing:border-box}.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#2563eb}.fg textarea{resize:vertical;min-height:88px}.form-btn{width:100%;padding:12px;background:#1e293b;color:#fff;border:none;border-radius:6px;font-weight:700;font-size:0.9375rem;cursor:pointer;transition:background .15s;font-family:inherit}.form-btn:hover{background:#334155}footer{background:#0f172a;padding:28px 5%;text-align:center}.foot-logo{font-weight:800;color:#fff;margin-bottom:6px}.foot-contact{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;font-size:0.9375rem;color:rgba(255,255,255,0.5)}.foot-abn{font-size:0.9375rem;color:rgba(255,255,255,0.3);margin-top:6px}.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;align-items:center;justify-content:center;padding:20px}.modal-box{background:#fff;border-radius:14px;padding:36px;max-width:420px;width:100%;text-align:center}.modal-size{font-size:1.4rem;font-weight:800;color:#1e293b;margin-bottom:6px}.modal-sub{font-size:0.9375rem;color:#64748b;margin-bottom:28px}.modal-btn{width:100%;padding:14px 20px;border-radius:8px;border:2px solid;font-weight:700;font-size:0.9375rem;cursor:pointer;font-family:inherit;text-align:left;margin-bottom:10px;transition:all .15s}.modal-btn-title{font-size:1rem;margin-bottom:3px}.modal-btn-sub{font-size:0.9375rem;font-weight:400}.modal-cancel{padding:8px;border:none;background:none;color:#94a3b8;cursor:pointer;font-family:inherit;font-size:0.9375rem;margin-top:4px}.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:6px;background:none;border:none}.nav-hamburger span{display:block;width:22px;height:2px;background:#1e3a5f;border-radius:2px;transition:transform 0.2s}.nav-mobile{display:none;position:fixed;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 5% 20px;flex-direction:column;z-index:99;box-shadow:0 8px 24px rgba(0,0,0,0.08)}.nav-mobile.open{display:flex}.nav-mobile a{font-size:0.95rem;font-weight:500;color:#1e3a5f;padding:13px 0;border-bottom:1px solid #f1f5f9;text-decoration:none;display:block}.nav-mobile a:last-child{border-bottom:none}.nav-mobile-cta{display:none;margin-top:12px;background:#2563eb;color:#fff !important;padding:12px 20px;border-radius:8px;text-align:center;font-weight:700 !important}@media(max-width:900px){.nav-links{display:none}.nav-hamburger{display:flex}.nav-mobile-cta{display:inline-block}.hero{grid-template-columns:1fr}.hero-freedom{border-right:none;border-bottom:1px solid #e2e8f0}.hero-inner{flex-direction:column;text-align:center;gap:32px}.hero-img-wrap{display:none}.hero-btns{justify-content:center;flex-wrap:wrap}.hero-new{padding:80px 5% 40px;min-height:auto}.three-products{grid-template-columns:1fr !important}.freedom-intro-grid{grid-template-columns:1fr}.models-grid{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr 1fr}.c1a-grid,.disp-grid,.contact-grid,.sitebox-grid{grid-template-columns:1fr}.proc-grid{grid-template-columns:1fr 1fr}.foot-top{grid-template-columns:1fr 1fr}div[style*="grid-template-columns:1fr 1fr;gap:48px"]{grid-template-columns:1fr !important}}@media(max-width:540px){nav{padding:0 4%}.hero-new{padding:72px 4% 32px;min-height:auto}.hero-btns{flex-direction:column;align-items:stretch;gap:10px}.btn-primary-hero,.btn-ghost-hero{text-align:center;width:100%;box-sizing:border-box}.sec{padding:40px 4% !important}.sec-hdr{margin-bottom:24px}.sec-hdr h2{font-size:1.5rem}.three-products{grid-template-columns:1fr !important}.models-grid,.why-grid,.proc-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.foot-top{grid-template-columns:1fr}.freedom-intro-grid{grid-template-columns:1fr}.c1a-grid{grid-template-columns:1fr;gap:24px}.contact-grid{grid-template-columns:1fr;gap:32px}div[style*="grid-template-columns:1fr 1fr;gap:48px"]{grid-template-columns:1fr !important;gap:24px !important}div[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr !important}div[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr !important}.foot-contact{flex-direction:column;gap:4px;align-items:center}.proc-grid{grid-template-columns:1fr 1fr}.layout-tab{font-size:0.9375rem;padding:3px 8px}}@media(max-width:768px){.hero-new{padding:80px 4% 36px;min-height:auto}.models-grid{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr 1fr}.proc-grid{grid-template-columns:1fr 1fr}.c1a-grid,.disp-grid,.contact-grid{grid-template-columns:1fr}.freedom-intro-grid{grid-template-columns:1fr}.foot-contact{flex-direction:column;gap:6px;align-items:center}.hero-btns{flex-wrap:wrap;gap:10px}}@media(max-width:380px){.models-grid,.proc-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}.sec-hdr h2{font-size:1.3rem}.hero-btns{flex-direction:column;align-items:stretch}.btn-primary-hero,.btn-ghost-hero{text-align:center;width:100%}}html,body{overflow-x:hidden}.three-products{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}</style>
+<link href="assets/fixes.css" rel="stylesheet"/>
 </head>
 <body>
 <!-- NAV -->
@@ -296,210 +47,7 @@ html,body{overflow-x:hidden}
 <a class="nav-mobile-cta" href="#contact" onclick="closeNav()">Get a Quote</a>
 </div>
 <!-- HERO -->
-<style>
-
-.hero-new{
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:60px 5%;
-    overflow:hidden;
-}
-
-.hero-new{
-    justify-content:center;
-    align-items:center;
-    padding-bottom:60px;
-}
-
-.hero-content{
-    max-width:1200px;
-}
-
-.hero-new::before{
-    content:'';
-    position:absolute;
-    width:100%;
-    max-width:1160px;
-    height:100%;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    background:url('images/hero/hero-main.jpg') center center/contain no-repeat;
-
-    filter:blur(2px);     /* less blur */
-    opacity:0.5;          /* slightly stronger */
-
-    z-index:0;
-}
-
-.hero-new::after{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(255,255,255,.25);
-    z-index:1;
-}
-
-.hero-inner{
-    position:relative;
-    z-index:2;
-    text-align:center;
-}
-
-.hero-content{
-    max-width:600px;
-    width:100%;
-    box-sizing:border-box;
-}
-
-.hero-content h1{
-    font-size:clamp(1.8rem,5vw,3.5rem);
-    white-space:normal;
-    word-wrap:break-word;
-}
-
-.hero-btns{
-    display:flex;
-    justify-content:center;
-    gap:16px;
-}
-
-.hero-location{font-size:0.9375rem;color:#2d6a4f;letter-spacing:0.04em;margin-bottom:24px;display:flex;align-items:center;gap:6px}
-.hero-location::before{content:'📍';font-size:0.9375rem}
-.hero-new h1 em{font-style:normal;color:#1d6a3a}
-.hero-new p{font-size:1rem;color:#2d5016;max-width:480px;line-height:1.75;margin-bottom:40px}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:56px}
-.btn-primary-hero,
-.btn-ghost-hero{
-    padding:16px 34px;
-    border-radius:8px;
-    font-weight:700;
-    font-size:0.95rem;
-    transition:all .2s ease;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-width:220px;
-}
-
-.btn-primary-hero{
-    background:#2563eb;   /* blue */
-    color:#fff;
-}
-
-.btn-primary-hero:hover{
-    background:#1d4ed8;
-    transform:translateY(-2px);
-}
-
-.btn-ghost-hero{
-    background:#0f172a;   /* dark navy */
-    color:#fff;
-}
-
-.btn-ghost-hero:hover{
-    background:#1e293b;
-    transform:translateY(-2px);
-}
-``
-
-
-.hero-stats{display:flex;gap:40px;padding-top:36px;border-top:1px solid rgba(26,58,40,0.2);flex-wrap:wrap}
-.hero-stat-n{font-size:1.5rem;font-weight:800;color:#1a3a28;line-height:1}
-.hero-stat-l{font-size:0.9375rem;color:#4a7c59;margin-top:4px}
-.hero-img-wrap{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(30,58,95,0.15)}
-.hero-img-wrap img{width:100%;height:520px;object-fit:cover;object-position:center}
-@media(max-width:900px){.hero-img-wrap{display:none}}
-.hero-img-badge{position:absolute;bottom:16px;left:16px;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;font-size:0.9375rem;font-weight:600;color:#1e293b;display:flex;align-items:center;gap:6px}
-.hero-img-badge span{color:#2563eb}
-@media(max-width:900px){.hero-inner{flex-direction:column;text-align:center}}
-
-
-.hero-inner > div{
-    width:100%;
-    max-width:1000px;
-}
-
-.hero-inner{
-max-width:1100px;
-margin:0 auto;
-width:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.hero-content{
-max-width:680px;
-width:100%;
-}
- 
-.hero-location{
-justify-content:center;
-}
- 
-.hero-new{
-    background:linear-gradient(170deg,#e8f4fd 0%,#dbeafe 40%,#e0f2fe 70%,#f0f9ff 100%);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:80px 6%;
-    box-sizing:border-box;
-}
-
-.hero-inner{
-    width:100%;
-    max-width:1200px;
-    display:flex;
-    justify-content:center;
-}
-
-.hero-content{
-    text-align:center;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
-
-.hero-content h1{
-    font-size:clamp(1.8rem,5vw,3.5rem);
-    font-weight:800;
-    color:#1e293b;
-    line-height:1.1;
-    letter-spacing:-0.03em;
-    margin-bottom:40px;
-}
-
-.hero-btns{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:16px;
-    flex-wrap:wrap;
-}
-
-.btn-primary-hero{
-    background:#1f3fa5;
-    color:#fff;
-    padding:16px 34px;
-    border-radius:8px;
-    font-weight:600;
-}
-
-.btn-ghost-hero{
-    background:#0f172a;
-    color:#fff;
-    padding:16px 34px;
-    border-radius:8px;
-    font-weight:600;
-}
-
-
-
-</style>
+<style>.hero-new{position:relative;display:flex;justify-content:center;align-items:center;padding:60px 5%;overflow:hidden;}.hero-new{justify-content:center;align-items:center;padding-bottom:60px;}.hero-content{max-width:1200px;}.hero-new::before{content:'';position:absolute;width:100%;max-width:1160px;height:100%;left:50%;top:50%;transform:translate(-50%,-50%);background:url('images/web/hero/hero-main-1200.webp') center center/contain no-repeat;filter:blur(2px);opacity:0.5;z-index:0;}.hero-new::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.25);z-index:1;}.hero-inner{position:relative;z-index:2;text-align:center;}.hero-content{max-width:600px;width:100%;box-sizing:border-box;}.hero-content h1{font-size:clamp(1.8rem,5vw,3.5rem);white-space:normal;word-wrap:break-word;}.hero-btns{display:flex;justify-content:center;gap:16px;}.hero-location{font-size:0.9375rem;color:#2d6a4f;letter-spacing:0.04em;margin-bottom:24px;display:flex;align-items:center;gap:6px}.hero-location::before{content:'📍';font-size:0.9375rem}.hero-new h1 em{font-style:normal;color:#1d6a3a}.hero-new p{font-size:1rem;color:#2d5016;max-width:480px;line-height:1.75;margin-bottom:40px}.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:56px}.btn-primary-hero,.btn-ghost-hero{padding:16px 34px;border-radius:8px;font-weight:700;font-size:0.95rem;transition:all .2s ease;display:inline-flex;align-items:center;justify-content:center;min-width:220px;}.btn-primary-hero{background:#2563eb;color:#fff;}.btn-primary-hero:hover{background:#1d4ed8;transform:translateY(-2px);}.btn-ghost-hero{background:#0f172a;color:#fff;}.btn-ghost-hero:hover{background:#1e293b;transform:translateY(-2px);}`` .hero-stats{display:flex;gap:40px;padding-top:36px;border-top:1px solid rgba(26,58,40,0.2);flex-wrap:wrap}.hero-stat-n{font-size:1.5rem;font-weight:800;color:#1a3a28;line-height:1}.hero-stat-l{font-size:0.9375rem;color:#4a7c59;margin-top:4px}.hero-img-wrap{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(30,58,95,0.15)}.hero-img-wrap img{width:100%;height:520px;object-fit:cover;object-position:center}@media(max-width:900px){.hero-img-wrap{display:none}}.hero-img-badge{position:absolute;bottom:16px;left:16px;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border-radius:8px;padding:10px 14px;font-size:0.9375rem;font-weight:600;color:#1e293b;display:flex;align-items:center;gap:6px}.hero-img-badge span{color:#2563eb}@media(max-width:900px){.hero-inner{flex-direction:column;text-align:center}}.hero-inner > div{width:100%;max-width:1000px;}.hero-inner{max-width:1100px;margin:0 auto;width:100%;display:flex;justify-content:center;align-items:center;text-align:center;}.hero-content{max-width:680px;width:100%;}.hero-location{justify-content:center;}.hero-new{background:linear-gradient(170deg,#e8f4fd 0%,#dbeafe 40%,#e0f2fe 70%,#f0f9ff 100%);display:flex;justify-content:center;align-items:center;padding:80px 6%;box-sizing:border-box;}.hero-inner{width:100%;max-width:1200px;display:flex;justify-content:center;}.hero-content{text-align:center;display:flex;flex-direction:column;align-items:center;}.hero-content h1{font-size:clamp(1.8rem,5vw,3.5rem);font-weight:800;color:#1e293b;line-height:1.1;letter-spacing:-0.03em;margin-bottom:40px;}.hero-btns{display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;}.btn-primary-hero{background:#1f3fa5;color:#fff;padding:16px 34px;border-radius:8px;font-weight:600;}.btn-ghost-hero{background:#0f172a;color:#fff;padding:16px 34px;border-radius:8px;font-weight:600;}</style>
 <section class="hero-new">
 <div class="hero-inner">
 <div class="hero-content">
@@ -516,35 +64,8 @@ justify-content:center;
 </div>
 </section>
 <!-- TWO PRODUCT LINES -->
-
 <!-- FREEDOM SERIES INTRO + MODELS -->
-<style>
-.freedom-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-@media(max-width:900px){.freedom-intro-grid{grid-template-columns:1fr}}
-.models-drawer{display:block;margin-top:48px;padding-top:40px;border-top:1px solid #e2e8f0}
-.model-gallery{position:relative;overflow:hidden;height:200px;background:#f1f5f9}
-.model-gallery img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s}
-.model-gallery img.active{opacity:1}
-.gallery-dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2}
-.gdot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.5);cursor:pointer;border:none;padding:0;transition:background .2s}
-.gdot.on{background:#fff}
-.gallery-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.35);color:#fff;border:none;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:0.9375rem;display:flex;align-items:center;justify-content:center;z-index:2;transition:background .2s}
-.gallery-arr:hover{background:rgba(0,0,0,0.6)}
-.gallery-prev{left:8px}
-.gallery-next{right:8px}
-.layout-tabs{display:flex;gap:6px;padding:10px 14px 0;flex-wrap:wrap}
-.layout-tab{font-size:0.9375rem;font-weight:600;padding:4px 10px;border-radius:4px;border:1.5px solid #e2e8f0;background:#fff;color:#64748b;cursor:pointer;transition:all .15s;font-family:inherit}
-.layout-tab.on{border-color:#2563eb;background:#eff6ff;color:#2563eb}
-.layout-preview{height:180px;overflow:hidden;margin:8px 14px 0;border-radius:6px;background:#f8fafc;border:1px solid #e2e8f0;position:relative}
-.layout-preview img{width:100%;height:100%;object-fit:contain;padding:4px;position:absolute;inset:0;opacity:0;transition:opacity .3s}
-.layout-preview img.active{opacity:1}
-.layout-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.25);color:#fff;border:none;width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:0.9375rem;display:flex;align-items:center;justify-content:center;z-index:2}
-.layout-arr-prev{left:6px}
-.layout-arr-next{right:6px}
-.layout-dots{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);display:flex;gap:4px;z-index:2}
-.ldot{width:6px;height:6px;border-radius:50%;background:rgba(0,0,0,0.25);border:none;padding:0;cursor:pointer;transition:background .2s}
-.ldot.on{background:#2563eb}
-</style>
+<style>.freedom-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}@media(max-width:900px){.freedom-intro-grid{grid-template-columns:1fr}}.models-drawer{display:block;margin-top:48px;padding-top:40px;border-top:1px solid #e2e8f0}.model-gallery{position:relative;overflow:hidden;height:200px;background:#f1f5f9}.model-gallery img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s}.model-gallery img.active{opacity:1}.gallery-dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:5px;z-index:2}.gdot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,0.5);cursor:pointer;border:none;padding:0;transition:background .2s}.gdot.on{background:#fff}.gallery-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.35);color:#fff;border:none;width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:0.9375rem;display:flex;align-items:center;justify-content:center;z-index:2;transition:background .2s}.gallery-arr:hover{background:rgba(0,0,0,0.6)}.gallery-prev{left:8px}.gallery-next{right:8px}.layout-tabs{display:flex;gap:6px;padding:10px 14px 0;flex-wrap:wrap}.layout-tab{font-size:0.9375rem;font-weight:600;padding:4px 10px;border-radius:4px;border:1.5px solid #e2e8f0;background:#fff;color:#64748b;cursor:pointer;transition:all .15s;font-family:inherit}.layout-tab.on{border-color:#2563eb;background:#eff6ff;color:#2563eb}.layout-preview{height:180px;overflow:hidden;margin:8px 14px 0;border-radius:6px;background:#f8fafc;border:1px solid #e2e8f0;position:relative}.layout-preview img{width:100%;height:100%;object-fit:contain;padding:4px;position:absolute;inset:0;opacity:0;transition:opacity .3s}.layout-preview img.active{opacity:1}.layout-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.25);color:#fff;border:none;width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:0.9375rem;display:flex;align-items:center;justify-content:center;z-index:2}.layout-arr-prev{left:6px}.layout-arr-next{right:6px}.layout-dots{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);display:flex;gap:4px;z-index:2}.ldot{width:6px;height:6px;border-radius:50%;background:rgba(0,0,0,0.25);border:none;padding:0;cursor:pointer;transition:background .2s}.ldot.on{background:#2563eb}</style>
 <section class="sec" id="models" style="background:#fff">
 <div class="sec-i">
 <div class="sec-hdr">
@@ -554,7 +75,7 @@ justify-content:center;
 </div>
 <div class="freedom-intro-grid">
 <div>
-<img alt="Freedom Series expandable home" src="images/freedom-20ft/exterior-01.jpg" style="width:100%;border-radius:12px;object-fit:cover;height:320px;box-shadow:0 12px 40px rgba(30,58,95,0.12)"/>
+<img alt="Freedom Series expandable home" decoding="async" height="922" loading="lazy" sizes="(max-width:760px) 100vw, 50vw" src="images/web/freedom-20ft/exterior-01-640.webp" srcset="images/web/freedom-20ft/exterior-01-320.webp 320w, images/web/freedom-20ft/exterior-01-640.webp 640w" style="width:100%;border-radius:12px;object-fit:cover;height:320px;box-shadow:0 12px 40px rgba(30,58,95,0.12)" width="1152"/>
 </div>
 <div>
 <h3 style="font-size:1.1rem;font-weight:700;color:#0f172a;margin-bottom:16px">What is a relocatable expandable home?</h3>
@@ -578,17 +99,16 @@ justify-content:center;
 <!-- 10ft -->
 <div class="model-card">
 <div class="model-gallery" id="g10">
-<img alt="10ft white" class="active" src="images/freedom-10ft/exterior-01.jpg"/>
-<img alt="10ft outdoor" src="images/freedom-10ft/exterior-02.jpg"/>
+<img alt="10ft white" class="active" decoding="async" height="800" loading="lazy" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" src="images/web/freedom-10ft/exterior-01-640.webp" srcset="images/web/freedom-10ft/exterior-01-320.webp 320w, images/web/freedom-10ft/exterior-01-640.webp 640w" width="800"/>
+<img alt="10ft outdoor" data-src="images/web/freedom-10ft/exterior-02-640.webp" data-srcset="images/web/freedom-10ft/exterior-02-320.webp 320w, images/web/freedom-10ft/exterior-02-640.webp 640w" decoding="async" height="800" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="800"/>
 <span class="model-badge">10ft</span>
 <button class="gallery-arr gallery-prev" onclick="gNav('g10',-1)">‹</button>
 <button class="gallery-arr gallery-next" onclick="gNav('g10',1)">›</button>
 <div class="gallery-dots" id="d10"></div>
 </div>
-
 <div class="layout-preview" id="lp10">
-<img alt="10ft layout" class="active" src="images/freedom-10ft/layout-01.jpg"/>
-<img alt="10ft floor plan" src="images/freedom-10ft/floor-plan-01.png"/>
+<img alt="10ft layout" class="active" decoding="async" height="922" loading="lazy" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" src="images/web/freedom-10ft/layout-01-640.webp" srcset="images/web/freedom-10ft/layout-01-320.webp 320w, images/web/freedom-10ft/layout-01-640.webp 640w" width="1152"/>
+<img alt="10ft floor plan" data-src="images/web/freedom-10ft/floor-plan-01-640.webp" data-srcset="images/web/freedom-10ft/floor-plan-01-320.webp 320w, images/web/freedom-10ft/floor-plan-01-640.webp 640w" decoding="async" height="800" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="800"/>
 <button class="layout-arr layout-arr-prev" onclick="lNav('lp10',-1)">‹</button>
 <button class="layout-arr layout-arr-next" onclick="lNav('lp10',1)">›</button>
 <div class="layout-dots" id="ld10"></div>
@@ -606,26 +126,21 @@ justify-content:center;
 <button class="model-btn" onclick="openModal('10ft')" style="flex:1">Get a quote</button>
 <a href="pages/freedom-10ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.9375rem;padding:10px;text-align:center">More details</a>
 </div>
-
 </div>
 </div>
 <!-- 20ft -->
 <div class="model-card">
 <div class="model-gallery" id="g20">
-<img alt="20ft white" class="active" src="images/freedom-20ft/exterior-01.jpg"/>
-<img alt="20ft angle" src="images/freedom-20ft/exterior-03.jpg"/>
+<img alt="20ft white" class="active" decoding="async" height="922" loading="lazy" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" src="images/web/freedom-20ft/exterior-01-640.webp" srcset="images/web/freedom-20ft/exterior-01-320.webp 320w, images/web/freedom-20ft/exterior-01-640.webp 640w" width="1152"/>
+<img alt="20ft angle" data-src="images/web/freedom-20ft/exterior-03-640.webp" data-srcset="images/web/freedom-20ft/exterior-03-320.webp 320w, images/web/freedom-20ft/exterior-03-640.webp 640w" decoding="async" height="800" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="800"/>
 <span class="model-badge">20ft · Popular</span>
 <button class="gallery-arr gallery-prev" onclick="gNav('g20',-1)">‹</button>
 <button class="gallery-arr gallery-next" onclick="gNav('g20',1)">›</button>
 <div class="gallery-dots" id="d20"></div>
 </div>
-
 <div class="layout-preview" id="lp20">
-<img alt="20ft layout" class="active" src="images/freedom-20ft/layout-01.jpg"/>
-<img alt="20ft floor plan 1" src="images/freedom-20ft/floor-plan-01.jpg"/>
-
-
-
+<img alt="20ft layout" class="active" decoding="async" height="800" loading="lazy" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" src="images/web/freedom-20ft/layout-01-640.webp" srcset="images/web/freedom-20ft/layout-01-320.webp 320w, images/web/freedom-20ft/layout-01-640.webp 640w" width="800"/>
+<img alt="20ft floor plan 1" data-src="images/web/freedom-20ft/floor-plan-01-640.webp" data-srcset="images/web/freedom-20ft/floor-plan-01-320.webp 320w, images/web/freedom-20ft/floor-plan-01-640.webp 640w" decoding="async" height="587" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="716"/>
 <button class="layout-arr layout-arr-prev" onclick="lNav('lp20',-1)">‹</button>
 <button class="layout-arr layout-arr-next" onclick="lNav('lp20',1)">›</button>
 <div class="layout-dots" id="ld20"></div>
@@ -643,26 +158,23 @@ justify-content:center;
 <button class="model-btn" onclick="openModal('20ft')" style="flex:1">Get a quote</button>
 <a href="pages/freedom-20ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.9375rem;padding:10px;text-align:center">More details</a>
 </div>
-
 </div>
 </div>
 <!-- 30ft -->
 <div class="model-card">
 <div class="model-gallery" id="g30">
-<img alt="30ft exterior" class="active" src="images/freedom-30ft/exterior-01.jpg"/>
-<img alt="30ft angle" src="images/freedom-30ft/exterior-02.png"/>
-<img alt="30ft lifestyle" src="images/freedom-30ft/exterior-03.jpg"/>
-
+<img alt="30ft exterior" class="active" decoding="async" height="1024" loading="lazy" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" src="images/web/freedom-30ft/exterior-01-640.webp" srcset="images/web/freedom-30ft/exterior-01-320.webp 320w, images/web/freedom-30ft/exterior-01-640.webp 640w" width="1024"/>
+<img alt="30ft angle" data-src="images/web/freedom-30ft/exterior-02-320.webp" data-srcset="images/web/freedom-30ft/exterior-02-320.webp 287w" decoding="async" height="178" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="287"/>
+<img alt="30ft lifestyle" data-src="images/web/freedom-30ft/exterior-03-640.webp" data-srcset="images/web/freedom-30ft/exterior-03-320.webp 320w, images/web/freedom-30ft/exterior-03-640.webp 640w, images/web/freedom-30ft/exterior-03-1200.webp 1200w" decoding="async" height="498" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="1200"/>
 <span class="model-badge">30ft</span>
 <button class="gallery-arr gallery-prev" onclick="gNav('g30',-1)">‹</button>
 <button class="gallery-arr gallery-next" onclick="gNav('g30',1)">›</button>
 <div class="gallery-dots" id="d30"></div>
 </div>
-
 <div class="layout-preview" id="lp30">
-<img alt="30ft layout 1" class="active" src="images/freedom-30ft/layout-01.jpg"/>
-<img alt="30ft layout 2" src="images/freedom-30ft/layout-02.jpg"/>
-<img alt="30ft floor plan" src="images/freedom-30ft/floor-plan-01.png"/>
+<img alt="30ft layout 1" class="active" decoding="async" height="1024" loading="lazy" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" src="images/web/freedom-30ft/layout-01-640.webp" srcset="images/web/freedom-30ft/layout-01-320.webp 320w, images/web/freedom-30ft/layout-01-640.webp 640w" width="1024"/>
+<img alt="30ft layout 2" data-src="images/web/freedom-30ft/layout-02-640.webp" data-srcset="images/web/freedom-30ft/layout-02-320.webp 320w, images/web/freedom-30ft/layout-02-640.webp 640w" decoding="async" height="800" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="800"/>
+<img alt="30ft floor plan" data-src="images/web/freedom-30ft/floor-plan-01-640.webp" data-srcset="images/web/freedom-30ft/floor-plan-01-320.webp 320w, images/web/freedom-30ft/floor-plan-01-640.webp 640w" decoding="async" height="968" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="968"/>
 <button class="layout-arr layout-arr-prev" onclick="lNav('lp30',-1)">‹</button>
 <button class="layout-arr layout-arr-next" onclick="lNav('lp30',1)">›</button>
 <div class="layout-dots" id="ld30"></div>
@@ -680,26 +192,23 @@ justify-content:center;
 <button class="model-btn" onclick="openModal('30ft')" style="flex:1">Get a quote</button>
 <a href="pages/freedom-30ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.9375rem;padding:10px;text-align:center">More details</a>
 </div>
-
 </div>
 </div>
 <!-- 40ft -->
 <div class="model-card">
 <div class="model-gallery" id="g40">
-<img alt="40ft expandable home" class="active" src="images/freedom-40ft/exterior-01.png"/>
-<img alt="40ft exterior" src="images/freedom-40ft/exterior-02.jpg"/>
-<img alt="40ft white exterior" src="images/freedom-40ft/exterior-03.jpg"/>
-<img alt="40ft angle" src="images/freedom-40ft/exterior-03b.png"/>
+<img alt="40ft expandable home" class="active" decoding="async" height="160" loading="lazy" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" src="images/web/freedom-40ft/exterior-01-320.webp" srcset="images/web/freedom-40ft/exterior-01-320.webp 280w" width="280"/>
+<img alt="40ft exterior" data-src="images/web/freedom-40ft/exterior-02-640.webp" data-srcset="images/web/freedom-40ft/exterior-02-320.webp 320w, images/web/freedom-40ft/exterior-02-640.webp 640w, images/web/freedom-40ft/exterior-02-1200.webp 1200w" decoding="async" height="498" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="1200"/>
+<img alt="40ft white exterior" data-src="images/web/freedom-40ft/exterior-03-640.webp" data-srcset="images/web/freedom-40ft/exterior-03-320.webp 320w, images/web/freedom-40ft/exterior-03-640.webp 640w, images/web/freedom-40ft/exterior-03-1200.webp 1200w" decoding="async" height="675" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="1200"/>
+<img alt="40ft angle" data-src="images/web/freedom-40ft/exterior-03b-320.webp" data-srcset="images/web/freedom-40ft/exterior-03b-320.webp 273w" decoding="async" height="172" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="273"/>
 <span class="model-badge">40ft</span>
 <button class="gallery-arr gallery-prev" onclick="gNav('g40',-1)">‹</button>
 <button class="gallery-arr gallery-next" onclick="gNav('g40',1)">›</button>
 <div class="gallery-dots" id="d40"></div>
 </div>
-
 <div class="layout-preview" id="lp40">
-<img alt="40ft layout 1" class="active" src="images/freedom-40ft/layout-01.jpg"/>
-
-<img alt="40ft layout 3" src="images/freedom-40ft/layout-03.jpg"/>
+<img alt="40ft layout 1" class="active" decoding="async" height="554" loading="lazy" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" src="images/web/freedom-40ft/layout-01-320.webp" srcset="images/web/freedom-40ft/layout-01-320.webp 320w" width="553"/>
+<img alt="40ft layout 3" data-src="images/web/freedom-40ft/layout-03-640.webp" data-srcset="images/web/freedom-40ft/layout-03-320.webp 320w, images/web/freedom-40ft/layout-03-640.webp 640w" decoding="async" height="1024" sizes="(max-width:540px) 100vw, (max-width:1024px) 50vw, 300px" width="1024"/>
 <button class="layout-arr layout-arr-prev" onclick="lNav('lp40',-1)">‹</button>
 <button class="layout-arr layout-arr-next" onclick="lNav('lp40',1)">›</button>
 <div class="layout-dots" id="ld40"></div>
@@ -717,7 +226,6 @@ justify-content:center;
 <button class="model-btn" onclick="openModal('40ft')" style="flex:1">Get a quote</button>
 <a href="pages/freedom-40ft.html" style="flex:1;display:flex;align-items:center;justify-content:center;background:#f1f5f9;color:#1e293b;border-radius:7px;font-weight:600;font-size:0.9375rem;padding:10px;text-align:center">More details</a>
 </div>
-
 </div>
 </div>
 </div>
@@ -747,7 +255,7 @@ justify-content:center;
 </div>
 </div>
 <div>
-<img alt="Illustration of the 30ft Class 1a home with ramp" src="images/certified-class1a/3DRender_Elevation3.jpeg" style="width:100%;border-radius:10px;margin-bottom:24px;object-fit:contain;background:#fff;height:220px"/>
+<img alt="Illustration of the 30ft Class 1a home with ramp" decoding="async" height="518" loading="lazy" sizes="(max-width:760px) 100vw, 50vw" src="images/web/certified-class1a/3drender_elevation3-640.webp" srcset="images/web/certified-class1a/3drender_elevation3-320.webp 320w, images/web/certified-class1a/3drender_elevation3-640.webp 640w, images/web/certified-class1a/3drender_elevation3-1200.webp 1200w" style="width:100%;border-radius:10px;margin-bottom:24px;object-fit:contain;background:#fff;height:220px" width="1200"/>
 <h3 style="font-size:1rem;font-weight:700;margin-bottom:16px;color:#1e3a5f">From enquiry to move-in</h3>
 <div class="c1a-steps"><div class="c1a-step"><div class="step-n">1</div><div class="step-t"><strong>Check your block</strong><span>Talk to a certifier and builder about zoning, overlays and site costs</span></div></div><div class="c1a-step"><div class="step-n">2</div><div class="step-t"><strong>Drawings and firm quote</strong><span>We assess the site and issue final drawings. A certifier reviews the plan</span></div></div><div class="c1a-step"><div class="step-n">3</div><div class="step-t"><strong>Order and deposit</strong><span>Pay 50% on order. Production takes about 40 to 50 days</span></div></div><div class="c1a-step"><div class="step-n">4</div><div class="step-t"><strong>Balance and shipping</strong><span>Pay the balance before shipping. About 40 days at sea to Brisbane</span></div></div><div class="c1a-step"><div class="step-n">5</div><div class="step-t"><strong>Customs and delivery</strong><span>We handle clearance. The crane places the home on your prepared site</span></div></div><div class="c1a-step"><div class="step-n">6</div><div class="step-t"><strong>Connect</strong><span>Your QBCC-licensed builder and licensed trades finish the site work</span></div></div></div>
 <div style="margin-top:20px;padding:14px 16px;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);border-radius:8px;font-size:0.9375rem;color:#1e3a5f">
@@ -763,18 +271,18 @@ justify-content:center;
 <div class="sec-hdr">
 <div style="display:inline-block;background:#0f172a;color:#f59e0b;font-size:0.9375rem;font-weight:700;padding:3px 10px;border-radius:4px;margin-bottom:14px">SiteBox Series</div>
 <h2>Foldable Site Units</h2>
-<p>A 5.8 m folding steel unit for site offices, storage and similar uses. It is an empty shell with basic wiring, not a home. Check approvals, tie-down and wind requirements for your site.</p>
+<p>A 5.8 m folding steel unit for site offices, storage and similar uses, in Standard and Premium Upgraded versions. It is not a home. Check approvals and tie-down requirements for your site.</p>
 </div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
 <div>
-<img alt="SiteBox foldable site unit" src="images/sitebox/sitebox-02.jpg" style="
+<img alt="SiteBox foldable site unit" decoding="async" height="623" loading="lazy" sizes="(max-width:760px) 100vw, 50vw" src="images/web/sitebox/sitebox-02-640.webp" srcset="images/web/sitebox/sitebox-02-320.webp 320w, images/web/sitebox/sitebox-02-640.webp 640w, images/web/sitebox/sitebox-02-1200.webp 1200w" style="
         width:100%;
         height:320px;
         object-fit:contain;
         border-radius:10px;
         margin-bottom:24px;
         background:#fff;
-     "/>
+     " width="1200"/>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px">
 <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:16px">
 <div style="font-size:1.3rem;margin-bottom:6px">🏗️</div>
@@ -797,17 +305,15 @@ justify-content:center;
 <div style="font-size:0.9375rem;color:#64748b">Pop-up retail, workspace</div>
 </div>
 </div>
-<div style="padding:20px;background:#1e3a5f;border-radius:10px;color:#fff">
-<div style="font-size:0.9375rem;color:rgba(255,255,255,0.6);margin-bottom:6px">SiteBox Series — from, incl. GST</div>
-<div style="font-size:2rem;font-weight:800;color:#f59e0b">$4,500</div>
-<div style="font-size:0.9375rem;color:rgba(255,255,255,0.55);margin-top:4px">Empty shell with basic wiring. Delivery, lifting and connection are extra.</div>
-<a href="#contact" style="display:inline-block;margin-top:16px;background:#f59e0b;color:#0f172a;padding:10px 20px;border-radius:7px;font-weight:700;font-size:0.9375rem">Enquire about SiteBox</a>
-<a href="pages/sitebox-brochure-v5.html" style="display:inline-block;margin-top:10px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:#fff;padding:10px 20px;border-radius:7px;font-weight:600;font-size:0.9375rem">View specifications</a>
-</div>
+<div style="padding:20px;background:#1e3a5f;border-radius:10px;color:#fff"><div class="sb-tiers"><div><div class="sb-name">Standard</div><div class="sb-price">From $4,500</div><div class="sb-desc">Empty shell with basic wiring. For sheltered or lower-wind sites. Rated 89 to 102 km/h by the manufacturer.</div></div>
+<div><div class="sb-name">Premium Upgraded</div><div class="sb-price">$6,500</div><div class="sb-desc">N3+ wind rating for tougher conditions. Your engineer confirms the wind class for your site.</div></div></div>
+<div class="sb-foot">Prices include GST. Delivery, lifting and connection are extra.</div>
+<a href="#contact" style="display:inline-block;margin-top:12px;background:#f59e0b;color:#0f172a;padding:10px 20px;border-radius:7px;font-weight:700;font-size:0.9375rem">Enquire about SiteBox</a> <a href="pages/sitebox-brochure-v5.html" style="display:inline-block;margin-top:12px;background:#f59e0b;color:#0f172a;padding:10px 20px;border-radius:7px;font-weight:700;font-size:0.9375rem;background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.25)">Compare both</a>
+<div class="sb-photos"><img alt="SiteBox Premium Upgraded exterior" decoding="async" height="1200" loading="lazy" sizes="(max-width:760px) 45vw, 240px" src="images/web/sitebox/premium-exterior-640.webp" srcset="images/web/sitebox/premium-exterior-320.webp 320w, images/web/sitebox/premium-exterior-640.webp 640w, images/web/sitebox/premium-exterior-1200.webp 1200w" width="1200"/><img alt="SiteBox Premium Upgraded interior" decoding="async" height="1200" loading="lazy" sizes="(max-width:760px) 45vw, 240px" src="images/web/sitebox/premium-interior-640.webp" srcset="images/web/sitebox/premium-interior-320.webp 320w, images/web/sitebox/premium-interior-640.webp 640w, images/web/sitebox/premium-interior-1200.webp 1200w" width="1200"/></div></div>
 </div>
 <div>
 <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:24px;margin-bottom:20px">
-<h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:16px">Specifications</h3>
+<h3 style="font-size:1rem;font-weight:700;color:#0f172a;margin-bottom:16px">Standard specifications</h3>
 <div style="display:flex;flex-direction:column;gap:0">
 <div style="display:flex;justify-content:space-between;font-size:0.9375rem;padding:10px 0;border-bottom:1px solid #e2e8f0"><span style="color:#64748b">External size</span><span style="color:#0f172a;font-weight:600">5.8 × 2.46 × 2.43 m</span></div>
 <div style="display:flex;justify-content:space-between;font-size:0.9375rem;padding:10px 0;border-bottom:1px solid #e2e8f0"><span style="color:#64748b">Folded depth</span><span style="color:#0f172a;font-weight:600">320 mm, still 2.46 m wide</span></div>
@@ -819,7 +325,7 @@ justify-content:center;
 </div>
 </div>
 <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:24px">
-<h3 style="font-size:0.95rem;font-weight:700;color:#0f172a;margin-bottom:14px">Why SiteBox?</h3>
+<h3 style="font-size:0.95rem;font-weight:700;color:#0f172a;margin-bottom:14px">About SiteBox</h3>
 <div style="display:flex;flex-direction:column;gap:10px">
 <div style="font-size:0.9375rem;color:#475569;display:flex;gap:8px"><span style="color:#2563eb;font-weight:700;flex-shrink:0">✓</span>Ships 320 mm flat, so several fit on a truck</div>
 <div style="font-size:0.9375rem;color:#475569;display:flex;gap:8px"><span style="color:#2563eb;font-weight:700;flex-shrink:0">✓</span>Lift into place, then fold out in minutes. Allow time to level and tie down</div>
@@ -861,7 +367,7 @@ justify-content:center;
 <div class="sec-i">
 <div class="disp-grid">
 <div class="disp-img">
-<img alt="20ft expandable prefab home white panels black trim" src="images/hero/hero-display-unit.jpg"/>
+<img alt="20ft expandable prefab home white panels black trim" decoding="async" height="531" loading="lazy" sizes="(max-width:760px) 100vw, 50vw" src="images/web/hero/hero-display-unit-640.webp" srcset="images/web/hero/hero-display-unit-320.webp 320w, images/web/hero/hero-display-unit-640.webp 640w" width="683"/>
 <span class="disp-loc">📍 Waterford, Brisbane QLD</span>
 </div>
 <div>
@@ -869,7 +375,6 @@ justify-content:center;
 <p style="font-size:0.9375rem;color:#64748b;line-height:1.75;margin-bottom:24px">We plan to have a new display home at Waterford. Send us a message and we will tell you when you can book a time to see it. Until then, we are happy to talk you through models, floor plans and finishes.</p>
 <div class="disp-pts">
 <div class="disp-pt">See the expanded layout in person once it is open</div>
-
 <div class="disp-pt">Talk to the owner directly on site</div>
 </div>
 <a class="hero-cta freedom-cta" href="#contact">Register for the display</a>
@@ -917,7 +422,7 @@ justify-content:center;
 <div class="fg"><label>Phone</label><input name="phone" placeholder="0400 000 000" type="tel"/></div>
 </div>
 <div class="fg"><label>I'm interested in</label>
-<select id="interest-select" name="interest"><option value="">Please select...</option><option value="10ft-freedom">10ft Freedom Series</option><option value="20ft-freedom">20ft Freedom Series</option><option value="30ft-freedom">30ft Freedom Series</option><option value="40ft-freedom">40ft Freedom Series</option><option value="30ft-certified">30ft Class 1a home</option><option value="sitebox">SiteBox</option><option value="notsure">Not sure yet, help me decide</option></select>
+<select id="interest-select" name="interest"><option value="">Please select...</option><option value="10ft-freedom">10ft Freedom Series</option><option value="20ft-freedom">20ft Freedom Series</option><option value="30ft-freedom">30ft Freedom Series</option><option value="40ft-freedom">40ft Freedom Series</option><option value="30ft-certified">30ft Class 1a home</option><option value="sitebox">SiteBox Standard</option><option value="sitebox-premium">SiteBox Premium Upgraded</option><option value="notsure">Not sure yet, help me decide</option></select>
 </div>
 <div class="fg" id="suburb-field"><label>Suburb / council of your block</label><input name="suburb_council" placeholder="e.g. Capalaba, Brisbane City Council" type="text"/></div>
 <div class="fg"><label>Message</label><textarea name="message" placeholder="How do you plan to use it? For example: a granny flat for my parents, connected to town water"></textarea></div>
@@ -937,7 +442,7 @@ justify-content:center;
 <span>✉️ info@notsotinyhomes.com.au</span>
 <span>📍 Waterford, Brisbane QLD</span>
 </div>
-<div class="foot-abn">© 2026 Kiteworks Pty Ltd · ABN 99 692 292 274 t/a Not So Tiny Homes</div><div class="foot-abn foot-legal">Kiteworks Pty Ltd does not hold a QBCC licence and cannot perform building work valued in excess of $3,300. Site work and service connections are carried out by licensed builders and trades. <a href="pages/privacy.html">Privacy</a></div>
+<div class="foot-abn">© 2026 Kiteworks Pty Ltd · ABN 99 692 292 274 t/a Not So Tiny Homes</div>
 </footer>
 <!-- MODAL -->
 <div class="modal-overlay" id="quote-modal">
@@ -957,6 +462,7 @@ justify-content:center;
 </div>
 </div>
 <script>
+function _ls(i){if(i&&i.dataset.src){i.srcset=i.dataset.srcset;i.src=i.dataset.src;delete i.dataset.src}}
 // Gallery images per model
 
 // Init galleries
@@ -986,7 +492,7 @@ function goToSlide(id, idx) {
   const g = document.getElementById(id);
   const imgs = Array.from(g.querySelectorAll('img'));
   const dots = document.getElementById('d' + id.slice(1)).querySelectorAll('.gdot');
-  imgs.forEach((img, i) => img.classList.toggle('active', i === idx));
+  _ls(imgs[idx]);imgs.forEach((img, i) => img.classList.toggle('active', i === idx));
   dots.forEach((d, i) => d.classList.toggle('on', i === idx));
 }
 
@@ -1086,7 +592,7 @@ function showLayout(id, i){
   const dots = wrap.querySelectorAll('.ldot');
   imgs.forEach(img => img.classList.remove('active'));
   dots.forEach(d => d.classList.remove('on'));
-  if(imgs[i]) imgs[i].classList.add('active');
+  _ls(imgs[i]);if(imgs[i]) imgs[i].classList.add('active');
   if(dots[i]) dots[i].classList.add('on');
 }
 
