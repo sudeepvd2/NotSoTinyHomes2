@@ -82,3 +82,14 @@ footer .foot-abn{color:#cbd5e1}
 #sitebox [style*="justify-content:space-between"]{gap:16px}
 #sitebox [style*="justify-content:space-between"]>span:first-child{flex-shrink:0}
 #sitebox [style*="justify-content:space-between"]>span:last-child{text-align:right}
+
+/* One footer, identical on every page (matches the home page) */
+footer{background:#0f172a!important;padding:28px 5%!important;text-align:center!important;font-family:'Inter',sans-serif!important;font-size:17px!important;line-height:1.6!important;border:0!important;margin:0!important}
+footer .foot-logo{font-weight:800!important;color:#fff!important;font-size:17px!important;margin:0 0 6px!important}
+footer .foot-contact{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;gap:20px!important;justify-content:center!important;align-items:center!important;font-size:.9375rem!important;color:rgba(255,255,255,.5)!important;margin:0!important}
+footer .foot-contact span{font-size:.9375rem!important;color:rgba(255,255,255,.5)!important}
+footer .foot-abn{font-size:.9375rem!important;color:#cbd5e1!important;margin:6px 0 0!important}
+@media (max-width:760px){
+  footer{padding:28px 18.75px!important}
+  footer .foot-contact{flex-direction:column!important;gap:6px!important}
+}
