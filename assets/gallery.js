@@ -62,7 +62,7 @@
         var num = n < 10 ? '0' + n : '' + n;
         probe(root + 'images/' + path + '-' + num, 0, function (url) {
           if (!url) return nextPath(p + 1);
-          var alt = path.split('/')[0].replace('freedom-', '') + ' ' + kind + ' photo ' + n;
+          var alt = 'Freedom ' + path.split('/')[0].replace('freedom-', '') + ' expandable home, ' + kind + ' photo ' + n;
           (box.classList.contains('model-gallery') ? addSlide : addThumb)(box, url, alt, kind);
           next(n + 1);
         });
